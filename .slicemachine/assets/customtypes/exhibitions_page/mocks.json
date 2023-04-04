@@ -1,0 +1,41 @@
+{
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "main_menu$517cfcaf-0a1f-4b06-b192-5cdc3f456fa4",
+        "name": "main_menu",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "menu_item",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "wear",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "page",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "DocumentLink",
+                      "id": "mock_document_id"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

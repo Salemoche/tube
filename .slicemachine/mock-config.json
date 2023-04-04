@@ -1,0 +1,19 @@
+{
+  "_cts": {
+    "artist": {},
+    "news": {},
+    "contact_page": {},
+    "about_page": {},
+    "exhibitions_page": {},
+    "exhibition": {}
+  },
+  "slices": {
+    "ExhibitionSlice": {},
+    "MainMenu": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

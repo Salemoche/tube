@@ -1,0 +1,21 @@
+{
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "fought",
+    "type": "Text"
+  },
+  "start_date": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2013-01-22"
+  },
+  "end_date": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2022-03-05"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  }
+}

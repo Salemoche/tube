@@ -1,0 +1,17 @@
+{
+  "id": "about_page",
+  "label": "About Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "main_text": {
+        "type": "Text",
+        "config": {
+          "label": "Main Text",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
