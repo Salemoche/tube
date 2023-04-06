@@ -1,0 +1,36 @@
+{
+  "id": "news_item",
+  "type": "SharedSlice",
+  "name": "NewsItem",
+  "description": "NewsItem",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "NewsItem",
+      "primary": {
+        "news": {
+          "type": "Link",
+          "config": {
+            "label": "News",
+            "select": "document",
+            "customtypes": [
+              "news"
+            ]
+          }
+        },
+        "spacing_right": {
+          "type": "Number",
+          "config": {
+            "label": "Spacing Right",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

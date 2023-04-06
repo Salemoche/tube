@@ -1,0 +1,39 @@
+{
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "milk",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "default_text$f34eedbc-5a95-4f56-ab05-e353b83b502d",
+        "name": "default_text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "In nostrud veniam nisi reprehenderit reprehenderit sunt et. Officia non amet commodo excepteur officia irure pariatur reprehenderit commodo. Velit ex voluptate aute consectetur ad dolore."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

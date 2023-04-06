@@ -1,6 +1,34 @@
 {
   "slices": {
     "__TYPE__": "SliceContentType",
-    "value": []
+    "value": [
+      {
+        "key": "contact_item$ec2ed72d-f09b-45e5-a3e3-b7dcbabdc756",
+        "name": "contact_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Nostrud ea exercitation dolore. Tempor ullamco tempor veniam tempor reprehenderit aliqua nulla eiusmod et. Aliquip do pariatur laborum enim et irure enim et non aliquip dolor ad nisi."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }

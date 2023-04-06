@@ -3,7 +3,7 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "main_menu$517cfcaf-0a1f-4b06-b192-5cdc3f456fa4",
+        "key": "main_menu$ae318a99-1435-41e0-ba00-fbd46d79a084",
         "name": "main_menu",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -17,7 +17,7 @@
                   "menu_item",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "wear",
+                    "value": "ever",
                     "type": "Text"
                   }
                 ],
@@ -32,6 +32,51 @@
                   }
                 ]
               ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "exhibition_slice$d0df5df1-1b8e-4d8f-99de-209f842661bc",
+        "name": "exhibition_slice",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Program"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Veniam proident dolor ipsum fugiat sint nostrud est excepteur non quis proident laboris. Lorem mollit minim nostrud culpa consequat ad duis aute reprehenderit eu est aute. Tempor laboris proident dolor veniam ad nostrud."
+                  }
+                }
+              ]
+            },
+            "exhibition": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
             }
           ]
         }

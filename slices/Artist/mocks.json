@@ -1,0 +1,30 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "name": {
+        "__TYPE__": "FieldContent",
+        "value": "constantly",
+        "type": "Text"
+      },
+      "information": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consequat anim ea nisi aliquip qui cupidatat culpa aute ex id id. Amet aute enim anim cupidatat excepteur qui pariatur."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

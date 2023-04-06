@@ -1,7 +1,13 @@
 {
-  "main_text": {
-    "__TYPE__": "FieldContent",
-    "value": "mass",
-    "type": "Text"
+  "intro": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Id pariatur dolor non duis do aliquip est ipsum velit id ut excepteur."
+        }
+      }
+    ]
   }
 }

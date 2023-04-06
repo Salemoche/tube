@@ -1,18 +1,52 @@
 {
   "_cts": {
-    "artist": {},
     "news": {},
     "contact_page": {},
     "about_page": {},
     "exhibitions_page": {},
-    "exhibition": {}
+    "exhibition": {},
+    "artist_page": {},
+    "news_page": {},
+    "default_page": {}
   },
   "slices": {
-    "ExhibitionSlice": {},
+    "ExhibitionSlice": {
+      "default": {
+        "primary": {}
+      }
+    },
     "MainMenu": {
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "ExhibitionImage": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Artist": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "NewsItem": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ContactItem": {
+      "default": {
+        "primary": {}
+      },
+      "newsletter": {
+        "primary": {}
+      }
+    },
+    "DefaultText": {
+      "default": {
+        "primary": {}
       }
     }
   }

@@ -1,0 +1,39 @@
+{
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "artist$9936fbc1-c4ca-49ef-9d2e-d52c46da0fbc",
+        "name": "artist",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "name": {
+              "__TYPE__": "FieldContent",
+              "value": "cause",
+              "type": "Text"
+            },
+            "information": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ea non laborum ipsum dolore reprehenderit officia commodo id commodo est consequat ipsum velit fugiat nostrud."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

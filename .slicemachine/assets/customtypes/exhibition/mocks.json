@@ -1,21 +1,85 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "fought",
+    "value": "according",
     "type": "Text"
   },
   "start_date": {
     "__TYPE__": "FieldContent",
     "type": "Date",
-    "value": "2013-01-22"
+    "value": "2023-03-14"
   },
   "end_date": {
     "__TYPE__": "FieldContent",
     "type": "Date",
-    "value": "2022-03-05"
+    "value": "2022-09-13"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
-    "value": []
+    "value": [
+      {
+        "key": "exhibition_image$be051028-2571-4919-a313-bb3b1bf2fb5d",
+        "name": "exhibition_image",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+                "width": 5848,
+                "height": 3899
+              },
+              "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+              "width": 5848,
+              "height": 3899,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Everything"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Incididunt laboris excepteur labore do duis aliqua magna magna aliqua. Nisi fugiat irure aliquip aute minim enim enim reprehenderit anim quis. Non amet eiusmod cillum anim ea et sunt sunt."
+                  }
+                }
+              ]
+            },
+            "show_on_exhibitions_page": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }

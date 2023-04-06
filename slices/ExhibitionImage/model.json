@@ -1,0 +1,59 @@
+{
+  "id": "exhibition_image",
+  "type": "SharedSlice",
+  "name": "ExhibitionImage",
+  "description": "ExhibitionImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ExhibitionImage",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "show_on_exhibitions_page": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show on Exhibitions Page",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "horizontal_alignment": {
+          "type": "Number",
+          "config": {
+            "label": "Horizontal Alignment",
+            "placeholder": "One Unit (Circle) is 1/24"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
