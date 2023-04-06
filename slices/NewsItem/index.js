@@ -1,36 +1,29 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
 
 /**
  * @typedef {import("@prismicio/client").Content.NewsItemSlice} NewsItemSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<NewsItemSlice>} NewsItemProps
  * @param { NewsItemProps }
  */
-const NewsItem = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
+const NewsItem = ({ slice }) => {
+  const news = slice.primary?.news?.data;
+
+  return (
+    <article>
+      <div>
+        <PrismicNextImage field={news.thumbnail} />
+      </div>
+      <span className="title">
+        {
+          news.content ?
+          <PrismicRichText field={news.content}/>
+          : <h2>Template slice, update me!</h2>
         }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+      </span>
+    </article>
+  )
+}
 
 export default NewsItem

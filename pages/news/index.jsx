@@ -4,7 +4,7 @@ import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/index';
 
 export default function NewsPage({ page }) {
-  console.log(page)
+  
   return (
     <LayoutComponent>
       <h1>News</h1>
@@ -15,7 +15,32 @@ export default function NewsPage({ page }) {
 
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
-  const page = await client.getSingle('news_page')
+  const page = await client.getByUID('news_page', 'newspage', {
+    graphQuery: `{
+      news_page {
+        slices {
+          ...on news_item {
+            variation {
+              ... on default {
+                primary {
+                  spacing_right
+                  news {
+                    ...on news {
+                      title
+                      thumbnail
+                      content
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }`
+  })
+
+  console.log(page)
 
   return {
     props: {

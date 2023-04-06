@@ -247,7 +247,7 @@ type NewsPageDocumentDataSlicesSlice = NewsItemSlice;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NewsPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NewsPageDocumentData>, "news_page", Lang>;
+export type NewsPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NewsPageDocumentData>, "news_page", Lang>;
 /** Content for News documents */
 interface NewsDocumentData {
     /**
@@ -293,7 +293,7 @@ interface NewsDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NewsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NewsDocumentData>, "news", Lang>;
+export type NewsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 export type AllDocumentTypes = AboutPageDocument | ArtistPageDocument | ContactPageDocument | DefaultPageDocument | ExhibitionDocument | ExhibitionsPageDocument | NewsPageDocument | NewsDocument;
 /**
  * Primary content in Artist → Primary
