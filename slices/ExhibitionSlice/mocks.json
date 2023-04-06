@@ -3,34 +3,32 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading1",
-            "content": {
-              "text": "Mental"
-            }
-          }
-        ]
-      },
-      "description": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Et do fugiat irure nisi exercitation magna et esse magna laborum dolore cupidatat. Voluptate nostrud Lorem occaecat sunt et occaecat Lorem sit aute duis."
-            }
-          }
-        ]
-      },
       "exhibition": {
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "DocumentLink",
           "id": "mock_document_id"
         }
+      },
+      "horizontal_alignment_title": {
+        "__TYPE__": "FieldContent",
+        "value": "50",
+        "type": "Number"
+      },
+      "vertical_alignment_title": {
+        "__TYPE__": "FieldContent",
+        "value": "56",
+        "type": "Number"
+      },
+      "horizontal_alignment_date": {
+        "__TYPE__": "FieldContent",
+        "value": "44",
+        "type": "Number"
+      },
+      "vertical_alignment_date": {
+        "__TYPE__": "FieldContent",
+        "value": "97",
+        "type": "Number"
       }
     },
     "items": [

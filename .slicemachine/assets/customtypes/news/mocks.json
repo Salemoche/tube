@@ -1,11 +1,7 @@
 {
-  "uid": {
-    "__TYPE__": "UIDContent",
-    "value": "pilot"
-  },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "second",
+    "value": "morning",
     "type": "Text"
   },
   "thumbnail": {
@@ -35,7 +31,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Laborum voluptate Lorem esse tempor laboris dolore excepteur velit Lorem ea in. Nulla commodo ullamco incididunt quis ut sit nostrud elit id do et voluptate nostrud non."
+          "text": "Minim sit commodo et."
         }
       }
     ]

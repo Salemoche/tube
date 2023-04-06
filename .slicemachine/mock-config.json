@@ -7,18 +7,13 @@
     "exhibition": {},
     "artist_page": {},
     "news_page": {},
-    "default_page": {}
+    "default_page": {},
+    "navigation": {}
   },
   "slices": {
     "ExhibitionSlice": {
       "default": {
         "primary": {}
-      }
-    },
-    "MainMenu": {
-      "default": {
-        "primary": {},
-        "items": {}
       }
     },
     "ExhibitionImage": {
@@ -45,6 +40,11 @@
       }
     },
     "DefaultText": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "MenuItem": {
       "default": {
         "primary": {}
       }

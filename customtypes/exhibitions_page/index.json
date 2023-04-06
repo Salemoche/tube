@@ -10,9 +10,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "main_menu": {
-              "type": "SharedSlice"
-            },
             "exhibition_slice": {
               "type": "SharedSlice"
             }

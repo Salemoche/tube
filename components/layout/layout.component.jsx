@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 
-const LayoutComponent = ({ children }) => {
+const LayoutComponent = ({ children, header = null }) => {
   return (
     <>
       <Head>
@@ -10,6 +10,11 @@ const LayoutComponent = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      { header && 
+        <header>
+          { header }
+        </header>
+      }
       <main>
         { children }
       </main>

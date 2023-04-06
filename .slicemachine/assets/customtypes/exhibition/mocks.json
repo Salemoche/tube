@@ -1,24 +1,24 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "according",
+    "value": "impossible",
     "type": "Text"
   },
   "start_date": {
     "__TYPE__": "FieldContent",
     "type": "Date",
-    "value": "2023-03-14"
+    "value": "2015-05-07"
   },
   "end_date": {
     "__TYPE__": "FieldContent",
     "type": "Date",
-    "value": "2022-09-13"
+    "value": "2021-10-14"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "exhibition_image$be051028-2571-4919-a313-bb3b1bf2fb5d",
+        "key": "exhibition_image$368327d4-9e1d-486d-b3a0-8b3841509b6e",
         "name": "exhibition_image",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -28,13 +28,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-                "width": 5848,
-                "height": 3899
+                "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+                "width": 3456,
+                "height": 3456
               },
-              "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-              "width": 5848,
-              "height": 3899,
+              "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+              "width": 3456,
+              "height": 3456,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -51,7 +51,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Everything"
+                    "text": "Article"
                   }
                 }
               ]
@@ -62,7 +62,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Incididunt laboris excepteur labore do duis aliqua magna magna aliqua. Nisi fugiat irure aliquip aute minim enim enim reprehenderit anim quis. Non amet eiusmod cillum anim ea et sunt sunt."
+                    "text": "Nisi et eu deserunt amet incididunt reprehenderit reprehenderit."
                   }
                 }
               ]
@@ -70,6 +70,11 @@
             "show_on_exhibitions_page": {
               "__TYPE__": "BooleanContent",
               "value": true
+            },
+            "horizontal_alignment": {
+              "__TYPE__": "FieldContent",
+              "value": "76",
+              "type": "Number"
             }
           },
           "items": [

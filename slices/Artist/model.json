@@ -15,7 +15,7 @@
           "type": "Text",
           "config": {
             "label": "Name",
-            "placeholder": ""
+            "placeholder": "Artist Name"
           }
         },
         "information": {
@@ -24,7 +24,7 @@
             "label": "Information",
             "placeholder": "Artist Information",
             "allowTargetBlank": true,
-            "single": "paragraph,hyperlink"
+            "multi": "paragraph,hyperlink"
           }
         }
       },

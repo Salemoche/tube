@@ -9,7 +9,7 @@
         "type": "Text",
         "config": {
           "label": "Title",
-          "placeholder": ""
+          "placeholder": "Exhibition Title"
         }
       },
       "start_date": {

@@ -12,7 +12,7 @@ interface AboutPageDocumentData {
      * Intro field in *About Page*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Intro
      * - **API ID Path**: about_page.intro
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
@@ -94,7 +94,7 @@ interface DefaultPageDocumentData {
      * Title field in *Default Page*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Page Title
      * - **API ID Path**: default_page.title
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
@@ -134,7 +134,7 @@ interface ExhibitionDocumentData {
      * Title field in *Exhibition*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Exhibition Title
      * - **API ID Path**: exhibition.title
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
@@ -208,7 +208,7 @@ interface ExhibitionsPageDocumentData {
  * Slice for *Exhibitions Page → Slice Zone*
  *
  */
-type ExhibitionsPageDocumentDataSlicesSlice = MainMenuSlice | ExhibitionSliceSlice;
+type ExhibitionsPageDocumentDataSlicesSlice = ExhibitionSliceSlice;
 /**
  * Exhibitions Page document from Prismic
  *
@@ -219,6 +219,35 @@ type ExhibitionsPageDocumentDataSlicesSlice = MainMenuSlice | ExhibitionSliceSli
  * @typeParam Lang - Language API ID of the document.
  */
 export type ExhibitionsPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ExhibitionsPageDocumentData>, "exhibitions_page", Lang>;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = MenuItemSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for News Page documents */
 interface NewsPageDocumentData {
     /**
@@ -247,14 +276,14 @@ type NewsPageDocumentDataSlicesSlice = NewsItemSlice;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NewsPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NewsPageDocumentData>, "news_page", Lang>;
+export type NewsPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NewsPageDocumentData>, "news_page", Lang>;
 /** Content for News documents */
 interface NewsDocumentData {
     /**
      * Title field in *News*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: News Title
      * - **API ID Path**: news.title
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
@@ -276,7 +305,7 @@ interface NewsDocumentData {
      * Content field in *News*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: News Content
      * - **API ID Path**: news.content
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
@@ -293,8 +322,8 @@ interface NewsDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NewsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
-export type AllDocumentTypes = AboutPageDocument | ArtistPageDocument | ContactPageDocument | DefaultPageDocument | ExhibitionDocument | ExhibitionsPageDocument | NewsPageDocument | NewsDocument;
+export type NewsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NewsDocumentData>, "news", Lang>;
+export type AllDocumentTypes = AboutPageDocument | ArtistPageDocument | ContactPageDocument | DefaultPageDocument | ExhibitionDocument | ExhibitionsPageDocument | NavigationDocument | NewsPageDocument | NewsDocument;
 /**
  * Primary content in Artist → Primary
  *
@@ -304,7 +333,7 @@ interface ArtistSliceDefaultPrimary {
      * Name field in *Artist → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Artist Name
      * - **API ID Path**: artist.primary.name
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
@@ -353,7 +382,7 @@ interface ContactItemSliceDefaultPrimary {
      * Title field in *ContactItem → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: Contact
+     * - **Placeholder**: Contact Information
      * - **API ID Path**: contact_item.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -437,7 +466,7 @@ interface DefaultTextSliceDefaultPrimary {
      * Text field in *DefaultText → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: Add your text
      * - **API ID Path**: default_text.primary.text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -486,7 +515,7 @@ interface ExhibitionImageSliceDefaultPrimary {
      * Title field in *ExhibitionImage → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
+     * - **Placeholder**: Image title
      * - **API ID Path**: exhibition_image.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -496,7 +525,7 @@ interface ExhibitionImageSliceDefaultPrimary {
      * Description field in *ExhibitionImage → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
+     * - **Placeholder**: Image Description
      * - **API ID Path**: exhibition_image.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -553,26 +582,6 @@ export type ExhibitionImageSlice = prismicT.SharedSlice<"exhibition_image", Exhi
  */
 interface ExhibitionSliceSliceDefaultPrimary {
     /**
-     * Title field in *ExhibitionSlice → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: exhibition_slice.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *ExhibitionSlice → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: exhibition_slice.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
      * Exhibition field in *ExhibitionSlice → Primary*
      *
      * - **Field Type**: Content Relationship
@@ -582,6 +591,46 @@ interface ExhibitionSliceSliceDefaultPrimary {
      *
      */
     exhibition: prismicT.RelationField<"exhibition">;
+    /**
+     * Horizontal Alignment (Title) field in *ExhibitionSlice → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_slice.primary.horizontal_alignment_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    horizontal_alignment_title: prismicT.NumberField;
+    /**
+     * Vertical Alignment (Title) field in *ExhibitionSlice → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_slice.primary.vertical_alignment_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    vertical_alignment_title: prismicT.NumberField;
+    /**
+     * Horizontal Alignment (Date) field in *ExhibitionSlice → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_slice.primary.horizontal_alignment_date
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    horizontal_alignment_date: prismicT.NumberField;
+    /**
+     * Vertical Alignment (Date) field in *ExhibitionSlice → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_slice.primary.vertical_alignment_date
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    vertical_alignment_date: prismicT.NumberField;
 }
 /**
  * Default variation for ExhibitionSlice Slice
@@ -607,54 +656,54 @@ type ExhibitionSliceSliceVariation = ExhibitionSliceSliceDefault;
  */
 export type ExhibitionSliceSlice = prismicT.SharedSlice<"exhibition_slice", ExhibitionSliceSliceVariation>;
 /**
- * Item in MainMenu → Items
+ * Primary content in MenuItem → Primary
  *
  */
-export interface MainMenuSliceDefaultItem {
+interface MenuItemSliceDefaultPrimary {
     /**
-     * Menu Item field in *MainMenu → Items*
+     * Label field in *MenuItem → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: main_menu.items[].menu_item
+     * - **API ID Path**: menu_item.primary.label
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    menu_item: prismicT.KeyTextField;
+    label: prismicT.KeyTextField;
     /**
-     * Page field in *MainMenu → Items*
+     * Link field in *MenuItem → Primary*
      *
-     * - **Field Type**: Content Relationship
+     * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: main_menu.items[].page
+     * - **API ID Path**: menu_item.primary.link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    page: prismicT.RelationField;
+    link: prismicT.LinkField;
 }
 /**
- * Default variation for MainMenu Slice
+ * Default variation for MenuItem Slice
  *
  * - **API ID**: `default`
- * - **Description**: `MainMenu`
+ * - **Description**: `MenuItem`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type MainMenuSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<MainMenuSliceDefaultItem>>;
+export type MenuItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<MenuItemSliceDefaultPrimary>, never>;
 /**
- * Slice variation for *MainMenu*
+ * Slice variation for *MenuItem*
  *
  */
-type MainMenuSliceVariation = MainMenuSliceDefault;
+type MenuItemSliceVariation = MenuItemSliceDefault;
 /**
- * MainMenu Shared Slice
+ * MenuItem Shared Slice
  *
- * - **API ID**: `main_menu`
- * - **Description**: `MainMenu`
+ * - **API ID**: `menu_item`
+ * - **Description**: `MenuItem`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type MainMenuSlice = prismicT.SharedSlice<"main_menu", MainMenuSliceVariation>;
+export type MenuItemSlice = prismicT.SharedSlice<"menu_item", MenuItemSliceVariation>;
 /**
  * Primary content in NewsItem → Primary
  *
@@ -709,6 +758,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AboutPageDocumentData, AboutPageDocument, ArtistPageDocumentData, ArtistPageDocumentDataSlicesSlice, ArtistPageDocument, ContactPageDocumentData, ContactPageDocumentDataSlicesSlice, ContactPageDocument, DefaultPageDocumentData, DefaultPageDocumentDataSlicesSlice, DefaultPageDocument, ExhibitionDocumentData, ExhibitionDocumentDataSlicesSlice, ExhibitionDocument, ExhibitionsPageDocumentData, ExhibitionsPageDocumentDataSlicesSlice, ExhibitionsPageDocument, NewsPageDocumentData, NewsPageDocumentDataSlicesSlice, NewsPageDocument, NewsDocumentData, NewsDocument, AllDocumentTypes, ArtistSliceDefaultPrimary, ArtistSliceDefault, ArtistSliceVariation, ArtistSlice, ContactItemSliceDefaultPrimary, ContactItemSliceDefault, ContactItemSliceNewsletterPrimary, ContactItemSliceNewsletter, ContactItemSliceVariation, ContactItemSlice, DefaultTextSliceDefaultPrimary, DefaultTextSliceDefault, DefaultTextSliceVariation, DefaultTextSlice, ExhibitionImageSliceDefaultPrimary, ExhibitionImageSliceDefault, ExhibitionImageSliceVariation, ExhibitionImageSlice, ExhibitionSliceSliceDefaultPrimary, ExhibitionSliceSliceDefault, ExhibitionSliceSliceVariation, ExhibitionSliceSlice, MainMenuSliceDefaultItem, MainMenuSliceDefault, MainMenuSliceVariation, MainMenuSlice, NewsItemSliceDefaultPrimary, NewsItemSliceDefault, NewsItemSliceVariation, NewsItemSlice };
+        export type { AboutPageDocumentData, AboutPageDocument, ArtistPageDocumentData, ArtistPageDocumentDataSlicesSlice, ArtistPageDocument, ContactPageDocumentData, ContactPageDocumentDataSlicesSlice, ContactPageDocument, DefaultPageDocumentData, DefaultPageDocumentDataSlicesSlice, DefaultPageDocument, ExhibitionDocumentData, ExhibitionDocumentDataSlicesSlice, ExhibitionDocument, ExhibitionsPageDocumentData, ExhibitionsPageDocumentDataSlicesSlice, ExhibitionsPageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, NewsPageDocumentData, NewsPageDocumentDataSlicesSlice, NewsPageDocument, NewsDocumentData, NewsDocument, AllDocumentTypes, ArtistSliceDefaultPrimary, ArtistSliceDefault, ArtistSliceVariation, ArtistSlice, ContactItemSliceDefaultPrimary, ContactItemSliceDefault, ContactItemSliceNewsletterPrimary, ContactItemSliceNewsletter, ContactItemSliceVariation, ContactItemSlice, DefaultTextSliceDefaultPrimary, DefaultTextSliceDefault, DefaultTextSliceVariation, DefaultTextSlice, ExhibitionImageSliceDefaultPrimary, ExhibitionImageSliceDefault, ExhibitionImageSliceVariation, ExhibitionImageSlice, ExhibitionSliceSliceDefaultPrimary, ExhibitionSliceSliceDefault, ExhibitionSliceSliceVariation, ExhibitionSliceSlice, MenuItemSliceDefaultPrimary, MenuItemSliceDefault, MenuItemSliceVariation, MenuItemSlice, NewsItemSliceDefaultPrimary, NewsItemSliceDefault, NewsItemSliceVariation, NewsItemSlice };
     }
 }

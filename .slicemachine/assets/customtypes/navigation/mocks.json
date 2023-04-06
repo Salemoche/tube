@@ -1,26 +1,32 @@
 {
-  "title": {
-    "__TYPE__": "FieldContent",
-    "value": "bean",
-    "type": "Text"
-  },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "default_text$6af230a6-3074-4840-826b-722fa10dc715",
-        "name": "default_text",
+        "key": "menu_item$c52c99e5-9155-41cc-b1bc-aeeb96faf1ce",
+        "name": "menu_item",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
           "primary": {
-            "text": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Property"
+                  }
+                }
+              ]
+            },
+            "description": {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Magna ad consequat aute anim nisi minim amet ut ipsum eiusmod dolore cillum laboris."
+                    "text": "Aute qui ut reprehenderit magna nostrud eu aute consequat duis amet anim eiusmod quis proident."
                   }
                 }
               ]

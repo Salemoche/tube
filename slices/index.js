@@ -5,7 +5,7 @@ import ContactItem from './ContactItem';
 import DefaultText from './DefaultText';
 import ExhibitionImage from './ExhibitionImage';
 import ExhibitionSlice from './ExhibitionSlice';
-import MainMenu from './MainMenu';
+import MenuItem from './MenuItem';
 import NewsItem from './NewsItem';
 
 export {
@@ -14,7 +14,7 @@ export {
 	DefaultText,
 	ExhibitionImage,
 	ExhibitionSlice,
-	MainMenu,
+	MenuItem,
 	NewsItem,
 };
 
@@ -24,6 +24,6 @@ export const components = {
 	default_text: DefaultText,
 	exhibition_image: ExhibitionImage,
 	exhibition_slice: ExhibitionSlice,
-	main_menu: MainMenu,
+	menu_item: MenuItem,
 	news_item: NewsItem,
 };

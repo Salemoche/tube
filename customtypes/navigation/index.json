@@ -1,23 +1,16 @@
 {
-  "id": "default_page",
-  "label": "Default Page",
-  "repeatable": true,
+  "id": "navigation",
+  "label": "Navigation",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "Text",
-        "config": {
-          "label": "Title",
-          "placeholder": "Page Title"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "default_text": {
+            "menu_item": {
               "type": "SharedSlice"
             }
           }

@@ -11,22 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "ExhibitionSlice",
       "primary": {
-        "title": {
-          "type": "StructuredText",
-          "config": {
-            "single": "heading1",
-            "label": "Title",
-            "placeholder": "This is where it all begins..."
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "single": "paragraph",
-            "label": "Description",
-            "placeholder": "A nice description of your feature"
-          }
-        },
         "exhibition": {
           "type": "Link",
           "config": {
@@ -35,6 +19,34 @@
             "customtypes": [
               "exhibition"
             ]
+          }
+        },
+        "horizontal_alignment_title": {
+          "type": "Number",
+          "config": {
+            "label": "Horizontal Alignment (Title)",
+            "placeholder": ""
+          }
+        },
+        "vertical_alignment_title": {
+          "type": "Number",
+          "config": {
+            "label": "Vertical Alignment (Title)",
+            "placeholder": ""
+          }
+        },
+        "horizontal_alignment_date": {
+          "type": "Number",
+          "config": {
+            "label": "Horizontal Alignment (Date)",
+            "placeholder": ""
+          }
+        },
+        "vertical_alignment_date": {
+          "type": "Number",
+          "config": {
+            "label": "Vertical Alignment (Date)",
+            "placeholder": ""
           }
         }
       },

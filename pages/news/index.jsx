@@ -1,7 +1,7 @@
 import { SliceZone } from '@prismicio/react'
 import { createClient } from '../../prismicio'
 import { components } from '../../slices'
-import LayoutComponent from '../../components/layout/index';
+import LayoutComponent from '../../components/layout/layout.component';
 
 export default function NewsPage({ page }) {
   
@@ -15,7 +15,7 @@ export default function NewsPage({ page }) {
 
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
-  const page = await client.getByUID('news_page', 'newspage', {
+  const page = await client.getSingle('news_page', {
     graphQuery: `{
       news_page {
         slices {

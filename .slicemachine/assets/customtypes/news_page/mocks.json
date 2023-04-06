@@ -1,13 +1,9 @@
 {
-  "uid": {
-    "__TYPE__": "UIDContent",
-    "value": "jack"
-  },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "news_item$bef75a9e-ab99-4fe2-839a-7911bf6afda0",
+        "key": "news_item$22ee4530-a8ac-4a1c-bce2-a650de08d01d",
         "name": "news_item",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -22,7 +18,7 @@
             },
             "spacing_right": {
               "__TYPE__": "FieldContent",
-              "value": "15",
+              "value": "99",
               "type": "Number"
             }
           },
