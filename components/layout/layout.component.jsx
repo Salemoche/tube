@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import BackgroundComponent from '../background/background.component'
 
 const LayoutComponent = ({ children, header = null }) => {
   return (
@@ -16,6 +17,7 @@ const LayoutComponent = ({ children, header = null }) => {
         </header>
       }
       <main>
+        <BackgroundComponent/>
         { children }
       </main>
     </>
