@@ -3,8 +3,15 @@ import { createClient } from '../../prismicio'
 import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
+import { ContentStyles } from '../../styles/global.components';
+import { proxy, useSnapshot } from 'valtio';
+import { baseState } from '../data/state';
 
 export default function ContactPage({ page, navigation }) {
+
+  const store = proxy(baseState);
+  const snap = useSnapshot(store);
+
   return (
     <LayoutComponent
       title={page.data.meta_title}
@@ -12,7 +19,9 @@ export default function ContactPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <SliceZone slices={page.data.slices} components={components} />
+      <ContentStyles circleCount={snap.circleCount}>
+        <SliceZone slices={page.data.slices} components={components} />
+      </ContentStyles>
     </LayoutComponent>
   )
 }

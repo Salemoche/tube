@@ -3,6 +3,7 @@ import { createClient } from '../prismicio'
 import { components } from '../slices'
 import LayoutComponent from '../components/layout/layout.component';
 import NavigationComponent from '../components/navigation/navigation.component';
+import { ContentStyles } from '../styles/global.components';
 
 export default function ExhibitionsPage({ page, navigation }) {
 
@@ -14,8 +15,10 @@ export default function ExhibitionsPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <h1>Exhibitions</h1>
-      <SliceZone slices={page.data.slices} components={components} />
+      <ContentStyles>
+        <h1>Exhibitions</h1>
+        <SliceZone slices={page.data.slices} components={components} />
+      </ContentStyles>
     </LayoutComponent>
   )
 }

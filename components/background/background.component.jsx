@@ -1,23 +1,26 @@
 import { useEffect, useState } from 'react';
 import { BackgroundStyles } from './background.styles';
+import { baseState } from '../../pages/data/state';
+import { proxy, useSnapshot } from 'valtio';
 
 const BackgroundComponent = () => {
 
-  const [circleCols, setCircleCols] = useState(24);
+  const store = proxy(baseState);
+  const snap = useSnapshot(store);
   const [circles, setCircles] = useState([])
 
   useEffect(() => {
 
     let circleArray = []
 
-    for (let count = 0; count < circleCols; count++) {
+    for (let count = 0; count < snap.circleCount; count++) {
       circleArray.push(count)
     }
 
     setCircles(circleArray)
     console.log(circles)
 
-  }, [circleCols])
+  }, [snap])
   
 
   return (

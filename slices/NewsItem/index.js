@@ -13,7 +13,7 @@ const NewsItem = ({ slice }) => {
   const spacingRight = slice.spacing_right;
   const width = slice.width;
   
-  console.log(news)
+  // console.log(news)
 
   return (
     <NewsStyles>

@@ -3,6 +3,7 @@ import { createClient } from '../../prismicio'
 import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
+import { ContentStyles } from '../../styles/global.components';
 
 export default function NewsPage({ page, navigation }) {
   
@@ -13,8 +14,9 @@ export default function NewsPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <h1>News</h1>
-      <SliceZone slices={page.data.slices} components={components} />
+      <ContentStyles>
+        <SliceZone slices={page.data.slices} components={components} />
+      </ContentStyles>
     </LayoutComponent>
   )
 }
