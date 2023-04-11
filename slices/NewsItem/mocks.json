@@ -12,7 +12,12 @@
       },
       "spacing_right": {
         "__TYPE__": "FieldContent",
-        "value": "41",
+        "value": "94",
+        "type": "Number"
+      },
+      "width": {
+        "__TYPE__": "FieldContent",
+        "value": "4",
         "type": "Number"
       }
     },

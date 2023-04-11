@@ -3,74 +3,38 @@
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "main_menu$ae318a99-1435-41e0-ba00-fbd46d79a084",
-        "name": "main_menu",
-        "widget": {
-          "__TYPE__": "SharedSliceContent",
-          "variation": "default",
-          "primary": {},
-          "items": [
-            {
-              "__TYPE__": "GroupItemContent",
-              "value": [
-                [
-                  "menu_item",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "value": "ever",
-                    "type": "Text"
-                  }
-                ],
-                [
-                  "page",
-                  {
-                    "__TYPE__": "LinkContent",
-                    "value": {
-                      "__TYPE__": "DocumentLink",
-                      "id": "mock_document_id"
-                    }
-                  }
-                ]
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "key": "exhibition_slice$d0df5df1-1b8e-4d8f-99de-209f842661bc",
+        "key": "exhibition_slice$3fc0f40f-7c17-436e-9f61-4fefd8e2a68f",
         "name": "exhibition_slice",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
           "primary": {
-            "title": {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "heading1",
-                  "content": {
-                    "text": "Program"
-                  }
-                }
-              ]
-            },
-            "description": {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Veniam proident dolor ipsum fugiat sint nostrud est excepteur non quis proident laboris. Lorem mollit minim nostrud culpa consequat ad duis aute reprehenderit eu est aute. Tempor laboris proident dolor veniam ad nostrud."
-                  }
-                }
-              ]
-            },
             "exhibition": {
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "DocumentLink",
                 "id": "mock_document_id"
               }
+            },
+            "horizontal_alignment_title": {
+              "__TYPE__": "FieldContent",
+              "value": "47",
+              "type": "Number"
+            },
+            "vertical_alignment_title": {
+              "__TYPE__": "FieldContent",
+              "value": "69",
+              "type": "Number"
+            },
+            "horizontal_alignment_date": {
+              "__TYPE__": "FieldContent",
+              "value": "73",
+              "type": "Number"
+            },
+            "vertical_alignment_date": {
+              "__TYPE__": "FieldContent",
+              "value": "69",
+              "type": "Number"
             }
           },
           "items": [
@@ -82,5 +46,42 @@
         }
       }
     ]
+  },
+  "meta_title": {
+    "__TYPE__": "FieldContent",
+    "value": "building",
+    "type": "Text"
+  },
+  "meta_description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Et nisi duis sit excepteur proident ullamco. Do proident pariatur eu mollit commodo deserunt consequat deserunt enim aute proident amet nostrud. Aute esse minim do et aliquip esse nostrud culpa occaecat dolore excepteur."
+        }
+      }
+    ]
+  },
+  "meta_thumbnail": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+      "width": 3560,
+      "height": 5340
+    },
+    "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+    "width": 3560,
+    "height": 5340,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   }
 }

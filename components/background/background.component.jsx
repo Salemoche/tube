@@ -3,21 +3,21 @@ import { BackgroundStyles } from './background.styles';
 
 const BackgroundComponent = () => {
 
-  const [circleCount, setCircleCount] = useState(24);
+  const [circleCols, setCircleCols] = useState(24);
   const [circles, setCircles] = useState([])
 
   useEffect(() => {
 
     let circleArray = []
 
-    for (let count = 0; count < circleCount; count++) {
+    for (let count = 0; count < circleCols; count++) {
       circleArray.push(count)
     }
 
     setCircles(circleArray)
     console.log(circles)
 
-  }, [circleCount])
+  }, [circleCols])
   
 
   return (

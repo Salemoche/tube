@@ -27,6 +27,13 @@
             "label": "Spacing Right",
             "placeholder": ""
           }
+        },
+        "width": {
+          "type": "Number",
+          "config": {
+            "label": "Width",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

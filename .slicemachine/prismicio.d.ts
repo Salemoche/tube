@@ -19,6 +19,39 @@ interface AboutPageDocumentData {
      *
      */
     intro: prismicT.RichTextField;
+    /**
+     * Meta Title field in *About Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *About Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
+    /**
+     * Meta Thumbnail field in *About Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.meta_thumbnail
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_thumbnail: prismicT.ImageField<never>;
 }
 /**
  * About Page document from Prismic
@@ -43,6 +76,39 @@ interface ArtistPageDocumentData {
      *
      */
     slices: prismicT.SliceZone<ArtistPageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *Artist Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: artist_page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *Artist Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: artist_page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
+    /**
+     * Meta Thumbnail field in *Artist Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: artist_page.meta_thumbnail
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_thumbnail: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Artist Page → Slice Zone*
@@ -72,6 +138,39 @@ interface ContactPageDocumentData {
      *
      */
     slices: prismicT.SliceZone<ContactPageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *Contact Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *Contact Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
+    /**
+     * Meta Thumbnail field in *Contact Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_page.meta_thumbnail
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_thumbnail: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Contact Page → Slice Zone*
@@ -112,6 +211,39 @@ interface DefaultPageDocumentData {
      *
      */
     slices: prismicT.SliceZone<DefaultPageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *Default Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: default_page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *Default Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: default_page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
+    /**
+     * Meta Thumbnail field in *Default Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: default_page.meta_thumbnail
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_thumbnail: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Default Page → Slice Zone*
@@ -203,6 +335,39 @@ interface ExhibitionsPageDocumentData {
      *
      */
     slices: prismicT.SliceZone<ExhibitionsPageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *Exhibitions Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibitions_page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *Exhibitions Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibitions_page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
+    /**
+     * Meta Thumbnail field in *Exhibitions Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibitions_page.meta_thumbnail
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_thumbnail: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Exhibitions Page → Slice Zone*
@@ -261,6 +426,39 @@ interface NewsPageDocumentData {
      *
      */
     slices: prismicT.SliceZone<NewsPageDocumentDataSlicesSlice>;
+    /**
+     * Meta Title field in *News Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news_page.meta_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * Meta Description field in *News Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news_page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
+    /**
+     * Meta Thumbnail field in *News Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news_page.meta_thumbnail
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_thumbnail: prismicT.ImageField<never>;
 }
 /**
  * Slice for *News Page → Slice Zone*
@@ -301,6 +499,17 @@ interface NewsDocumentData {
      *
      */
     thumbnail: prismicT.ImageField<never>;
+    /**
+     * Summary field in *News*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: News summary for overview
+     * - **API ID Path**: news.summary
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    summary: prismicT.RichTextField;
     /**
      * Content field in *News*
      *
@@ -379,7 +588,7 @@ export type ArtistSlice = prismicT.SharedSlice<"artist", ArtistSliceVariation>;
  */
 interface ContactItemSliceDefaultPrimary {
     /**
-     * Title field in *ContactItem → Primary*
+     * Content field in *ContactItem → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: Contact Information
@@ -729,6 +938,16 @@ interface NewsItemSliceDefaultPrimary {
      *
      */
     spacing_right: prismicT.NumberField;
+    /**
+     * Width field in *NewsItem → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news_item.primary.width
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    width: prismicT.NumberField;
 }
 /**
  * Default variation for NewsItem Slice

@@ -5,9 +5,46 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Culpa labore enim excepteur et pariatur mollit irure aliqua aliqua elit consectetur anim. Officia mollit ut labore ut aliqua. Et labore eiusmod aliqua laborum."
+          "text": "Magna labore consequat nulla nostrud adipisicing Lorem id et reprehenderit reprehenderit officia. Irure esse aute dolor labore consectetur mollit."
         }
       }
     ]
+  },
+  "meta_title": {
+    "__TYPE__": "FieldContent",
+    "value": "happen",
+    "type": "Text"
+  },
+  "meta_description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Amet id magna magna cupidatat labore anim ullamco nulla. Eiusmod Lorem adipisicing irure ullamco commodo cillum veniam aliqua."
+        }
+      }
+    ]
+  },
+  "meta_thumbnail": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+      "width": 4000,
+      "height": 6000
+    },
+    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+    "width": 4000,
+    "height": 6000,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   }
 }

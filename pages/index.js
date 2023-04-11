@@ -5,8 +5,15 @@ import LayoutComponent from '../components/layout/layout.component';
 import NavigationComponent from '../components/navigation/navigation.component';
 
 export default function ExhibitionsPage({ page, navigation }) {
+
+  console.log(page)
   return (
-    <LayoutComponent header={ <NavigationComponent navigation={navigation} />  }>
+    <LayoutComponent 
+      title={page.data.meta_title}
+      description={page.data.meta_description.text}
+      image={page.data.meta_thumbnail.url}
+      header={ <NavigationComponent navigation={navigation} />  }
+    >
       <h1>Exhibitions</h1>
       <SliceZone slices={page.data.slices} components={components} />
     </LayoutComponent>
@@ -19,6 +26,9 @@ export async function getStaticProps({ previewData }) {
   const page = await client.getSingle('exhibitions_page', {
     graphQuery: `{
       exhibitions_page {
+        meta_title
+        meta_description
+        meta_thumbnail
         slices {
           ...on exhibition_slice {
             variation {

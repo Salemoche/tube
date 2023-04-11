@@ -16,6 +16,32 @@
           }
         }
       }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph"
+        }
+      },
+      "meta_thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
     }
   }
 }

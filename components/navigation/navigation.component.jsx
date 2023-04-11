@@ -4,8 +4,6 @@ const NavigationComponent = ({ navigation }) => {
 
   const menuItems = navigation.data.slices;
 
-  console.log( menuItems )
-
   return (
     <nav>
       <ul>

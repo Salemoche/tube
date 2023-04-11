@@ -1,36 +1,40 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { ContactItemStyles, NewsletterItemStyles } from './contact-item.styles';
 
 /**
  * @typedef {import("@prismicio/client").Content.ContactItemSlice} ContactItemSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ContactItemSlice>} ContactItemProps
  * @param { ContactItemProps }
  */
-const ContactItem = ({ slice }) => (
+
+const DefaultItem = ({ props }) => {
+  return (
+    <ContactItemStyles>
+      <PrismicRichText field={props.primary.title}/>
+    </ContactItemStyles>
+  )
+}
+
+const NewsletterItem = ({props: { primary: { email_placeholder, intro, subscribe_button }}} ) => {
+
+  return (
+    <NewsletterItemStyles>
+      <PrismicRichText field={intro}/>
+    </NewsletterItemStyles>
+  )
+}
+
+const ContactItem = ({ slice }) => {
+
+  const variation = slice.variation;
+
+  return (
   <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+    { variation == 'default' && <DefaultItem props={slice}/>}
+    { variation == 'newsletter' && <NewsletterItem props={slice}/>}
   </section>
-)
+  )
+}
 
 export default ContactItem

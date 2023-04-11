@@ -1,14 +1,14 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "bean",
+    "value": "height",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "default_text$6af230a6-3074-4840-826b-722fa10dc715",
+        "key": "default_text$d3511d7e-8011-4b21-ac3e-f66cbd4d55ec",
         "name": "default_text",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -20,7 +20,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Magna ad consequat aute anim nisi minim amet ut ipsum eiusmod dolore cillum laboris."
+                    "text": "Amet exercitation ipsum quis deserunt qui aute exercitation. Sit sint sint quis dolore culpa est id enim qui consectetur deserunt pariatur."
                   }
                 }
               ]
@@ -35,5 +35,42 @@
         }
       }
     ]
+  },
+  "meta_title": {
+    "__TYPE__": "FieldContent",
+    "value": "courage",
+    "type": "Text"
+  },
+  "meta_description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Cillum non veniam esse anim culpa laborum eu elit labore fugiat non minim consequat."
+        }
+      }
+    ]
+  },
+  "meta_thumbnail": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+      "width": 3277,
+      "height": 4092
+    },
+    "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+    "width": 3277,
+    "height": 4092,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   }
 }

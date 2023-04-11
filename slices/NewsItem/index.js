@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
+import { NewsStyles } from './news.styles';
 
 /**
  * @typedef {import("@prismicio/client").Content.NewsItemSlice} NewsItemSlice
@@ -9,20 +10,23 @@ import { PrismicNextImage } from '@prismicio/next'
  */
 const NewsItem = ({ slice }) => {
   const news = slice.primary?.news?.data;
+  const spacingRight = slice.spacing_right;
+  const width = slice.width;
+  
+  console.log(news)
 
   return (
-    <article>
+    <NewsStyles>
       <div>
         <PrismicNextImage field={news.thumbnail} />
       </div>
-      <span className="title">
-        {
-          news.content ?
-          <PrismicRichText field={news.content}/>
-          : <h2>Template slice, update me!</h2>
-        }
-      </span>
-    </article>
+      { news.title && <h2 className="title">{ news.title }</h2>}
+      { news.summary && 
+        <span className="summary">
+          <PrismicRichText field={news.summary}/>
+        </span>
+      }
+    </NewsStyles>
   )
 }
 

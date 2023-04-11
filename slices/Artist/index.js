@@ -1,36 +1,21 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { ArtistStyles } from './artist.styles'
 
 /**
  * @typedef {import("@prismicio/client").Content.ArtistSlice} ArtistSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ArtistSlice>} ArtistProps
  * @param { ArtistProps }
  */
-const Artist = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+const Artist = ({ slice, index, slices }) => {
+
+  return (
+    <ArtistStyles>
+      <p className="index">{index + 1 >= 10 ? `${index + 1}` : `0${index+1}`}</p>
+      { slice.primary.name && <p className="name">{slice.primary.name}</p>}
+      { slice.primary.information && <PrismicRichText field={slice.primary.information}/>}
+    </ArtistStyles>
+  )
+}
 
 export default Artist
