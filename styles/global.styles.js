@@ -38,6 +38,8 @@ main {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+
+  ${ props => getFontSize('M', props)}
 }
 
 main {

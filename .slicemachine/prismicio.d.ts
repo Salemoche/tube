@@ -939,6 +939,16 @@ interface NewsItemSliceDefaultPrimary {
      */
     spacing_right: prismicT.NumberField;
     /**
+     * Spacing Top field in *NewsItem → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news_item.primary.spacing_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    spacing_top: prismicT.NumberField;
+    /**
      * Width field in *NewsItem → Primary*
      *
      * - **Field Type**: Number

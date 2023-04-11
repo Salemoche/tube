@@ -10,21 +10,26 @@ import { NewsStyles } from './news.styles';
  */
 const NewsItem = ({ slice }) => {
   const news = slice.primary?.news?.data;
-  const spacingRight = slice.spacing_right;
-  const width = slice.width;
+  const spacingRight = slice.primary.spacing_right || 0;
+  const spacingTop = slice.primary.spacing_top || 0;
+  const width = slice.primary.width || 3;
   
-  // console.log(news)
+  console.log(slice)
 
   return (
-    <NewsStyles>
-      <div>
+    <NewsStyles 
+      spacingRight={spacingRight} 
+      spacingTop={spacingTop} 
+      width={width}
+    >
+      <div className="thumbnail">
         <PrismicNextImage field={news.thumbnail} />
       </div>
       { news.title && <h2 className="title">{ news.title }</h2>}
       { news.summary && 
-        <span className="summary">
+        <div className="summary">
           <PrismicRichText field={news.summary}/>
-        </span>
+        </div>
       }
     </NewsStyles>
   )

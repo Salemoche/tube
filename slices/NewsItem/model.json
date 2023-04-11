@@ -28,6 +28,13 @@
             "placeholder": ""
           }
         },
+        "spacing_top": {
+          "type": "Number",
+          "config": {
+            "label": "Spacing Top",
+            "placeholder": ""
+          }
+        },
         "width": {
           "type": "Number",
           "config": {

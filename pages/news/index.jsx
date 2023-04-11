@@ -4,6 +4,7 @@ import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
 import { ContentStyles } from '../../styles/global.components';
+import { NewsContainerStyles } from './news.styles';
 
 export default function NewsPage({ page, navigation }) {
   
@@ -15,7 +16,9 @@ export default function NewsPage({ page, navigation }) {
       header={ <NavigationComponent navigation={navigation} />  }
     >
       <ContentStyles>
-        <SliceZone slices={page.data.slices} components={components} />
+        <NewsContainerStyles>
+          <SliceZone slices={page.data.slices} components={components} />
+        </NewsContainerStyles>
       </ContentStyles>
     </LayoutComponent>
   )
@@ -35,6 +38,8 @@ export async function getStaticProps({ previewData }) {
               ... on default {
                 primary {
                   spacing_right
+                  spacing_top
+                  width
                   news {
                     ...on news {
                       title
