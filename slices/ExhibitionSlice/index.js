@@ -1,6 +1,8 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next';
+import { ExhibitionSliceStyles, ExhibitionTitleStyles, ExhibitionDateStyles, ExhibitionContentStyles } from './exhibition-slice.style';
+import { defaultTheme } from '@/styles/theme';
 
 /**
  * @typedef {import("@prismicio/client").Content.ExhibitionSliceSlice} ExhibitionSliceSlice
@@ -14,21 +16,64 @@ const ExhibitionSlice = ({ slice }) => {
     if ( slice.primary.show_on_exhibitions_page ) return slice.primary
   });
 
-  console.log(images)
+  const startDate = new Date(exhibition.data.start_date);
+  const endDate = new Date(exhibition.data.end_date);
 
   //TODO: find out why the primary isn't filtered
 
+
   return (
-    <section>
-      <h2>{ exhibition.data.title }</h2>
+    <ExhibitionSliceStyles>
+      <div className="exhibition-info">
+        <ExhibitionTitleStyles
+          width={slice.primary.width_title}
+          left={slice.primary.horizontal_alignment_title}
+          top={slice.primary.vertical_alignment_title}
+        >
+          { exhibition.data.title }
+        </ExhibitionTitleStyles>
+        <ExhibitionDateStyles 
+          width={slice.primary.width_date}
+          left={slice.primary.horizontal_alignment_date}
+          top={slice.primary.vertical_alignment_date}
+        >
+          <span>{ 
+            startDate.toLocaleDateString('en-GB', {
+              month: '2-digit',
+              year: '2-digit',
+            }).replace(/\//g, '.') }
+          </span>
+          <span>–</span>
+          <span>{ 
+              endDate.toLocaleDateString('en-GB', {
+                month: '2-digit',
+                year: '2-digit',
+              }).replace(/\//g, '.') }
+          </span>
+        </ExhibitionDateStyles>
+      </div>
       { images.map(( image, i ) => {
-          return (<div className='image' key={`image-${i}`}>
-            <PrismicNextImage field={ image.primary.image } />
+        return (
+          <ExhibitionContentStyles 
+            className='image' 
+            key={`image-${i}`}
+            spacingLeft={ image.primary.spacing_left}
+            spacingRight={ image.primary.spacing_right}
+            spacingTop={ image.primary.spacing_top}
+            width={ image.primary.width}
+            spacingLeftTablet={ Math.floor(image.primary.spacing_left * defaultTheme.tabletMultiplier)}
+            spacingRightTablet={ Math.floor(image.primary.spacing_right * defaultTheme.tabletMultiplier)}
+            spacingTopTablet={ Math.floor(image.primary.spacing_top * defaultTheme.tabletMultiplier)}
+            widthTablet={ Math.floor(image.primary.width * defaultTheme.tabletMultiplier)}
+          >
+            { image.primary.image && <PrismicNextImage field={ image.primary.image } /> }
             { image.primary.title?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}
             <PrismicRichText field={image.primary.description}/>
-          </div>)}
+          </ExhibitionContentStyles>
+        )
+      }
       )}
-    </section>
+    </ExhibitionSliceStyles>
   )
 }
 

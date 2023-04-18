@@ -21,6 +21,7 @@ export const defaultTheme = {
     'M': '16px',
     'L': '32px',
     'XL': '64px',
+    'XXL': '128px',
   },
   fontSizes: {
     'S': {
@@ -50,5 +51,6 @@ export const defaultTheme = {
   },
   transitions: {
     'default': '.3s'
-  }
+  },
+  tabletMultiplier: 0.75
 }

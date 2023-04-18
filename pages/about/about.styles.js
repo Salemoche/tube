@@ -19,4 +19,11 @@ export const AboutContentStyles = styled(ColumnContentComponent)`
       z-index: -1
     }
   }
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
+    .image img {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 `

@@ -35,6 +35,13 @@
             "placeholder": ""
           }
         },
+        "width_title": {
+          "type": "Number",
+          "config": {
+            "label": "Width (Title)",
+            "placeholder": ""
+          }
+        },
         "horizontal_alignment_date": {
           "type": "Number",
           "config": {
@@ -46,6 +53,13 @@
           "type": "Number",
           "config": {
             "label": "Vertical Alignment (Date)",
+            "placeholder": ""
+          }
+        },
+        "width_date": {
+          "type": "Number",
+          "config": {
+            "label": "Width (Date)",
             "placeholder": ""
           }
         }

@@ -8,13 +8,13 @@ export const NavigationStyles = styled('nav')`
   top: 0;
   display: flex;
   z-index: 1;
-  padding: ${({ theme }) => theme.spacing.SR } ${({ theme }) => theme.spacing.XLR };;
+  padding: ${({ theme }) => theme.spacing.SR } ${({ theme }) => theme.spacing.XLR };
 
   .logo {
     user-select: none;
-    font-size: 5vw;
+    font-size: 3.5vw;
     line-height: 1.2;
-    margin-right: ${({ theme }) => theme.spacing.LR };
+    width: calc(5 * var(--circle-width));
 
     /* transition: color ${props => props.theme.transitions.default};
     &:hover {
@@ -31,6 +31,10 @@ export const NavigationStyles = styled('nav')`
       margin-right: ${({ theme }) => theme.spacing.LR };
       font-size: 2vw;
 
+      &:last-of-type {
+        margin-right: 0;
+      }
+
       a { 
         color: ${({ theme }) => theme.colors.gray };
         transition: color ${props => props.theme.transitions.default};
@@ -45,6 +49,10 @@ export const NavigationStyles = styled('nav')`
         }
       }
     }
+  }
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
+    padding: ${({ theme }) => theme.spacing.SR } ${({ theme }) => theme.spacing.SR };
   }
 
 `

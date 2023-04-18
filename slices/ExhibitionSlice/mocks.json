@@ -29,6 +29,16 @@
         "__TYPE__": "FieldContent",
         "value": "97",
         "type": "Number"
+      },
+      "width_title": {
+        "__TYPE__": "FieldContent",
+        "value": "18",
+        "type": "Number"
+      },
+      "width_date": {
+        "__TYPE__": "FieldContent",
+        "value": "84",
+        "type": "Number"
       }
     },
     "items": [

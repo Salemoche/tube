@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Percent"
+              "text": "Horse"
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Nisi officia commodo esse in officia incididunt aute exercitation anim incididunt magna esse ad ad. Nisi aute sit elit reprehenderit exercitation ullamco duis ullamco esse."
+              "text": "Enim non consectetur laboris esse amet consectetur excepteur Lorem anim do voluptate id nostrud. Velit ipsum consequat elit cillum culpa irure velit excepteur eu non qui quis sit reprehenderit."
             }
           }
         ]
@@ -52,9 +52,24 @@
         "__TYPE__": "BooleanContent",
         "value": true
       },
-      "horizontal_alignment": {
+      "spacing_left": {
         "__TYPE__": "FieldContent",
-        "value": "8",
+        "value": "2",
+        "type": "Number"
+      },
+      "spacing_right": {
+        "__TYPE__": "FieldContent",
+        "value": "41",
+        "type": "Number"
+      },
+      "spacing_top": {
+        "__TYPE__": "FieldContent",
+        "value": "21",
+        "type": "Number"
+      },
+      "width": {
+        "__TYPE__": "FieldContent",
+        "value": "30",
         "type": "Number"
       }
     },

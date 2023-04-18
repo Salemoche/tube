@@ -17,23 +17,26 @@ export default function App({ Component, pageProps }) {
   const resizeScripts = e => {
 
     const windowWidth = window.innerWidth;
+    let circleCount = 18
 
     switch (true) {
       case windowWidth > defaultTheme.breakpoints['L']:
-        store.circleCount = 18
+        circleCount = 18
         break;
       case windowWidth >= defaultTheme.breakpoints['S']:
-        store.circleCount = 12
+        circleCount = 12
         break;
       case windowWidth < defaultTheme.breakpoints['S']:
-        store.circleCount = 6
+        circleCount = 6
         break;
       default:
-        store.circleCount = 24
+        circleCount = 18
         break;
     }
 
-    let circleWidth = Math.floor( windowWidth / snap.circleCount );
+    store.circleCount = circleCount
+
+    let circleWidth = Math.floor( windowWidth / circleCount );
     document.documentElement.style.setProperty('--circle-width', `${circleWidth}px`)
   }
 

@@ -55,6 +55,7 @@ h5,
 h6 {
   text-decoration: none;
   font-size: inherit;
+  font-weight: inherit;
 }
 
 a {
@@ -85,6 +86,11 @@ input[type=submit],
   border: none;
   background: none;
   cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 

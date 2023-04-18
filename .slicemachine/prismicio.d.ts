@@ -772,12 +772,12 @@ type DefaultTextSliceVariation = DefaultTextSliceDefault;
  */
 export type DefaultTextSlice = prismicT.SharedSlice<"default_text", DefaultTextSliceVariation>;
 /**
- * Primary content in ExhibitionImage → Primary
+ * Primary content in ExhibitionContent → Primary
  *
  */
 interface ExhibitionImageSliceDefaultPrimary {
     /**
-     * Image field in *ExhibitionImage → Primary*
+     * Image field in *ExhibitionContent → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -787,49 +787,79 @@ interface ExhibitionImageSliceDefaultPrimary {
      */
     image: prismicT.ImageField<never>;
     /**
-     * Title field in *ExhibitionImage → Primary*
+     * Title field in *ExhibitionContent → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: Image title
+     * - **Placeholder**: Title
      * - **API ID Path**: exhibition_image.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     title: prismicT.TitleField;
     /**
-     * Description field in *ExhibitionImage → Primary*
+     * Description field in *ExhibitionContent → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: Image Description
+     * - **Placeholder**: Description
      * - **API ID Path**: exhibition_image.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     description: prismicT.RichTextField;
     /**
-     * Show on Exhibitions Page field in *ExhibitionImage → Primary*
+     * Show on Exhibitions Page field in *ExhibitionContent → Primary*
      *
      * - **Field Type**: Boolean
      * - **Placeholder**: *None*
-     * - **Default Value**: true
+     * - **Default Value**: false
      * - **API ID Path**: exhibition_image.primary.show_on_exhibitions_page
      * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
      *
      */
     show_on_exhibitions_page: prismicT.BooleanField;
     /**
-     * Horizontal Alignment field in *ExhibitionImage → Primary*
+     * Spacing Left field in *ExhibitionContent → Primary*
      *
      * - **Field Type**: Number
-     * - **Placeholder**: One Unit (Circle) is 1/24
-     * - **API ID Path**: exhibition_image.primary.horizontal_alignment
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_image.primary.spacing_left
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
      */
-    horizontal_alignment: prismicT.NumberField;
+    spacing_left: prismicT.NumberField;
+    /**
+     * Spacing Right field in *ExhibitionContent → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_image.primary.spacing_right
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    spacing_right: prismicT.NumberField;
+    /**
+     * Spacing Top field in *ExhibitionContent → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_image.primary.spacing_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    spacing_top: prismicT.NumberField;
+    /**
+     * Width field in *ExhibitionContent → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_image.primary.width
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    width: prismicT.NumberField;
 }
 /**
- * Default variation for ExhibitionImage Slice
+ * Default variation for ExhibitionContent Slice
  *
  * - **API ID**: `default`
  * - **Description**: `ExhibitionImage`
@@ -838,12 +868,12 @@ interface ExhibitionImageSliceDefaultPrimary {
  */
 export type ExhibitionImageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ExhibitionImageSliceDefaultPrimary>, never>;
 /**
- * Slice variation for *ExhibitionImage*
+ * Slice variation for *ExhibitionContent*
  *
  */
 type ExhibitionImageSliceVariation = ExhibitionImageSliceDefault;
 /**
- * ExhibitionImage Shared Slice
+ * ExhibitionContent Shared Slice
  *
  * - **API ID**: `exhibition_image`
  * - **Description**: `ExhibitionImage`
@@ -887,6 +917,16 @@ interface ExhibitionSliceSliceDefaultPrimary {
      */
     vertical_alignment_title: prismicT.NumberField;
     /**
+     * Width (Title) field in *ExhibitionSlice → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_slice.primary.width_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    width_title: prismicT.NumberField;
+    /**
      * Horizontal Alignment (Date) field in *ExhibitionSlice → Primary*
      *
      * - **Field Type**: Number
@@ -906,6 +946,16 @@ interface ExhibitionSliceSliceDefaultPrimary {
      *
      */
     vertical_alignment_date: prismicT.NumberField;
+    /**
+     * Width (Date) field in *ExhibitionSlice → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: exhibition_slice.primary.width_date
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    width_date: prismicT.NumberField;
 }
 /**
  * Default variation for ExhibitionSlice Slice
@@ -994,6 +1044,16 @@ interface NewsItemSliceDefaultPrimary {
      *
      */
     news: prismicT.RelationField<"news">;
+    /**
+     * Spacing Left field in *NewsItem → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news_item.primary.spacing_left
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    spacing_left: prismicT.NumberField;
     /**
      * Spacing Right field in *NewsItem → Primary*
      *

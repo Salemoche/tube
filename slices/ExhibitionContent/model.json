@@ -1,7 +1,7 @@
 {
   "id": "exhibition_image",
   "type": "SharedSlice",
-  "name": "ExhibitionImage",
+  "name": "ExhibitionContent",
   "description": "ExhibitionImage",
   "variations": [
     {
@@ -23,7 +23,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Title",
-            "placeholder": "Image title",
+            "placeholder": "Title",
             "allowTargetBlank": true,
             "single": "heading1"
           }
@@ -32,7 +32,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Description",
-            "placeholder": "Image Description",
+            "placeholder": "Description",
             "allowTargetBlank": true,
             "single": "paragraph"
           }
@@ -43,14 +43,35 @@
             "label": "Show on Exhibitions Page",
             "placeholder_false": "false",
             "placeholder_true": "true",
-            "default_value": true
+            "default_value": false
           }
         },
-        "horizontal_alignment": {
+        "spacing_left": {
           "type": "Number",
           "config": {
-            "label": "Horizontal Alignment",
-            "placeholder": "One Unit (Circle) is 1/24"
+            "label": "Spacing Left",
+            "placeholder": ""
+          }
+        },
+        "spacing_right": {
+          "type": "Number",
+          "config": {
+            "label": "Spacing Right",
+            "placeholder": ""
+          }
+        },
+        "spacing_top": {
+          "type": "Number",
+          "config": {
+            "label": "Spacing Top",
+            "placeholder": ""
+          }
+        },
+        "width": {
+          "type": "Number",
+          "config": {
+            "label": "Width",
+            "placeholder": ""
           }
         }
       },

@@ -38,6 +38,7 @@ export async function getStaticProps({ previewData }) {
               ... on default {
                 primary {
                   spacing_right
+                  spacing_left
                   spacing_top
                   width
                   news {

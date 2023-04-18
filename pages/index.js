@@ -6,8 +6,6 @@ import NavigationComponent from '../components/navigation/navigation.component';
 import { ContentStyles } from '../styles/global.components';
 
 export default function ExhibitionsPage({ page, navigation }) {
-
-  console.log(page)
   return (
     <LayoutComponent 
       title={page.data.meta_title}
@@ -16,7 +14,6 @@ export default function ExhibitionsPage({ page, navigation }) {
       header={ <NavigationComponent navigation={navigation} />  }
     >
       <ContentStyles>
-        <h1>Exhibitions</h1>
         <SliceZone slices={page.data.slices} components={components} />
       </ContentStyles>
     </LayoutComponent>
@@ -37,6 +34,12 @@ export async function getStaticProps({ previewData }) {
             variation {
               ... on default {
                 primary {
+                  width_title
+                  horizontal_alignment_title
+                  vertical_alignment_title
+                  width_date
+                  horizontal_alignment_date
+                  vertical_alignment_date
                   exhibition {
                     ... on exhibition {
                       title
@@ -51,7 +54,10 @@ export async function getStaticProps({ previewData }) {
                                 title
                                 description
                                 show_on_exhibitions_page
-                                horizontal_alignment
+                                spacing_right
+                                spacing_left
+                                spacing_top
+                                width
                               }
                             }
                           }

@@ -17,7 +17,7 @@ export default function AboutPage({ page, navigation }) {
       header={ <NavigationComponent navigation={navigation} />  }
     >
       <AboutContentStyles>
-        <div className="column-1 content-column">
+        <div className="column-1 column content-column">
           <div className="intro">
             {/* { page.data.intro && <PrismicRichText field={page.data.intro} />} */}
             TODO: "We offer a platform for artists to build and reimagine what the future could be, by promoting cultural exchange and intercultural and inter-medial dialogue. We believe that art can help us better understand ourselves and the world around us."
@@ -27,7 +27,7 @@ export default function AboutPage({ page, navigation }) {
             <PrismicNextImage field={page.data.map}/>
           </div>
         </div>
-        <div className="column-2 images-column">
+        <div className="column-2 column images-column">
           <div className="image">
             <PrismicNextImage field={page.data.image}/>
           </div>

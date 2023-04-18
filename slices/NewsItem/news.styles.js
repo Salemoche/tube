@@ -20,4 +20,19 @@ export const NewsStyles = styled('article')`
     text-decoration: underline;
     margin-bottom: ${({ theme }) => theme.spacing.XSR };
   }
+
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
+    /* margin-top: 0; */
+    margin-bottom: var(--circle-width);
+    margin-right: var(--circle-width);
+    width: calc( 4 * var(--circle-width) - 3px);
+  }
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: ${({ theme }) => theme.spacing.XL };
+  }
 `

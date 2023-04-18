@@ -24,6 +24,11 @@
         "__TYPE__": "FieldContent",
         "value": "20",
         "type": "Number"
+      },
+      "spacing_left": {
+        "__TYPE__": "FieldContent",
+        "value": "21",
+        "type": "Number"
       }
     },
     "items": [

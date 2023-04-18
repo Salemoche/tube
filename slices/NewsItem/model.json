@@ -21,6 +21,13 @@
             ]
           }
         },
+        "spacing_left": {
+          "type": "Number",
+          "config": {
+            "label": "Spacing Left",
+            "placeholder": ""
+          }
+        },
         "spacing_right": {
           "type": "Number",
           "config": {
