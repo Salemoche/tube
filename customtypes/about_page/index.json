@@ -13,6 +13,29 @@
           "allowTargetBlank": true,
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "map_label": {
+        "type": "Text",
+        "config": {
+          "label": "Map Label",
+          "placeholder": ""
+        }
+      },
+      "map": {
+        "type": "Image",
+        "config": {
+          "label": "Map",
+          "constraint": {},
+          "thumbnails": []
+        }
       }
     },
     "SEO": {

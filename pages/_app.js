@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
 
     switch (true) {
       case windowWidth > defaultTheme.breakpoints['L']:
-        store.circleCount = 24
+        store.circleCount = 18
         break;
       case windowWidth >= defaultTheme.breakpoints['S']:
         store.circleCount = 12

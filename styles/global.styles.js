@@ -74,6 +74,19 @@ p > a {
   }
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
+button,
+input[type=submit],
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 
 /**========================
 *	Utility Classes

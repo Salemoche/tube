@@ -21,38 +21,5 @@
         "value": []
       }
     ]
-  },
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "newsletter",
-    "primary": {
-      "intro": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Dolore eiusmod veniam adipisicing nulla pariatur enim ipsum. Cillum enim excepteur sit adipisicing minim."
-            }
-          }
-        ]
-      },
-      "email_placeholder": {
-        "__TYPE__": "FieldContent",
-        "value": "evidence",
-        "type": "Text"
-      },
-      "subscribe_button": {
-        "__TYPE__": "FieldContent",
-        "value": "creature",
-        "type": "Text"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
   }
 ]

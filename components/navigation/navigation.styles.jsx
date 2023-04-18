@@ -7,12 +7,12 @@ export const NavigationStyles = styled('nav')`
   top: 0;
   display: flex;
   z-index: 1;
-  padding: ${({ theme }) => theme.spacing.S } ${({ theme }) => theme.spacing.XL };;
+  padding: ${({ theme }) => theme.spacing.SR } ${({ theme }) => theme.spacing.XLR };;
 
   .logo {
     user-select: none;
     font-size: 72px;
-    margin-right: ${({ theme }) => theme.spacing.L };
+    margin-right: ${({ theme }) => theme.spacing.LR };
   }
 
   .menu {
@@ -21,7 +21,7 @@ export const NavigationStyles = styled('nav')`
     align-items: center;
 
     .menu-item {
-      margin-right: ${({ theme }) => theme.spacing.L };
+      margin-right: ${({ theme }) => theme.spacing.LR };
 
       a { 
         color: ${({ theme }) => theme.colors.gray };

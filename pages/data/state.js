@@ -1,4 +1,4 @@
 export const baseState = {
-  circleCount: 24,
+  circleCount: 18,
   circleWidth: 0,
 }

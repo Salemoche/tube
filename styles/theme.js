@@ -11,22 +11,27 @@ export const defaultTheme = {
     gray: '#B4B4B4',
   },
   spacing: {
-    'XS': 'calc( var(--circle-width) / 8)',
-    'S': 'calc( var(--circle-width) / 4)',
-    'M': 'calc( var(--circle-width) / 2)',
-    'L': 'calc( var(--circle-width) * 0.75)',
-    'XL': 'calc( var(--circle-width))',
+    'XSR': 'calc( var(--circle-width) / 8)',
+    'SR': 'calc( var(--circle-width) / 4)',
+    'MR': 'calc( var(--circle-width) / 2)',
+    'LR': 'calc( var(--circle-width) * 0.75)',
+    'XLR': 'calc( var(--circle-width))',
+    'XS': '4px',
+    'S': '8px',
+    'M': '16px',
+    'L': '32px',
+    'XL': '64px',
   },
   fontSizes: {
     'S': {
       unit: 'px',
-      fontSize: 16,
+      fontSize: 14,
       lineHeight: 1.4,
       letterSpacing: 0
     },
     'M': {
       unit: 'px',
-      fontSize: 21,
+      fontSize: 16,
       lineHeight: 1.4,
       letterSpacing: 0
     },

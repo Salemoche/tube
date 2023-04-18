@@ -8,7 +8,7 @@ export const NewsStyles = styled('article')`
 
   .thumbnail {
     width: 100%;
-    margin-bottom: ${({ theme }) => theme.spacing.M };
+    margin-bottom: ${({ theme }) => theme.spacing.MR };
 
     img {
       width: 100%;
@@ -18,6 +18,6 @@ export const NewsStyles = styled('article')`
 
   .title {
     text-decoration: underline;
-    margin-bottom: ${({ theme }) => theme.spacing.XS };
+    margin-bottom: ${({ theme }) => theme.spacing.XSR };
   }
 `

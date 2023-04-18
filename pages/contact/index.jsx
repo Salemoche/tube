@@ -1,16 +1,17 @@
-import { SliceZone } from '@prismicio/react'
+import { PrismicRichText, SliceZone } from '@prismicio/react'
 import { createClient } from '../../prismicio'
 import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
-import { ContentStyles } from '../../styles/global.components';
 import { proxy, useSnapshot } from 'valtio';
 import { baseState } from '../data/state';
+import { ContactContentStyles } from './contact.styles';
 
 export default function ContactPage({ page, navigation }) {
 
   const store = proxy(baseState);
   const snap = useSnapshot(store);
+  console.log(page)
 
   return (
     <LayoutComponent
@@ -19,9 +20,22 @@ export default function ContactPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <ContentStyles circleCount={snap.circleCount}>
-        <SliceZone slices={page.data.slices} components={components} />
-      </ContentStyles>
+      <ContactContentStyles circleCount={snap.circleCount}>
+        <div className="column address-column">
+          <SliceZone slices={page.data.slices} components={components} />
+        </div>
+        <div className="column newsletter-column">
+          <div className="newsletter-form">
+            <div className="newsletter-intro">  
+              <PrismicRichText field={page.data.intro}/>
+            </div>
+            <div className="newsletter-form">
+              <input className="newsletter-input" type="text" placeholder={page.data.newsletter_placeholder}/>
+              <input className="newsletter-submit"  type="submit" value={page.data.subscribe_button} />
+            </div>
+          </div>
+        </div>
+      </ContactContentStyles>
     </LayoutComponent>
   )
 }

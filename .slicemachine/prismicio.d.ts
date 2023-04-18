@@ -20,6 +20,39 @@ interface AboutPageDocumentData {
      */
     intro: prismicT.RichTextField;
     /**
+     * Image field in *About Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Map Label field in *About Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.map_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    map_label: prismicT.KeyTextField;
+    /**
+     * Map field in *About Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.map
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    map: prismicT.ImageField<never>;
+    /**
      * Meta Title field in *About Page*
      *
      * - **Field Type**: Text
@@ -127,6 +160,39 @@ type ArtistPageDocumentDataSlicesSlice = ArtistSlice;
 export type ArtistPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ArtistPageDocumentData>, "artist_page", Lang>;
 /** Content for Contact Page documents */
 interface ContactPageDocumentData {
+    /**
+     * Intro field in *Contact Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_page.intro
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    intro: prismicT.RichTextField;
+    /**
+     * Newsletter Placeholder field in *Contact Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_page.newsletter_placeholder
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    newsletter_placeholder: prismicT.KeyTextField;
+    /**
+     * Subscribe Button field in *Contact Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_page.subscribe_button
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subscribe_button: prismicT.KeyTextField;
     /**
      * Slice Zone field in *Contact Page*
      *

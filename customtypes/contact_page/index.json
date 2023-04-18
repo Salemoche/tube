@@ -5,6 +5,29 @@
   "status": true,
   "json": {
     "Main": {
+      "intro": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Intro",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "newsletter_placeholder": {
+        "type": "Text",
+        "config": {
+          "label": "Newsletter Placeholder",
+          "placeholder": ""
+        }
+      },
+      "subscribe_button": {
+        "type": "Text",
+        "config": {
+          "label": "Subscribe Button",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
