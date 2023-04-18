@@ -20,7 +20,7 @@ const LayoutComponent = ({ children, title = 'Tube Gallery', description = 'Tube
         </header>
       }
       <main>
-        {/* <BackgroundComponent/> */}
+        <BackgroundComponent/>
         { children }
       </main>
     </>

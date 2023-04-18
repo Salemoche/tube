@@ -1,33 +1,39 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BackgroundStyles } from './background.styles';
 import { baseState } from '../../pages/data/state';
 import { proxy, useSnapshot } from 'valtio';
 
 const BackgroundComponent = () => {
 
-  const store = proxy(baseState);
-  const snap = useSnapshot(store);
+  const store = proxy(baseState)
+  const snap = useSnapshot(store)
+  const bgRef = useRef(null)
   const [circles, setCircles] = useState([])
 
-  useEffect(() => {
+  const createCircles = () => {
+    let circlesArray = []
+    const backgroundWidth = bgRef.current.offsetWidth
+    const backgroundHeight = bgRef.current.offsetHeight
+    const circleSize = backgroundWidth / snap.circleCount
+    const circleRows = Math.floor(backgroundHeight / circleSize) + 1
 
-    let circleArray = []
-
-    for (let count = 0; count < snap.circleCount; count++) {
-      circleArray.push(count)
+    for (let rows = 0; rows < circleRows; rows++) {
+      for (let cols = 0; cols < snap.circleCount; cols++) {
+        circlesArray.push(cols)
+      }
     }
 
-    setCircles(circleArray)
-    console.log(circles)
+    setCircles(circlesArray);
+  }
 
-  }, [snap])
+  useEffect(() => {
+    createCircles()
+  }, [snap, bgRef])
   
 
   return (
-    <BackgroundStyles>
-      {circles.map( (circle, i) => { 
-        return <div className="circle" key={`circle-${i}`}></div>}
-      )}
+    <BackgroundStyles ref={bgRef} circleCount={snap.circleCount}>
+      { circles.map( circle => ( <div className="circle"></div> ))}
     </BackgroundStyles>
   )
 }

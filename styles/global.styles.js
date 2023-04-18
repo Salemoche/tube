@@ -42,8 +42,9 @@ main {
   ${ props => getFontSize('M', props)}
 }
 
-main {
-
+main, body {
+  width: 100%;
+  overflow: hidden;
 }
 
 h1,
