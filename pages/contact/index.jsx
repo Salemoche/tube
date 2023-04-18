@@ -21,10 +21,10 @@ export default function ContactPage({ page, navigation }) {
       header={ <NavigationComponent navigation={navigation} />  }
     >
       <ContactContentStyles circleCount={snap.circleCount}>
-        <div className="column address-column">
+        <div className="column column-1 address-column">
           <SliceZone slices={page.data.slices} components={components} />
         </div>
-        <div className="column newsletter-column">
+        <div className="column column-2 newsletter-column">
           <div className="newsletter-form">
             <div className="newsletter-intro">  
               <PrismicRichText field={page.data.intro}/>

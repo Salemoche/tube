@@ -4,8 +4,11 @@ import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
 import { ContentStyles } from '../../styles/global.components';
+import { AboutContentStyles } from './about.styles';
+import { PrismicNextImage, PrismicRichText } from '@prismicio/next';
 
 export default function AboutPage({ page, navigation }) {
+  console.log(page.data.intro)
   return (
     <LayoutComponent
       title={page.data.meta_title}
@@ -13,9 +16,23 @@ export default function AboutPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <ContentStyles>
-        <SliceZone slices={page.data.slices} components={components} />
-      </ContentStyles>
+      <AboutContentStyles>
+        <div className="column-1 content-column">
+          <div className="intro">
+            {/* { page.data.intro && <PrismicRichText field={page.data.intro} />} */}
+            TODO: "We offer a platform for artists to build and reimagine what the future could be, by promoting cultural exchange and intercultural and inter-medial dialogue. We believe that art can help us better understand ourselves and the world around us."
+          </div>
+          <div className="map">
+            <h3>{page.data.map_label}</h3>
+            <PrismicNextImage field={page.data.map}/>
+          </div>
+        </div>
+        <div className="column-2 images-column">
+          <div className="image">
+            <PrismicNextImage field={page.data.image}/>
+          </div>
+        </div>
+      </AboutContentStyles>
     </LayoutComponent>
   )
 }

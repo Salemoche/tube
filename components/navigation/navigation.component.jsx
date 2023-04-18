@@ -1,4 +1,5 @@
 import { PrismicLink } from "@prismicio/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { NavigationStyles } from './navigation.styles';
 
@@ -18,10 +19,10 @@ const NavigationComponent = ({ navigation }) => {
 
   return (
     <NavigationStyles>
-      <div className="logo">
+      <Link className="logo" href="/">
         Tube <br/>
         Gallery
-      </div>
+      </Link>
       <ul className="menu">
         { menuItems.map(( menuItem, i ) => (
           <li className={`menu-item ${ isPath(menuItem) && 'menu-item-current'}`} key={`menu-item-${i}`}>

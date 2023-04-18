@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import getFontSize from '../../utils/getFontSize';
 
 export const NavigationStyles = styled('nav')`
   width: 100vw;
@@ -11,8 +12,14 @@ export const NavigationStyles = styled('nav')`
 
   .logo {
     user-select: none;
-    font-size: 72px;
+    font-size: 5vw;
+    line-height: 1.2;
     margin-right: ${({ theme }) => theme.spacing.LR };
+
+    /* transition: color ${props => props.theme.transitions.default};
+    &:hover {
+      color: black;
+    } */
   }
 
   .menu {
@@ -22,10 +29,11 @@ export const NavigationStyles = styled('nav')`
 
     .menu-item {
       margin-right: ${({ theme }) => theme.spacing.LR };
+      font-size: 2vw;
 
       a { 
         color: ${({ theme }) => theme.colors.gray };
-        transition: ${props => props.theme.transitions.default};
+        transition: color ${props => props.theme.transitions.default};
         &:hover {
           color: black;
         }

@@ -37,7 +37,7 @@ export const defaultTheme = {
     },
     'L': {
       unit: 'px',
-      fontSize: 35,
+      fontSize: 24,
       lineHeight: 1.4,
       letterSpacing: 0
     },
