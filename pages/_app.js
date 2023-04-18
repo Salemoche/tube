@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
 
     const windowWidth = window.innerWidth;
     let circleCount = 18
+    let deviceMode = 'desktop'
 
     switch (true) {
       case windowWidth > defaultTheme.breakpoints['L']:
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }) {
         break;
       case windowWidth < defaultTheme.breakpoints['S']:
         circleCount = 6
+        deviceMode = 'mobile'
         break;
       default:
         circleCount = 18
@@ -35,6 +37,7 @@ export default function App({ Component, pageProps }) {
     }
 
     store.circleCount = circleCount
+    store.deviceMode = deviceMode
 
     let circleWidth = Math.floor( windowWidth / circleCount );
     document.documentElement.style.setProperty('--circle-width', `${circleWidth}px`)

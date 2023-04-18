@@ -10,6 +10,7 @@ export const BackgroundStyles = styled('div')`
   top: 0;
   overflow: hidden;
   z-index: -1;
+  background: white;
 
   .circle {
     border: 0.5px solid black;
