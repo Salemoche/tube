@@ -21,10 +21,14 @@ export const NavigationStyles = styled('nav')`
     align-items: center;
 
     .menu-item {
-      margin-right: ${({ theme }) => theme.spacing.S };
+      margin-right: ${({ theme }) => theme.spacing.L };
 
       a { 
         color: ${({ theme }) => theme.colors.gray };
+        transition: ${props => props.theme.transitions.default};
+        &:hover {
+          color: black;
+        }
       }
 
       &.menu-item-current {

@@ -9,6 +9,7 @@ export const BackgroundStyles = styled('div')`
   left: 0;
   top: 0;
   overflow: hidden;
+  z-index: -1;
 
   .circle {
     border: 0.5px solid black;
@@ -18,6 +19,7 @@ export const BackgroundStyles = styled('div')`
     border-radius: 50%;
     vertical-align: top;
     opacity: 0.2;
+    pointer-events: none;
   }
 
 

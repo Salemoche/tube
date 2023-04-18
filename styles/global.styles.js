@@ -62,9 +62,16 @@ a {
   color: black;
 }
 
-p > a::after {
-  content: '↗';
-  margin-left: 0.5em;
+p > a {
+  transition: ${props => props.theme.transitions.default};
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &::after {
+    content: '↗';
+    margin-left: 0.5em;
+  }
 }
 
 

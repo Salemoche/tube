@@ -21,26 +21,29 @@ export const defaultTheme = {
     'S': {
       unit: 'px',
       fontSize: 16,
-      lineHeight: 1.2,
+      lineHeight: 1.4,
       letterSpacing: 0
     },
     'M': {
       unit: 'px',
       fontSize: 21,
-      lineHeight: 1.2,
+      lineHeight: 1.4,
       letterSpacing: 0
     },
     'L': {
       unit: 'px',
       fontSize: 35,
-      lineHeight: 1.2,
+      lineHeight: 1.4,
       letterSpacing: 0
     },
     'XL': {
       unit: 'px',
       fontSize: 10,
-      lineHeight: 1.2,
+      lineHeight: 1.4,
       letterSpacing: 0
     },
   },
+  transitions: {
+    'default': '.3s'
+  }
 }
