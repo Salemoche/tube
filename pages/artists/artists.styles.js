@@ -9,3 +9,5 @@ export const ArtistContentStyles = styled(ContentStyles)`
     width: 50%;
   }
 `
+
+export default ArtistContentStyles

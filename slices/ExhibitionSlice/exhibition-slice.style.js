@@ -7,7 +7,11 @@ export const ExhibitionSliceStyles = styled('div')`
     width: 100%;
     height: 100vh;
     font-size: 10vw;
-    opacity: 0.1;
+    /* opacity: 0.1; */
+
+    * {
+      line-height: 1.2;
+    }
   }
 `
 export const ExhibitionTitleStyles = styled('h2')`

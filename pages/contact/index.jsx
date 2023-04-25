@@ -4,7 +4,7 @@ import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
 import { proxy, useSnapshot } from 'valtio';
-import { baseState } from '../data/state';
+import { baseState } from '../../data/state';
 import { ContactContentStyles } from './contact.styles';
 
 export default function ContactPage({ page, navigation }) {

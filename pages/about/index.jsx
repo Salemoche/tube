@@ -20,7 +20,7 @@ export default function AboutPage({ page, navigation }) {
         <div className="column-1 column content-column">
           <div className="intro">
             {/* { page.data.intro && <PrismicRichText field={page.data.intro} />} */}
-            TODO: "We offer a platform for artists to build and reimagine what the future could be, by promoting cultural exchange and intercultural and inter-medial dialogue. We believe that art can help us better understand ourselves and the world around us."
+            We offer a platform for artists to build and reimagine what the future could be, by promoting cultural exchange and intercultural and inter-medial dialogue. We believe that art can help us better understand ourselves and the world around us.
           </div>
           <div className="map">
             <h3>{page.data.map_label}</h3>

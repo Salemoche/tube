@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { BackgroundStyles } from './background.styles';
-import { baseState } from '../../pages/data/state';
+import { baseState } from '../../data/state';
 import { proxy, useSnapshot } from 'valtio';
 
 const BackgroundComponent = () => {
@@ -33,7 +33,7 @@ const BackgroundComponent = () => {
 
   return (
     <BackgroundStyles ref={bgRef} circleCount={snap.circleCount}>
-      { circles.map( circle => ( <div className="circle"></div> ))}
+      { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
     </BackgroundStyles>
   )
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { NavigationStyles } from './navigation.styles';
 import { proxy, useSnapshot } from 'valtio';
-import { baseState } from '../../pages/data/state';
+import { baseState } from '../../data/state';
 import { useState } from "react";
 import BackgroundComponent from '../background/background.component';
 

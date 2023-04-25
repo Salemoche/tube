@@ -27,3 +27,5 @@ export const AboutContentStyles = styled(ColumnContentComponent)`
     }
   }
 `
+
+export default AboutContentStyles

@@ -1,0 +1,99 @@
+[
+  {
+    "intro": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Minim do Lorem officia. Et deserunt voluptate esse in ullamco officia ex occaecat ea veniam elit aute sit."
+          }
+        }
+      ]
+    },
+    "image": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+        "width": 4016,
+        "height": 6016
+      },
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+      "width": 4016,
+      "height": 6016,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "map_label": {
+      "__TYPE__": "FieldContent",
+      "value": "gently",
+      "type": "Text"
+    },
+    "map": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+        "width": 8640,
+        "height": 8640
+      },
+      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+      "width": 8640,
+      "height": 8640,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "meta_title": {
+      "__TYPE__": "FieldContent",
+      "value": "sort",
+      "type": "Text"
+    },
+    "meta_description": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Id minim magna voluptate adipisicing ipsum ipsum."
+          }
+        }
+      ]
+    },
+    "meta_thumbnail": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+        "width": 3882,
+        "height": 2584
+      },
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      "width": 3882,
+      "height": 2584,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    }
+  }
+]

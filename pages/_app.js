@@ -6,7 +6,7 @@ import GlobalStyle from '../styles/global.styles';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../styles/theme';
 import { proxy, useSnapshot } from 'valtio';
-import { baseState } from './data/state';
+import { baseState } from '../data/state';
 import { useEffect } from 'react';
 
 export default function App({ Component, pageProps }) {
@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }) {
     store.circleCount = circleCount
     store.deviceMode = deviceMode
 
-    let circleWidth = Math.floor( windowWidth / circleCount );
+    let circleWidth = windowWidth / circleCount;
     document.documentElement.style.setProperty('--circle-width', `${circleWidth}px`)
   }
 

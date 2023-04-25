@@ -25,3 +25,5 @@ export const ContactContentStyles = styled(ColumnContentComponent)`
     }
   }
 `
+
+export default ContactContentStyles
