@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { BackgroundStyles } from './background.styles';
 import { baseState } from '../../data/state';
 import { proxy, useSnapshot } from 'valtio';
+import { useScroll, motion, useMotionValueEvent } from 'framer-motion';
 
 const BackgroundComponent = () => {
 
@@ -9,6 +10,8 @@ const BackgroundComponent = () => {
   const snap = useSnapshot(store)
   const bgRef = useRef(null)
   const [circles, setCircles] = useState([])
+  const { scrollYProgress } = useScroll();
+  const [scrollYPos, setScrollYPos] = useState(0)
 
   const createCircles = () => {
     let circlesArray = []
@@ -29,11 +32,18 @@ const BackgroundComponent = () => {
   useEffect(() => {
     createCircles()
   }, [snap, bgRef])
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setScrollYPos(latest)
+    console.log(latest)
+  })
   
 
   return (
     <BackgroundStyles ref={bgRef} circleCount={snap.circleCount}>
-      { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
+      <motion.div style={{ y: (scrollYPos-1)*(400) }}>
+        { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
+      </motion.div>
     </BackgroundStyles>
   )
 }

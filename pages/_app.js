@@ -8,11 +8,14 @@ import { defaultTheme } from '../styles/theme';
 import { proxy, useSnapshot } from 'valtio';
 import { baseState } from '../data/state';
 import { useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { useScroll } from 'framer-motion';
 
 export default function App({ Component, pageProps }) {
 
   const store = proxy(baseState);
   const snap = useSnapshot(store);
+  const { scrollYProgress } = useScroll();
 
   const resizeScripts = e => {
 
@@ -58,7 +61,11 @@ export default function App({ Component, pageProps }) {
       <PrismicPreview repositoryName={repositoryName}>
         <ThemeProvider theme={defaultTheme}>
           <GlobalStyle />
-          <Component {...pageProps} />
+          <AnimatePresence
+            mode="wait"
+          >
+            <Component {...pageProps} />
+          </AnimatePresence>
         </ThemeProvider>
       </PrismicPreview>
     </PrismicProvider>

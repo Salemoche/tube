@@ -19,12 +19,14 @@ export const ExhibitionTitleStyles = styled('h2')`
   width: calc( ${ props => props.width } * var(--circle-width));
   left: calc( ${ props => props.left } * var(--circle-width));
   top: calc( ${ props => props.top } * var(--circle-width));
+  /* word-break: break-word; */
 `
 export const ExhibitionDateStyles = styled('div')`
   position: absolute;
   width: calc( ${ props => props.width } * var(--circle-width));
   left: calc( ${ props => props.left } * var(--circle-width));
   top: calc( ${ props => props.top } * var(--circle-width));
+  word-break: break-word;
 `
 
 export const ExhibitionContentStyles = styled('div')`

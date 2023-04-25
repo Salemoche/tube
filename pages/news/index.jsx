@@ -5,6 +5,7 @@ import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
 import { ContentStyles } from '../../styles/global.components';
 import { NewsContainerStyles } from './news.styles';
+import { motion } from 'framer-motion';
 
 export default function NewsPage({ page, navigation }) {
   
@@ -15,11 +16,17 @@ export default function NewsPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <ContentStyles>
-        <NewsContainerStyles>
-          <SliceZone slices={page.data.slices} components={components} />
-        </NewsContainerStyles>
-      </ContentStyles>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <ContentStyles>
+          <NewsContainerStyles>
+            <SliceZone slices={page.data.slices} components={components} />
+          </NewsContainerStyles>
+        </ContentStyles>
+      </motion.div>
     </LayoutComponent>
   )
 }

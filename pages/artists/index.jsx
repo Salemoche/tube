@@ -4,6 +4,7 @@ import { components } from '../../slices'
 import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
 import { ArtistContentStyles } from './artists.styles';
+import { motion } from 'framer-motion';
 
 export default function ArtistsPage({ page, navigation }) {
   return (
@@ -13,9 +14,15 @@ export default function ArtistsPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <ArtistContentStyles>
-        <SliceZone slices={page.data.slices} components={components} />
-      </ArtistContentStyles>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <ArtistContentStyles>
+          <SliceZone slices={page.data.slices} components={components} />
+        </ArtistContentStyles>
+      </motion.div>
     </LayoutComponent>
   )
 }

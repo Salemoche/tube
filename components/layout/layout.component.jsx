@@ -1,8 +1,10 @@
 import Head from 'next/head'
-import React from 'react'
+
 import BackgroundComponent from '../background/background.component'
 
 const LayoutComponent = ({ children, title = 'Tube Gallery', description = 'Tube Gallery Site', thumbnail = 'https://media.wired.co.uk/photos/606dba2c581351b2c44d89d3/master/w_1600,c_limit/gettyimages-881725440.jpg', header = null }) => {
+
+
   return (
     <>
       <Head>

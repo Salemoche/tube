@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next';
 import { ExhibitionSliceStyles, ExhibitionTitleStyles, ExhibitionDateStyles, ExhibitionContentStyles } from './exhibition-slice.style';
 import { defaultTheme } from '@/styles/theme';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
 /**
  * @typedef {import("@prismicio/client").Content.ExhibitionSliceSlice} ExhibitionSliceSlice
@@ -19,12 +20,22 @@ const ExhibitionSlice = ({ slice }) => {
   const startDate = new Date(exhibition.data.start_date);
   const endDate = new Date(exhibition.data.end_date);
 
+  const { scrollYProgress } = useScroll();
+  const [scrollYPos, setScrollYPos] = useState(0)
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setScrollYPos(latest)
+  })
+
   //TODO: find out why the primary isn't filtered
 
 
   return (
     <ExhibitionSliceStyles>
-      <div className="exhibition-info">
+      <motion.div 
+        style={{ y: scrollYPos * 600}}
+        className="exhibition-info"
+      >
         <ExhibitionTitleStyles
           width={slice.primary.width_title}
           left={slice.primary.horizontal_alignment_title}
@@ -51,7 +62,7 @@ const ExhibitionSlice = ({ slice }) => {
               }).replace(/\//g, '.') }
           </span>
         </ExhibitionDateStyles>
-      </div>
+      </motion.div>
       { images.map(( image, i ) => {
         return (
           <ExhibitionContentStyles 

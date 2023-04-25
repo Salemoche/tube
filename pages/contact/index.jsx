@@ -6,6 +6,8 @@ import NavigationComponent from '../../components/navigation/navigation.componen
 import { proxy, useSnapshot } from 'valtio';
 import { baseState } from '../../data/state';
 import { ContactContentStyles } from './contact.styles';
+import { motion } from 'framer-motion';
+
 
 export default function ContactPage({ page, navigation }) {
 
@@ -20,22 +22,28 @@ export default function ContactPage({ page, navigation }) {
       image={page.data.meta_thumbnail.url}
       header={ <NavigationComponent navigation={navigation} />  }
     >
-      <ContactContentStyles circleCount={snap.circleCount}>
-        <div className="column column-1 address-column">
-          <SliceZone slices={page.data.slices} components={components} />
-        </div>
-        <div className="column column-2 newsletter-column">
-          <div className="newsletter-form">
-            <div className="newsletter-intro">  
-              <PrismicRichText field={page.data.intro}/>
-            </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <ContactContentStyles circleCount={snap.circleCount}>
+          <div className="column column-1 address-column">
+            <SliceZone slices={page.data.slices} components={components} />
+          </div>
+          <div className="column column-2 newsletter-column">
             <div className="newsletter-form">
-              <input className="newsletter-input" type="text" placeholder={page.data.newsletter_placeholder}/>
-              <input className="newsletter-submit"  type="submit" value={page.data.subscribe_button} />
+              <div className="newsletter-intro">  
+                <PrismicRichText field={page.data.intro}/>
+              </div>
+              <div className="newsletter-form">
+                <input className="newsletter-input" type="text" placeholder={page.data.newsletter_placeholder}/>
+                <input className="newsletter-submit"  type="submit" value={page.data.subscribe_button} />
+              </div>
             </div>
           </div>
-        </div>
-      </ContactContentStyles>
+        </ContactContentStyles>
+      </motion.div>
     </LayoutComponent>
   )
 }
