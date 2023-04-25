@@ -6,7 +6,7 @@ export const ExhibitionSliceStyles = styled('div')`
     left: 0;
     width: 100%;
     height: 100vh;
-    font-size: 10vw;
+    font-size: 8vw;
     /* opacity: 0.1; */
 
     * {

@@ -23,6 +23,13 @@ const GlobalStyle = createGlobalStyle`
   color: white;
 }
 
+${'' /* ::-webkit-scrollbar {
+  display: none;
+}
+
+-ms-overflow-style: none;
+scrollbar-width: none; */}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -43,7 +50,7 @@ main {
 }
 
 main, body {
-  width: 100%;
+  width: 100vw;;
   overflow: hidden;
 }
 
