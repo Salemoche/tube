@@ -16,7 +16,7 @@ const NavigationComponent = ({ navigation }) => {
   const store = proxy(baseState);
   const snap = useSnapshot(store);
 
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const isPath = ( menuItem ) => {
     if (
@@ -24,6 +24,8 @@ const NavigationComponent = ({ navigation }) => {
       pathName == "" && menuItem.primary.label.toLowerCase() == 'exhibitions'
     ) return true
   }
+
+  
 
   return (
     <NavigationStyles mode={snap.deviceMode} menuOpen={menuOpen}>
@@ -42,7 +44,8 @@ const NavigationComponent = ({ navigation }) => {
         </div>
       }
       <ul className="menu">
-        { snap.deviceMode == 'mobile' && <BackgroundComponent/> }
+        {/* { snap.deviceMode == 'mobile' && <BackgroundComponent/> } */}
+        { snap.deviceMode == 'mobile' && <div className="circle"></div> }
         { menuItems.map(( menuItem, i ) => (
           <li className={`menu-item ${ isPath(menuItem) && 'menu-item-current'}`} key={`menu-item-${i}`}>
             <PrismicLink field={menuItem.primary.link}>{ menuItem.primary.label }</PrismicLink>

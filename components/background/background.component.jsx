@@ -35,13 +35,12 @@ const BackgroundComponent = () => {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setScrollYPos(latest)
-    console.log(latest)
   })
   
 
   return (
     <BackgroundStyles ref={bgRef} circleCount={snap.circleCount}>
-      <motion.div style={{ y: (scrollYPos-1)*(400) }}>
+      <motion.div style={{ y: snap.deviceMode != 'mobile' ? (scrollYPos-1)*(400) : 0}}>
         { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
       </motion.div>
     </BackgroundStyles>

@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next';
 import { ExhibitionSliceStyles, ExhibitionTitleStyles, ExhibitionDateStyles, ExhibitionContentStyles } from './exhibition-slice.style';
 import { defaultTheme } from '@/styles/theme';
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
+import { proxy, useSnapshot } from 'valtio';
+import { baseState } from '@/data/state';
 
 /**
  * @typedef {import("@prismicio/client").Content.ExhibitionSliceSlice} ExhibitionSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ExhibitionSliceSlice>} ExhibitionSliceProps
  * @param { ExhibitionSliceProps }
  */
-const ExhibitionSlice = ({ slice }) => {
+const ExhibitionSlice = ({ slice, index }) => {
 
+  const containerRef = useRef(null);
   const exhibition = slice.primary.exhibition;
   const images = exhibition.data.slices.filter( slice => {
     if ( slice.primary.show_on_exhibitions_page ) return slice.primary
@@ -20,20 +23,29 @@ const ExhibitionSlice = ({ slice }) => {
   const startDate = new Date(exhibition.data.start_date);
   const endDate = new Date(exhibition.data.end_date);
 
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll({ target: containerRef});
   const [scrollYPos, setScrollYPos] = useState(0)
+  const offset = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * 0.3 : 0;
+  const y = useTransform(scrollYProgress, [0, 1], [0, offset])
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setScrollYPos(latest)
   })
 
+  const store = proxy(baseState);
+  const snap = useSnapshot(store);
+  
+
   //TODO: find out why the primary isn't filtered
 
 
   return (
-    <ExhibitionSliceStyles>
+    <ExhibitionSliceStyles
+      index={index}
+      ref={containerRef}
+    >
       <motion.div 
-        style={{ y: scrollYPos * 600}}
+        style={{ y: snap.deviceMode != 'mobile' ? y : y }}
         className="exhibition-info"
       >
         <ExhibitionTitleStyles
@@ -72,10 +84,7 @@ const ExhibitionSlice = ({ slice }) => {
             spacingRight={ image.primary.spacing_right}
             spacingTop={ image.primary.spacing_top}
             width={ image.primary.width}
-            spacingLeftTablet={ Math.floor(image.primary.spacing_left * defaultTheme.tabletMultiplier)}
-            spacingRightTablet={ Math.floor(image.primary.spacing_right * defaultTheme.tabletMultiplier)}
-            spacingTopTablet={ Math.floor(image.primary.spacing_top * defaultTheme.tabletMultiplier)}
-            widthTablet={ Math.floor(image.primary.width * defaultTheme.tabletMultiplier)}
+            // widthTablet={ Math.floor(image.primary.width * defaultTheme.tabletMultiplier)}
           >
             { image.primary.image && <PrismicNextImage field={ image.primary.image } /> }
             { image.primary.title?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}

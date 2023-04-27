@@ -14,8 +14,6 @@ import { useScroll } from 'framer-motion';
 export default function App({ Component, pageProps }) {
 
   const store = proxy(baseState);
-  const snap = useSnapshot(store);
-  const { scrollYProgress } = useScroll();
 
   const resizeScripts = e => {
 
@@ -27,11 +25,11 @@ export default function App({ Component, pageProps }) {
       case windowWidth > defaultTheme.breakpoints['L']:
         circleCount = 18
         break;
-      case windowWidth >= defaultTheme.breakpoints['S']:
+      case windowWidth > defaultTheme.breakpoints['S']:
         circleCount = 12
         break;
-      case windowWidth < defaultTheme.breakpoints['S']:
-        circleCount = 6
+      case windowWidth <= defaultTheme.breakpoints['S']:
+        circleCount = 8
         deviceMode = 'mobile'
         break;
       default:

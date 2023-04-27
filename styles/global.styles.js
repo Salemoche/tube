@@ -23,12 +23,12 @@ const GlobalStyle = createGlobalStyle`
   color: white;
 }
 
-${'' /* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
 -ms-overflow-style: none;
-scrollbar-width: none; */}
+scrollbar-width: none;
 
 * {
   box-sizing: border-box;
@@ -50,7 +50,7 @@ main {
 }
 
 main, body {
-  width: 100vw;;
+    width: 100vw;;
   overflow: hidden;
 }
 

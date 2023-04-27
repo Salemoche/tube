@@ -3,10 +3,15 @@ import { createClient } from '../prismicio'
 import { components } from '../slices'
 import LayoutComponent from '../components/layout/layout.component';
 import NavigationComponent from '../components/navigation/navigation.component';
-import { ContentStyles } from '../styles/global.components';
+import { ContentStyles, HomeContentStyles } from '../styles/global.components';
 import { motion } from 'framer-motion';
 
-export default function ExhibitionsPage({ page, navigation }) {
+export default function ExhibitionsPage({ page, navigation }) {  
+
+  const isHovered = () => {
+    console.log('hub')
+  }
+
   return (
     <LayoutComponent 
       title={page.data.meta_title}
@@ -19,9 +24,9 @@ export default function ExhibitionsPage({ page, navigation }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <ContentStyles>
-          <SliceZone slices={page.data.slices} components={components} />
-        </ContentStyles>
+        <HomeContentStyles>
+          <SliceZone slices={page.data.slices} components={components}/>
+        </HomeContentStyles>
       </motion.div>
     </LayoutComponent>
   )

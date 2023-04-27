@@ -1,9 +1,32 @@
 import Head from 'next/head'
 
 import BackgroundComponent from '../background/background.component'
+import LoadingScreenComponent from '../loading-screen/loading-screen.component'
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-const LayoutComponent = ({ children, title = 'Tube Gallery', description = 'Tube Gallery Site', thumbnail = 'https://media.wired.co.uk/photos/606dba2c581351b2c44d89d3/master/w_1600,c_limit/gettyimages-881725440.jpg', header = null }) => {
+const LayoutComponent = ({ 
+  children, 
+  title = 'Tube Gallery', 
+  description = 'Tube Gallery Site', 
+  thumbnail = 'https://media.wired.co.uk/photos/606dba2c581351b2c44d89d3/master/w_1600,c_limit/gettyimages-881725440.jpg', 
+  header = null
+}) => {
 
+  const [contentLoaded, setContentLoaded] = useState(false)
+
+  useEffect(() => {
+
+    if (typeof window === 'undefined') return console.log('no window')
+
+    window.addEventListener('load', () => { setContentLoaded(true); } )
+    setTimeout(() => { setContentLoaded(true) }, 1000);
+
+    return () => {
+      window.removeEventListener('load', () => { setContentLoaded(true) } )
+    }
+
+  }, [])
 
   return (
     <>
@@ -16,6 +39,25 @@ const LayoutComponent = ({ children, title = 'Tube Gallery', description = 'Tube
         <meta property="og:image" content={ thumbnail } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <AnimatePresence>
+      { !contentLoaded &&
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          style={{
+            zIndex: 1000,
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100%',
+          }}
+        >
+          <LoadingScreenComponent/>
+        </motion.div>
+      }
+      </AnimatePresence>
       { header && 
         <header>
           { header }

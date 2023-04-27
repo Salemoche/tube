@@ -5849,10 +5849,10 @@ slash@^4.0.0:
   resolved "https://registry.npmjs.org/slash/-/slash-4.0.0.tgz"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
 
-slice-machine-ui@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/slice-machine-ui/-/slice-machine-ui-1.0.0.tgz#26057d6b40c2a5ae76bef305d60e943c70b7ac70"
-  integrity sha512-2NVe7lz8SD3Tz7kiAv938hkHhtBPra7ouA3SMGF0hj9N40TfnKXp+yRJimaGlM7C/B052RXEg+ZfY4gJDlZtXQ==
+slice-machine-ui@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/slice-machine-ui/-/slice-machine-ui-1.0.1.tgz#abbc8a702e16199c25d66490a1762726fcb69192"
+  integrity sha512-pTOs78h0Oym4CrMffE++JAHCZBvANawb9sbtR2oKmi0VHXXFEo/cHk7VwYCCcrjmOi0dfC/lc8ETaw+WZpbqpA==
   dependencies:
     "@extractus/oembed-extractor" "^3.1.8"
     "@prismicio/editor-fields" "^0.3.0"
@@ -5871,7 +5871,7 @@ slice-machine-ui@^1.0.0:
     puppeteer "^19.11.0"
     react "^18.2.0"
     semver "^7.3.8"
-    start-slicemachine "0.7.0"
+    start-slicemachine "0.7.1"
     yup "^0.32.11"
 
 source-map-js@^1.0.2:
@@ -5910,10 +5910,10 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.13.tgz#7189a474c46f8d47c7b0da4b987bb45e908bd2d5"
   integrity sha512-XkD+zwiqXHikFZm4AX/7JSCXA98U5Db4AFd5XUg/+9UNtnH75+Z9KxtpYiJZx36mUDVOwH83pl7yvCer6ewM3w==
 
-start-slicemachine@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/start-slicemachine/-/start-slicemachine-0.7.0.tgz#fccbd50f6c23fe879697cc7527502231b23672a6"
-  integrity sha512-K6OxfWVI6S5WelxOU2DKOJhMGSNtlQnLZNqiWv6vwCiPFKP9ZzjgTxCbdEbl40fwheqv52Mo/lhhWv2kXXc71w==
+start-slicemachine@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/start-slicemachine/-/start-slicemachine-0.7.1.tgz#80b3c0ea0c21bb322db1398ff371a4c973ef2735"
+  integrity sha512-7cYfXSUFetf6bNbK4yoJ7vPiD7WXjPWnyz5UjB4un/ZMazK0Q4T/+tS1B9jmxtHL6/qfjqE0Q7AGrSt+jjJeVA==
   dependencies:
     "@slicemachine/manager" "0.2.0"
     body-parser "^1.20.2"

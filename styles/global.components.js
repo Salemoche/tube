@@ -10,8 +10,8 @@ export const ContentStyles = styled('div')`
   @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
   }
 
-  @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
-    margin-top: ${({ theme }) => theme.spacing.XXL };
+  @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
+    margin-top: ${({ theme }) => theme.spacing.XL };
     padding: 0 ${({ theme }) => theme.spacing.SR };
   }
 `
@@ -28,11 +28,15 @@ export const ColumnContentComponent = styled(ContentStyles)`
     width: 62.5%;
   }
 
-  @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
+  @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     flex-wrap: wrap;
     
     .column {
       width: 100%;
     }
   }
+`
+
+export const HomeContentStyles = styled(ContentStyles)`
+  margin-top: 0;
 `

@@ -9,19 +9,28 @@ export const AboutContentStyles = styled(ColumnContentComponent)`
 
   .intro {
     margin-bottom: ${({ theme }) => theme.spacing.L };
+    z-index: 1;
   }
 
-  .image {
-    img {
+  .plan {
+    z-index: 1;
+  }
+
+  .column-1 {
+    z-index: 1;
+  }
+
+  .map {
+    iframe {
+      border: none;
       width: calc( var(--circle-width) + 100%);
       position: relative;
       margin-left: calc(0px - var(--circle-width));
-      z-index: -1
     }
   }
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
-    .image img {
+    .map iframe {
       width: 100%;
       margin-left: 0;
     }

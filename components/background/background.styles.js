@@ -23,5 +23,9 @@ export const BackgroundStyles = styled('div')`
     pointer-events: none;
   }
 
+  ${'' /* @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
+    left: calc(0px - (var(--circle-width) / 2));
+    width: calc(100% + var(--circle-width));
+  } */}
 
 `

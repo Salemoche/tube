@@ -13,11 +13,7 @@
       "primary": {
         "image": {
           "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
         },
         "title": {
           "type": "StructuredText",
@@ -48,31 +44,19 @@
         },
         "spacing_left": {
           "type": "Number",
-          "config": {
-            "label": "Spacing Left",
-            "placeholder": ""
-          }
+          "config": { "label": "Spacing Left", "placeholder": "" }
         },
         "spacing_right": {
           "type": "Number",
-          "config": {
-            "label": "Spacing Right",
-            "placeholder": ""
-          }
+          "config": { "label": "Spacing Right", "placeholder": "" }
         },
         "spacing_top": {
           "type": "Number",
-          "config": {
-            "label": "Spacing Top",
-            "placeholder": ""
-          }
+          "config": { "label": "Spacing Top", "placeholder": "" }
         },
         "width": {
           "type": "Number",
-          "config": {
-            "label": "Width",
-            "placeholder": ""
-          }
+          "config": { "label": "Width", "placeholder": "" }
         }
       },
       "items": {},

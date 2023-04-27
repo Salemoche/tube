@@ -52,5 +52,6 @@ export const defaultTheme = {
   transitions: {
     'default': '.3s'
   },
-  tabletMultiplier: 0.75
+  tabletMultiplier: 0.75,
+  phoneMultiplier: 0.75
 }
