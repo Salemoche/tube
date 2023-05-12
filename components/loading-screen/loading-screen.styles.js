@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const LoadingScreenStyles = styled('div')`
   height: 100%;
   width: 100%;
-  background-color: white;
   z-index: 1000;
   display: flex;
   justify-content: center;

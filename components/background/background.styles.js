@@ -13,13 +13,13 @@ export const BackgroundStyles = styled('div')`
   background: white;
 
   .circle {
-    border: 0.5px solid black;
+    border: 1px solid black;
     display: inline-block;
     width: calc(100% / ${ props => props.circleCount });
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     vertical-align: top;
-    opacity: 0.2;
+    opacity: 0.05;
     pointer-events: none;
   }
 

@@ -8,6 +8,7 @@ export const NavigationStyles = styled('nav')`
   top: 0;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   z-index: 100;
   padding: 0 ${({ theme }) => theme.spacing.XLR };
   height: calc(var(--circle-width));
@@ -71,8 +72,8 @@ export const NavigationStyles = styled('nav')`
       pointer-events: all;
 
       .menu-item {
-        margin-right: ${({ theme }) => theme.spacing.LR };
-        font-size: calc( var(--circle-width) * 0.5);
+        margin-right: ${({ theme }) => theme.spacing.MR };
+        ${ props => getFontSize('L', props) };
 
         &:last-of-type {
           margin-right: 0;
@@ -118,9 +119,8 @@ export const NavigationStyles = styled('nav')`
       height: 100vh;
       padding: ${({ theme }) => theme.spacing.SR };
       overflow: hidden;
-      max-height: 0;
       padding: 0;
-      transition: ${ props => props.theme.transitions.default };
+      transition: opacity ${ props => props.theme.transitions.default };
       background: white;
       pointer-events: none;
       transform: none;
@@ -142,13 +142,15 @@ export const NavigationStyles = styled('nav')`
         align-items: center;
         justify-content: center;
         position: relative;
+        align-items: flex-start;
+        padding: ${({ theme }) => theme.spacing.SR };
 
         .circle {
           border: 0.5px solid black;
         }
 
         .menu-item {
-          text-align: center;
+          text-align: left;
           margin: 0;
           font-size: 3vh;
           z-index: 1;
@@ -156,7 +158,7 @@ export const NavigationStyles = styled('nav')`
       }
       
 
-      .circle {
+      ${'' /* .circle {
         border: 0.5px solid white;
         position: absolute;
         left: 50%;
@@ -166,12 +168,12 @@ export const NavigationStyles = styled('nav')`
         width: calc( 100% - var(--circle-width));
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-      }
+      } */}
 
       .menu-footer {
         margin-top: auto;
         padding: ${({ theme }) => theme.spacing.SR };
-        text-align: center;
+        ${'' /* text-align: center; */}
       }
     }
   }

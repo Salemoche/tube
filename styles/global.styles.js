@@ -47,8 +47,9 @@ main {
   position: relative;
   min-height: 100vh;
 
+  ${ props => getFontSize('S', props)}
   
-  font-size: 1.39vw;
+  ${'' /* font-size: 1.39vw;
   line-height: 1.49;
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.L }px) {
@@ -57,7 +58,7 @@ main {
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.M }px) {
     font-size: 16px;
-  }
+  } */}
 }
 
 main, body {

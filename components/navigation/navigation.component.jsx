@@ -46,7 +46,7 @@ const NavigationComponent = ({ navigation }) => {
       <div className="menu">
       <ul>
         {/* { snap.deviceMode == 'mobile' && <BackgroundComponent/> } */}
-        { snap.deviceMode == 'mobile' && <div className="circle"></div> }
+        {/* { snap.deviceMode == 'mobile' && <div className="circle"></div> } */}
         { menuItems.map(( menuItem, i ) => (
           <li 
             className={`menu-item ${ isPath(menuItem) && 'menu-item-current'}`} 

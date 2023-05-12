@@ -40,7 +40,7 @@ const LayoutComponent = ({
         <meta property="og:image" content={ thumbnail } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AnimatePresence>
+      {/* <AnimatePresence>
       { !contentLoaded &&
         <motion.div
           initial={{ opacity: 1 }}
@@ -58,7 +58,7 @@ const LayoutComponent = ({
           <LoadingScreenComponent/>
         </motion.div>
       }
-      </AnimatePresence>
+      </AnimatePresence> */}
       { header && 
         <header>
           { header }

@@ -18,6 +18,7 @@ export default function ArtistsPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ duration: .3, delay: 1 }}
       >
         <ArtistContentStyles>
           <SliceZone slices={page.data.slices} components={components} />
