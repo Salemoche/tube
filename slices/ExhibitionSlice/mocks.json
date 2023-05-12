@@ -1,51 +1,51 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "exhibition": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "DocumentLink",
-          "id": "mock_document_id"
-        }
-      },
-      "horizontal_alignment_title": {
-        "__TYPE__": "FieldContent",
-        "value": "50",
-        "type": "Number"
-      },
-      "vertical_alignment_title": {
-        "__TYPE__": "FieldContent",
-        "value": "56",
-        "type": "Number"
-      },
-      "horizontal_alignment_date": {
-        "__TYPE__": "FieldContent",
-        "value": "44",
-        "type": "Number"
-      },
-      "vertical_alignment_date": {
-        "__TYPE__": "FieldContent",
-        "value": "97",
-        "type": "Number"
-      },
-      "width_title": {
-        "__TYPE__": "FieldContent",
-        "value": "18",
-        "type": "Number"
-      },
-      "width_date": {
-        "__TYPE__": "FieldContent",
-        "value": "84",
-        "type": "Number"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"exhibition": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"horizontal_alignment_title": {
+				"__TYPE__": "FieldContent",
+				"value": "50",
+				"type": "Number"
+			},
+			"vertical_alignment_title": {
+				"__TYPE__": "FieldContent",
+				"value": "56",
+				"type": "Number"
+			},
+			"horizontal_alignment_date": {
+				"__TYPE__": "FieldContent",
+				"value": "44",
+				"type": "Number"
+			},
+			"vertical_alignment_date": {
+				"__TYPE__": "FieldContent",
+				"value": "97",
+				"type": "Number"
+			},
+			"width_title": {
+				"__TYPE__": "FieldContent",
+				"value": "18",
+				"type": "Number"
+			},
+			"width_date": {
+				"__TYPE__": "FieldContent",
+				"value": "84",
+				"type": "Number"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

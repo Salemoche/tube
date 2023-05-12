@@ -22,7 +22,7 @@
         }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/tube/shared-slices/contact_item/default/aaebe16866290d6406e6ef0a51b826c63e694367.png?auto=compress%2Cformat"
     },
     {
       "id": "newsletter",
@@ -42,17 +42,11 @@
         },
         "email_placeholder": {
           "type": "Text",
-          "config": {
-            "label": "Email Placeholder",
-            "placeholder": ""
-          }
+          "config": { "label": "Email Placeholder", "placeholder": "" }
         },
         "subscribe_button": {
           "type": "Text",
-          "config": {
-            "label": "Subscribe Button",
-            "placeholder": ""
-          }
+          "config": { "label": "Subscribe Button", "placeholder": "" }
         }
       },
       "items": {},

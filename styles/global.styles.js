@@ -48,11 +48,11 @@ main {
   min-height: 100vh;
 
   
-  fontSize: 1.03vw;
-  lineHeight: 1.34;
+  font-size: 1.39vw;
+  line-height: 1.49;
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.L }px) {
-    font-size: 1.3vw;
+    font-size: 1.85vw;
   }
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.M }px) {

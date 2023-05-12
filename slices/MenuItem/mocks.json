@@ -1,26 +1,26 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "link": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "https://prismic.io"
-        }
-      },
-      "label": {
-        "__TYPE__": "FieldContent",
-        "value": "upward",
-        "type": "Text"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "upward",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

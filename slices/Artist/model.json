@@ -13,10 +13,7 @@
       "primary": {
         "name": {
           "type": "Text",
-          "config": {
-            "label": "Name",
-            "placeholder": "Artist Name"
-          }
+          "config": { "label": "Name", "placeholder": "Artist Name" }
         },
         "information": {
           "type": "StructuredText",
@@ -29,7 +26,7 @@
         }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/tube/shared-slices/artist/default/538e8f1d142b373e36b3668326a3deb4a74e2aba.png?auto=compress%2Cformat"
     }
   ]
 }

@@ -1,25 +1,58 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Consectetur fugiat esse elit eu esse sit consectetur cupidatat irure nisi nisi nulla. Ex laborum pariatur ut sit reprehenderit. Non aliquip sit magna nulla laborum consectetur ipsum nulla culpa."
-            }
-          }
-        ]
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur fugiat esse elit eu esse sit consectetur cupidatat irure nisi nisi nulla. Ex laborum pariatur ut sit reprehenderit. Non aliquip sit magna nulla laborum consectetur ipsum nulla culpa."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "newsletter",
+		"primary": {
+			"intro": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ex quis sunt anim excepteur nostrud ad mollit deserunt duis amet occaecat elit labore ex minim."
+						}
+					}
+				]
+			},
+			"email_placeholder": {
+				"__TYPE__": "FieldContent",
+				"value": "dollar",
+				"type": "Text"
+			},
+			"subscribe_button": {
+				"__TYPE__": "FieldContent",
+				"value": "orbit",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

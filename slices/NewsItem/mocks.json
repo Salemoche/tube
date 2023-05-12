@@ -1,41 +1,41 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "news": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "DocumentLink",
-          "id": "mock_document_id"
-        }
-      },
-      "spacing_right": {
-        "__TYPE__": "FieldContent",
-        "value": "94",
-        "type": "Number"
-      },
-      "width": {
-        "__TYPE__": "FieldContent",
-        "value": "4",
-        "type": "Number"
-      },
-      "spacing_top": {
-        "__TYPE__": "FieldContent",
-        "value": "20",
-        "type": "Number"
-      },
-      "spacing_left": {
-        "__TYPE__": "FieldContent",
-        "value": "21",
-        "type": "Number"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"news": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"spacing_right": {
+				"__TYPE__": "FieldContent",
+				"value": "94",
+				"type": "Number"
+			},
+			"width": {
+				"__TYPE__": "FieldContent",
+				"value": "4",
+				"type": "Number"
+			},
+			"spacing_top": {
+				"__TYPE__": "FieldContent",
+				"value": "20",
+				"type": "Number"
+			},
+			"spacing_left": {
+				"__TYPE__": "FieldContent",
+				"value": "21",
+				"type": "Number"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

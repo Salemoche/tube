@@ -72,7 +72,7 @@ export const NavigationStyles = styled('nav')`
 
       .menu-item {
         margin-right: ${({ theme }) => theme.spacing.LR };
-        font-size: 2vw;
+        font-size: calc( var(--circle-width) * 0.5);
 
         &:last-of-type {
           margin-right: 0;
@@ -96,6 +96,12 @@ export const NavigationStyles = styled('nav')`
         ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
         `)}
       }
+    }
+  }
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.L }px) {
+    .menu ul .menu-item {
+      font-size: font-size: 1.85vw;
     }
   }
 

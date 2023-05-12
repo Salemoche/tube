@@ -16,42 +16,28 @@
           "config": {
             "label": "News",
             "select": "document",
-            "customtypes": [
-              "news"
-            ]
+            "customtypes": ["news"]
           }
         },
         "spacing_left": {
           "type": "Number",
-          "config": {
-            "label": "Spacing Left",
-            "placeholder": ""
-          }
+          "config": { "label": "Spacing Left", "placeholder": "" }
         },
         "spacing_right": {
           "type": "Number",
-          "config": {
-            "label": "Spacing Right",
-            "placeholder": ""
-          }
+          "config": { "label": "Spacing Right", "placeholder": "" }
         },
         "spacing_top": {
           "type": "Number",
-          "config": {
-            "label": "Spacing Top",
-            "placeholder": ""
-          }
+          "config": { "label": "Spacing Top", "placeholder": "" }
         },
         "width": {
           "type": "Number",
-          "config": {
-            "label": "Width",
-            "placeholder": ""
-          }
+          "config": { "label": "Width", "placeholder": "" }
         }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/tube/shared-slices/news_item/default/0be50b541550cc3c6a035329a4022c52969fb91d.png?auto=compress%2Cformat"
     }
   ]
 }

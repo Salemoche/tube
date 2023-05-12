@@ -16,9 +16,7 @@
           "config": {
             "label": "Exhibition",
             "select": "document",
-            "customtypes": [
-              "exhibition"
-            ]
+            "customtypes": ["exhibition"]
           }
         },
         "horizontal_alignment_title": {
@@ -30,17 +28,11 @@
         },
         "vertical_alignment_title": {
           "type": "Number",
-          "config": {
-            "label": "Vertical Alignment (Title)",
-            "placeholder": ""
-          }
+          "config": { "label": "Vertical Alignment (Title)", "placeholder": "" }
         },
         "width_title": {
           "type": "Number",
-          "config": {
-            "label": "Width (Title)",
-            "placeholder": ""
-          }
+          "config": { "label": "Width (Title)", "placeholder": "" }
         },
         "horizontal_alignment_date": {
           "type": "Number",
@@ -51,21 +43,15 @@
         },
         "vertical_alignment_date": {
           "type": "Number",
-          "config": {
-            "label": "Vertical Alignment (Date)",
-            "placeholder": ""
-          }
+          "config": { "label": "Vertical Alignment (Date)", "placeholder": "" }
         },
         "width_date": {
           "type": "Number",
-          "config": {
-            "label": "Width (Date)",
-            "placeholder": ""
-          }
+          "config": { "label": "Width (Date)", "placeholder": "" }
         }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/tube/shared-slices/exhibition_slice/default/724f72d3d424a1340e7eb8d7f75779632b159cfd.png?auto=compress%2Cformat"
     }
   ]
 }

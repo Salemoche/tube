@@ -13,22 +13,15 @@
       "primary": {
         "label": {
           "type": "Text",
-          "config": {
-            "label": "Label",
-            "placeholder": ""
-          }
+          "config": { "label": "Label", "placeholder": "" }
         },
         "link": {
           "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
+          "config": { "label": "Link", "placeholder": "", "select": null }
         }
       },
       "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/tube/shared-slices/menu_item/default/5f468e33a9f52d50978135d265e096accc93d3d9.png?auto=compress%2Cformat"
     }
   ]
 }
