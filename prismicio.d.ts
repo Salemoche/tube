@@ -876,6 +876,16 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   title: prismicT.TitleField;
   /**
+   * Information field in *ExhibitionContent → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition_image.primary.information
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  information: prismicT.KeyTextField;
+  /**
    * Description field in *ExhibitionContent → Primary*
    *
    * - **Field Type**: Rich Text
@@ -936,6 +946,16 @@ interface ExhibitionImageSliceDefaultPrimary {
    *
    */
   width: prismicT.NumberField;
+  /**
+   * Height field in *ExhibitionContent → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition_image.primary.height
+   * - **Documentation**: https://prismic.io/docs/core-concepts/number
+   *
+   */
+  height: prismicT.NumberField;
 }
 /**
  * Default variation for ExhibitionContent Slice

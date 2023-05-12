@@ -82,9 +82,8 @@ export const NavigationStyles = styled('nav')`
         a { 
           ${'' /* color: ${({ theme }) => theme.colors.gray }; */}
           color: inherit;
-          transition: color ${props => props.theme.transitions.default};
           &:hover {
-            color: var(--random-color);
+            color: black;
           }
         }
 

@@ -23,7 +23,7 @@ export default function ExhibitionsPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: .3, delay: 3 }}
+        transition={{ duration: .3 }}
       >
         <HomeContentStyles>
           <SliceZone slices={page.data.slices} components={components}/>
@@ -65,12 +65,14 @@ export async function getStaticProps({ previewData }) {
                               primary {
                                 image
                                 title
+                                information
                                 description
                                 show_on_exhibitions_page
                                 spacing_right
                                 spacing_left
                                 spacing_top
                                 width
+                                height
                               }
                             }
                           }

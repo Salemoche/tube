@@ -29,6 +29,13 @@ export const ExhibitionSliceStyles = styled('div')`
     }
   }
 
+  ${'' /* @media screen and (max-width: ${ props => props.theme.breakpoints.M }px) {
+
+    .exhibition-info {
+      font-size: 12vw;
+    }
+  } */}
+
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     &:first-child {
       padding-top: ${({ theme }) => theme.spacing.XL };
@@ -99,11 +106,49 @@ export const ExhibitionContentStyles = styled('div')`
   margin-top: calc( ${ props => props.spacingTop } * var(--circle-width));
   margin-bottom: var(--circle-width);
 
+  .image-container {
+    width: calc( ${ props => props.width } * var(--circle-width));
+    height: calc( ${ props => props.height } * var(--circle-width));
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .image-caption {
+    height: var(--circle-width);
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 0.3vw;
+
+    .name, 
+    .info {
+      width: 100%;
+    }
+  }
+
+  .description {
+  }
+
   @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
     width: calc( ${ props => props.width * props.theme.tabletMultiplier } * var(--circle-width));
     margin-left: calc( ${ props => props.spacingLeft * props.theme.tabletMultiplier } * var(--circle-width));
     margin-right: calc(${ props => props.spacingRight * props.theme.tabletMultiplier > 0 ? props.spacingRight : 1 } * var(--circle-width));
     margin-top: calc( ${ props => props.spacingTop * props.theme.tabletMultiplier } * var(--circle-width));
+
+    .image-container {
+      height: calc( ${ props => props.height * props.theme.tabletMultiplier } * var(--circle-width));
+      width: calc( ${ props => props.width * props.theme.tabletMultiplier } * var(--circle-width));
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
@@ -112,5 +157,9 @@ export const ExhibitionContentStyles = styled('div')`
     margin-right: 0;
     margin-top: 0;
     margin-bottom: ${({ theme }) => theme.spacing.XL };
+
+    .image-container {
+      height: 100%
+    }
   }
 `

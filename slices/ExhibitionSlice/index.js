@@ -34,6 +34,8 @@ const ExhibitionSlice = ({ slice, index }) => {
 
   const store = proxy(baseState);
   const snap = useSnapshot(store);
+
+  console.log(images)
   
 
   //TODO: find out why the primary isn't filtered
@@ -84,11 +86,17 @@ const ExhibitionSlice = ({ slice, index }) => {
             spacingRight={ image.primary.spacing_right}
             spacingTop={ image.primary.spacing_top}
             width={ image.primary.width}
+            height={ image.primary.height}
             // widthTablet={ Math.floor(image.primary.width * defaultTheme.tabletMultiplier)}
           >
-            { image.primary.image && <PrismicNextImage field={ image.primary.image } /> }
-            { image.primary.title?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}
-            <PrismicRichText field={image.primary.description}/>
+            { image.primary.image && <div className="image-container"><PrismicNextImage field={ image.primary.image } /></div> }
+              <div className="image-caption">
+                <div className="name">{image.primary.title?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}</div>
+                <div className="info">{image.primary.information}</div>
+              </div>
+            <div className="description">
+              <PrismicRichText field={image.primary.description}/>
+            </div>
           </ExhibitionContentStyles>
         )
       }

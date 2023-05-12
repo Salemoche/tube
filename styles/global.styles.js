@@ -87,9 +87,9 @@ a {
 }
 
 p > a {
-  transition: ${props => props.theme.transitions.default};
   &:hover {
-    color: var(--random-color);
+    ${'' /* color: var(--random-color); */}
+    color: ${ props => props.theme.colors.gray };
   }
 
   &::after {

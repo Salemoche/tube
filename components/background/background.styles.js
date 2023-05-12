@@ -10,7 +10,12 @@ export const BackgroundStyles = styled('div')`
   top: 0;
   overflow: hidden;
   z-index: -1;
-  background: white;
+  background-color: white;
+
+
+  ${'' /* background-image: url('${ props => props.bgImage }');
+  background-size: contain;
+  position: fixed; */}
 
   .circle {
     border: 1px solid black;

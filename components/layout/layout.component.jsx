@@ -40,25 +40,20 @@ const LayoutComponent = ({
         <meta property="og:image" content={ thumbnail } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <AnimatePresence>
-      { !contentLoaded &&
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          style={{
-            zIndex: 1000,
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100%',
-          }}
-        >
-          <LoadingScreenComponent/>
-        </motion.div>
-      }
-      </AnimatePresence> */}
+      {/* <div
+        style={{
+          opacity: contentLoaded ? 0 : 1,
+          pointerEvents: contentLoaded ? 'none' : 'all',
+          zIndex: 1000,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100%',
+        }}
+      >
+        <LoadingScreenComponent/>
+      </div> */}
       { header && 
         <header>
           { header }

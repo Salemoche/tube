@@ -71,6 +71,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "30",
 				"type": "Number"
+			},
+			"information": {
+				"__TYPE__": "FieldContent",
+				"value": "room",
+				"type": "Text"
+			},
+			"height": {
+				"__TYPE__": "FieldContent",
+				"value": "61",
+				"type": "Number"
 			}
 		},
 		"items": [
