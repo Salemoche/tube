@@ -4,6 +4,7 @@ import BackgroundComponent from '../background/background.component'
 import LoadingScreenComponent from '../loading-screen/loading-screen.component'
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import FooterComponent from '../footer/footer.component';
 
 const LayoutComponent = ({ 
   children, 
@@ -66,6 +67,7 @@ const LayoutComponent = ({
       <main>
         <BackgroundComponent/>
         { children }
+        <FooterComponent />
       </main>
     </>
   )

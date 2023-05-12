@@ -14,16 +14,15 @@ export const ContactContentStyles = styled(ColumnContentComponent)`
       }
 
       .newsletter-intro {
-        margin-bottom: ${({ theme }) => theme.spacing.L };
+        margin-bottom: ${({ theme }) => theme.spacing.LR};
       }
 
       .newsletter-input {
         width: 100%;
-        margin-bottom: ${({ theme }) => theme.spacing.L };
+        margin-bottom: ${({ theme }) => theme.spacing.LR };
         background: none;
       }
     }
   }
 `
-
 export default ContactContentStyles

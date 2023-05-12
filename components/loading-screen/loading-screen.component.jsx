@@ -3,7 +3,7 @@ import { LoadingScreenStyles } from "./loading-screen.styles"
 const LoadingScreenComponent = () => {
   return (
     <LoadingScreenStyles>
-      <img src="images/placeholder.gif" alt="" />
+      <img src="images/tube-logo.svg" alt="" />
     </LoadingScreenStyles>
   )
 }

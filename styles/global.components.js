@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const ContentStyles = styled('div')`
-  margin-top: 11vw;
+  margin-top: calc( var(--circle-width) * 4 );
   margin-bottom: ${({ theme }) => theme.spacing.XLR };
 
   padding: 0 var(--circle-width);
@@ -21,20 +21,28 @@ export const ColumnContentComponent = styled(ContentStyles)`
   display: flex;
 
   .column-1 {
-    width: 37.5%;
+    width: calc(var(--circle-width) * 8);
+    padding-right: var(--circle-width);
+    flex-shrink: 0;
   }
 
   .column-2 {
-    width: 62.5%;
+    flex-grow: 1;
   }
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     flex-wrap: wrap;
+
+    .column-1 {
+      padding-right: 0;
+      margin-bottom: var(--circle-width);
+    }
     
     .column {
       width: 100%;
     }
   }
+
 `
 
 export const HomeContentStyles = styled(ContentStyles)`

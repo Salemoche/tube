@@ -7,6 +7,7 @@ import { ContentStyles } from '../../styles/global.components';
 import { AboutContentStyles } from './about.styles';
 import { PrismicNextImage, PrismicRichText } from '@prismicio/next';
 import { motion } from 'framer-motion';
+import CustomMapComponent from '../../components/custom-map/custom-map.component';
 
 export default function AboutPage({ page, navigation }) {
   console.log(page.data.intro)
@@ -35,7 +36,7 @@ export default function AboutPage({ page, navigation }) {
           </div>
           <div className="column-2 column images-column">
             <div className="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.334798316607!2d2.6578557767421356!3d39.57460427158756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793ab6241e8f3%3A0x5c4220cb2408d4ac!2sCarrer%20Nicolau%20de%20Pacs%2C%20Palma%2C%20Illes%20Balears%2C%20Spanien!5e0!3m2!1sde!2sch!4v1682597685787!5m2!1sde!2sch" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <CustomMapComponent/>
             </div>
           </div>
         </AboutContentStyles>

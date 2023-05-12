@@ -18,38 +18,58 @@ export default function App({ Component, pageProps }) {
   const resizeScripts = e => {
 
     const windowWidth = window.innerWidth;
-    let circleCount = 18
+    let circleCount = 24
     let deviceMode = 'desktop'
 
     switch (true) {
       case windowWidth > defaultTheme.breakpoints['L']:
-        circleCount = 18
+        circleCount = 24
         break;
       case windowWidth > defaultTheme.breakpoints['S']:
-        circleCount = 12
+        circleCount = 18
         break;
       case windowWidth <= defaultTheme.breakpoints['S']:
         circleCount = 8
         deviceMode = 'mobile'
         break;
       default:
-        circleCount = 18
+        circleCount = 24
         break;
     }
 
-    store.circleCount = circleCount
-    store.deviceMode = deviceMode
-
     let circleWidth = windowWidth / circleCount;
     document.documentElement.style.setProperty('--circle-width', `${circleWidth}px`)
+
+    store.circleCount = circleCount
+    store.deviceMode = deviceMode
+    store.circleWidth = circleWidth
+  }
+
+  const changeHighlightColor = () => {
+
+    const randomValue = Math.random();
+    let randomColor = defaultTheme.colors.pink;
+
+    if (randomValue < 0.33) randomColor = defaultTheme.colors.orange;
+    else if (randomValue < 0.66) randomColor = defaultTheme.colors.green;
+
+    
+    document.documentElement.style.setProperty('--random-color', `${randomColor}`)
+    console.log(randomColor)
   }
 
   useEffect(() => {
     resizeScripts();
     window.addEventListener( 'resize', resizeScripts)
+    document.querySelectorAll('p > a, .menu-item').forEach(element => {
+        element.addEventListener('mouseleave', changeHighlightColor)
+    });
   
     return () => {
       window.removeEventListener( 'resize', resizeScripts)
+      document.querySelectorAll('p > a, .menu-item').forEach(element => {
+          element.addEventListener('mouseleave', changeHighlightColor)
+      });
     }
   }, [])
   

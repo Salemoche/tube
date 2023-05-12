@@ -8,7 +8,7 @@ export const AboutContentStyles = styled(ColumnContentComponent)`
   }
 
   .intro {
-    margin-bottom: ${({ theme }) => theme.spacing.L };
+    margin-bottom: ${({ theme }) => theme.spacing.LR };
     z-index: 1;
   }
 
@@ -21,18 +21,22 @@ export const AboutContentStyles = styled(ColumnContentComponent)`
   }
 
   .map {
-    iframe {
-      border: none;
-      width: calc( var(--circle-width) + 100%);
-      position: relative;
-      margin-left: calc(0px - var(--circle-width));
-    }
+    height: 100%;
+    position: relative;
+    margin-left: calc(0px - var(--circle-width));
+    width: calc( var(--circle-width) + 100%);
   }
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
-    .map iframe {
+
+    .plan h3 {
+      padding-bottom: ${({ theme }) => theme.spacing.SR };
+    }
+
+    .map {
       width: 100%;
       margin-left: 0;
+      min-height: calc( var(--circle-width) * 4 );
     }
   }
 `

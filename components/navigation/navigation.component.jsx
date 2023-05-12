@@ -6,6 +6,8 @@ import { proxy, useSnapshot } from 'valtio';
 import { baseState } from '../../data/state';
 import { useState } from "react";
 import BackgroundComponent from '../background/background.component';
+import { motion } from 'framer-motion';
+import { defaultTheme } from '@/styles/theme';
 
 const NavigationComponent = ({ navigation }) => {
 
@@ -24,7 +26,6 @@ const NavigationComponent = ({ navigation }) => {
       pathName == "" && menuItem.primary.label.toLowerCase() == 'exhibitions'
     ) return true
   }
-
   
 
   return (
@@ -36,22 +37,34 @@ const NavigationComponent = ({ navigation }) => {
         </Link>
       :
         <div 
-          className="logo mobile"
+          className="logo-mobile"
           onClick={() => setMenuOpen( prev => !prev)}
         >
-          Tube <br/>
-          Gallery
+          <img src="/images/tube-logo.svg" alt="" />
         </div>
       }
-      <ul className="menu">
+      <div className="menu">
+      <ul>
         {/* { snap.deviceMode == 'mobile' && <BackgroundComponent/> } */}
         { snap.deviceMode == 'mobile' && <div className="circle"></div> }
         { menuItems.map(( menuItem, i ) => (
-          <li className={`menu-item ${ isPath(menuItem) && 'menu-item-current'}`} key={`menu-item-${i}`}>
+          <li 
+            className={`menu-item ${ isPath(menuItem) && 'menu-item-current'}`} 
+            key={`menu-item-${i}`}
+            style={{ color: isPath(menuItem) ? 'black' : defaultTheme.colors.gray }}
+          >
             <PrismicLink field={menuItem.primary.link}>{ menuItem.primary.label }</PrismicLink>
           </li>
         ))}
       </ul>
+      { snap.deviceMode == 'mobile' && <div className="menu-footer">
+        <p>Tube Gallery</p>
+        <p>Carrer Nicolau de Pacs</p>
+        <p>25 Palma De Mallorca</p>
+        <p>Spain</p>
+        </div>
+      }
+      </div>
     </NavigationStyles>
   )
 }

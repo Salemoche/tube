@@ -5,6 +5,7 @@ export const NewsStyles = styled('article')`
   width: calc( ${ props => props.width } * var(--circle-width) );
   margin-right: calc( ${ props => props.spacingRight } * var(--circle-width) );
   margin-top: calc( ${ props => props.spacingTop } * var(--circle-width) );
+  margin-bottom: var(--circle-width);
 
   .thumbnail {
     width: 100%;
@@ -18,6 +19,10 @@ export const NewsStyles = styled('article')`
 
   .title {
     text-decoration: underline;
+    margin-bottom: ${({ theme }) => theme.spacing.XSR };
+  }
+
+  .date {
     margin-bottom: ${({ theme }) => theme.spacing.XSR };
   }
 

@@ -7,8 +7,10 @@ export const NavigationStyles = styled('nav')`
   left: 0;
   top: 0;
   display: flex;
+  align-items: flex-end;
   z-index: 100;
-  padding: ${({ theme }) => theme.spacing.SR } ${({ theme }) => theme.spacing.XLR };
+  padding: 0 ${({ theme }) => theme.spacing.XLR };
+  height: calc(var(--circle-width));
 
   /* ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
     background: green;
@@ -20,20 +22,37 @@ export const NavigationStyles = styled('nav')`
 
   .logo {
     user-select: none;
-    font-size: 3.5vw;
-    line-height: 1.2;
-    width: calc(5 * var(--circle-width));
+    font-size: 3vw;
+    line-height: var(--circle-width);
+    width: calc(6 * var(--circle-width));
+    pointer-events: all;
+    height: var(--circle-width);
+    transform: translateY(22%) translateX(-1%);
+  }
+
+  .logo-mobile {
+    height: var(--circle-width);
+    width: var(--circle-width);
+    display: inline-block;
+    position: absolute;
+    right: ${({ theme }) => theme.spacing.SR };
+    top: ${({ theme }) => theme.spacing.SR };
+    right: 0;
+    top: 0;
+    z-index: 100;
+    ${ props => getFontSize('S', props) };
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     pointer-events: all;
 
-    &.mobile {
-      display: inline-block;
-      position: absolute;
-      right: ${({ theme }) => theme.spacing.SR };
-      top: ${({ theme }) => theme.spacing.SR };
-      z-index: 100;
-      width: unset;
-      ${ props => getFontSize('S', props) };
+    img {
+      width: 70%;
+      height: 70%;
+      transform: translateY(10%);
     }
+  }
 
 
     /* Mobile Menu Open */
@@ -43,59 +62,92 @@ export const NavigationStyles = styled('nav')`
   }
 
   .menu {
-    display: flex;  
-    list-style-type: none;
-    align-items: center;
-    pointer-events: all;
+    transform: translateY(22%);
 
-    .menu-item {
-      margin-right: ${({ theme }) => theme.spacing.LR };
-      font-size: 2vw;
+    ul {
+      display: flex;  
+      list-style-type: none;
+      align-items: center;
+      pointer-events: all;
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+      .menu-item {
+        margin-right: ${({ theme }) => theme.spacing.LR };
+        font-size: 2vw;
 
-      a { 
-        color: ${({ theme }) => theme.colors.gray };
-        transition: color ${props => props.theme.transitions.default};
-        &:hover {
-          color: black;
+        &:last-of-type {
+          margin-right: 0;
         }
-      }
 
-      &.menu-item-current {
         a { 
-          color: black;
+          ${'' /* color: ${({ theme }) => theme.colors.gray }; */}
+          color: inherit;
+          transition: color ${props => props.theme.transitions.default};
+          &:hover {
+            color: var(--random-color);
+          }
         }
-      }
 
-      ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
-      `)}
+        &.menu-item-current {
+          a { 
+            color: black;
+          }
+        }
+
+        ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
+        `)}
+      }
     }
   }
 
-  @media screen and (max-width: ${ props => props.theme.breakpoints.M - 1 }px) {
+  @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     ${'' /* padding: ${({ theme }) => theme.spacing.SR } ${({ theme }) => theme.spacing.SR }; */}
     padding: 0;
     overflow: hidden;
     pointer-events: none;
-    min-height: 60px;
+    height: 100vh;
+    align-items: flex-start;
 
     .menu {
       width: 100vw;
       height: 100vh;
       padding: ${({ theme }) => theme.spacing.SR };
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
       max-height: 0;
       padding: 0;
       transition: ${ props => props.theme.transitions.default };
       background: white;
       pointer-events: none;
+      transform: none;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      opacity: 0;
       ${'' /* transform: rotateY(90deg); */}
+
+      ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
+        max-height: 100vh;
+        pointer-events: all;
+        opacity: 1;
+        ${'' /* transform: none; */}
+
+      `)}
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .circle {
+          border: 0.5px solid black;
+        }
+
+        .menu-item {
+          text-align: center;
+          margin: 0;
+          font-size: 3vh;
+          z-index: 1;
+        }
+      }
       
 
       .circle {
@@ -110,21 +162,10 @@ export const NavigationStyles = styled('nav')`
         border-radius: 50%;
       }
 
-      ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
-        max-height: 100vh;
-        pointer-events: all;
-        ${'' /* transform: none; */}
-
-        .circle {
-          border: 0.5px solid black;
-        }
-      `)}
-
-      .menu-item {
+      .menu-footer {
+        margin-top: auto;
+        padding: ${({ theme }) => theme.spacing.SR };
         text-align: center;
-        margin: 0;
-        font-size: 3vh;
-        z-index: 1;
       }
     }
   }

@@ -13,8 +13,6 @@ const NewsItem = ({ slice }) => {
   const spacingRight = slice.primary.spacing_right || 0;
   const spacingTop = slice.primary.spacing_top || 0;
   const width = slice.primary.width || 3;
-  
-  console.log(slice)
 
   return (
     <NewsStyles 
@@ -26,6 +24,14 @@ const NewsItem = ({ slice }) => {
         <PrismicNextImage field={news.thumbnail} />
       </div>
       { news.title && <h2 className="title">{ news.title }</h2>}
+      <p className="date">
+        {
+          new Date(slice.primary.news.first_publication_date).toLocaleDateString('en-GB', {
+            month: '2-digit',
+            year: '2-digit',
+          }).replace(/\//g, '.') 
+        }
+      </p>
       { news.summary && 
         <div className="summary">
           <PrismicRichText field={news.summary}/>

@@ -1,5 +1,5 @@
 export const baseState = {
   deviceMode: 'desktop',
-  circleCount: 18,
+  circleCount: 24,
   circleWidth: 0,
 }

@@ -40,7 +40,7 @@ const BackgroundComponent = () => {
 
   return (
     <BackgroundStyles ref={bgRef} circleCount={snap.circleCount}>
-      <motion.div style={{ y: snap.deviceMode != 'mobile' ? (scrollYPos-1)*(400) : 0}}>
+      <motion.div style={{ y: snap.deviceMode != 'mobile' ? (scrollYPos-1)*(snap.circleWidth*5) : 0}}>
         { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
       </motion.div>
     </BackgroundStyles>

@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
   --circle-width: 0px;
+  --random-color: '#000000';
 }
 
 @font-face {
@@ -14,12 +15,12 @@ const GlobalStyle = createGlobalStyle`
 }
 
 ::selection {
-  background: ${ props => props.theme.colors.highlight };
+  background: ${ props => props.theme.colors.pink };
   color: white;
 }
 
 ::-moz-selection {
-  background: ${ props => props.theme.colors.highlight };
+  background: ${ props => props.theme.colors.pink };
   color: white;
 }
 
@@ -46,12 +47,26 @@ main {
   position: relative;
   min-height: 100vh;
 
-  ${ props => getFontSize('M', props)}
+  
+  fontSize: 1.03vw;
+  lineHeight: 1.34;
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.L }px) {
+    font-size: 1.3vw;
+  }
+
+  @media screen and (max-width: ${ props => props.theme.breakpoints.M }px) {
+    font-size: 16px;
+  }
 }
 
 main, body {
-    width: 100vw;;
+  width: 100vw;;
   overflow: hidden;
+}
+
+main {
+  padding-bottom: calc( ${({ theme }) => theme.spacing.SR }*2 + 1.4rem);
 }
 
 h1,
@@ -73,7 +88,7 @@ a {
 p > a {
   transition: ${props => props.theme.transitions.default};
   &:hover {
-    opacity: 0.5;
+    color: var(--random-color);
   }
 
   &::after {

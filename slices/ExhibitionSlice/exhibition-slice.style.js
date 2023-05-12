@@ -8,7 +8,7 @@ export const ExhibitionSliceStyles = styled('div')`
   position: relative;
 
   &:first-child {
-    padding-top: 11vw;
+    padding-top: calc( var(--circle-width) * 4);
   }
 
   .exhibition-info {
@@ -18,13 +18,14 @@ export const ExhibitionSliceStyles = styled('div')`
     height: 100vh;
     font-size: 8vw;
     display: flex;
+    pointer-events: none;
     ${'' /* top: 100vh; */}
     top: 0;
     ${'' /* top: calc( ${ props => props.index } * 100vh); */}
     /* opacity: 0.1; */
 
     * {
-      line-height: 1.2;
+      line-height: calc( var(--circle-width) * 2);
     }
   }
 
@@ -42,6 +43,7 @@ export const ExhibitionSliceStyles = styled('div')`
   }
 `
 export const ExhibitionTitleStyles = styled('h2')`
+  transform: translateY(12%);
   position: absolute;
   width: calc( ${ props => props.width } * var(--circle-width));
   left: calc( ${ props => props.left } * var(--circle-width));
@@ -66,6 +68,7 @@ export const ExhibitionTitleStyles = styled('h2')`
   }
 `
 export const ExhibitionDateStyles = styled('div')`
+  transform: translateY(12%);
   position: absolute;
   width: calc( ${ props => props.width } * var(--circle-width));
   left: calc( ${ props => props.left } * var(--circle-width));

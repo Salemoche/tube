@@ -7,8 +7,10 @@ export const defaultTheme = {
     'XL': 1400,
   },
   colors: {
-    highlight: '#FF3E9D',
+    pink: '#FF3E9D',
     gray: '#B4B4B4',
+    orange: '#FF6700',
+    green: '#D1FD51',
   },
   spacing: {
     'XSR': 'calc( var(--circle-width) / 8)',
