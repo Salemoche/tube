@@ -52,7 +52,8 @@ export const defaultTheme = {
     },
   },
   transitions: {
-    'default': '.3s'
+    'default': '.3s',
+    fakePageLoad: 2
   },
   tabletMultiplier: 0.75,
   phoneMultiplier: 0.75

@@ -6,6 +6,7 @@ import NavigationComponent from '../../components/navigation/navigation.componen
 import { ContentStyles } from '../../styles/global.components';
 import { NewsContainerStyles } from './news.styles';
 import { motion } from 'framer-motion';
+import { defaultTheme } from '@/styles/theme';
 
 export default function NewsPage({ page, navigation }) {
   
@@ -20,6 +21,7 @@ export default function NewsPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         <ContentStyles>
           <NewsContainerStyles>

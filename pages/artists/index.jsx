@@ -5,6 +5,7 @@ import LayoutComponent from '../../components/layout/layout.component';
 import NavigationComponent from '../../components/navigation/navigation.component';
 import { ArtistContentStyles } from './artists.styles';
 import { motion } from 'framer-motion';
+import { defaultTheme } from '@/styles/theme';
 
 export default function ArtistsPage({ page, navigation }) {
   return (
@@ -18,7 +19,7 @@ export default function ArtistsPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: .3, delay: 1 }}
+        transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         <ArtistContentStyles>
           <SliceZone slices={page.data.slices} components={components} />

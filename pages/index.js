@@ -5,6 +5,7 @@ import LayoutComponent from '../components/layout/layout.component';
 import NavigationComponent from '../components/navigation/navigation.component';
 import { ContentStyles, HomeContentStyles } from '../styles/global.components';
 import { motion } from 'framer-motion';
+import { defaultTheme } from '@/styles/theme';
 
 export default function ExhibitionsPage({ page, navigation }) {  
 
@@ -23,7 +24,7 @@ export default function ExhibitionsPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: .3 }}
+        transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         <HomeContentStyles>
           <SliceZone slices={page.data.slices} components={components}/>

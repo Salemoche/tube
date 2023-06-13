@@ -8,6 +8,7 @@ import { AboutContentStyles } from './about.styles';
 import { PrismicNextImage, PrismicRichText } from '@prismicio/next';
 import { motion } from 'framer-motion';
 import CustomMapComponent from '../../components/custom-map/custom-map.component';
+import { defaultTheme } from '@/styles/theme';
 
 export default function AboutPage({ page, navigation }) {
   console.log(page.data.intro)
@@ -22,6 +23,7 @@ export default function AboutPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         <AboutContentStyles>
           <div className="column-1 column content-column">

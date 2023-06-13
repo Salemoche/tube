@@ -5,6 +5,7 @@ import LoadingScreenComponent from '../loading-screen/loading-screen.component'
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import FooterComponent from '../footer/footer.component';
+import { defaultTheme } from '@/styles/theme';
 
 const LayoutComponent = ({ 
   children, 
@@ -40,20 +41,36 @@ const LayoutComponent = ({
         <meta property="og:image" content={ thumbnail } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <div
-        style={{
-          opacity: contentLoaded ? 0 : 1,
-          pointerEvents: contentLoaded ? 'none' : 'all',
-          zIndex: 1000,
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100%',
-        }}
-      >
-        <LoadingScreenComponent/>
-      </div> */}
+      <AnimatePresence>
+        { !contentLoaded &&
+          <motion.div
+            style={{
+              zIndex: 1000,
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100vw',
+              height: '100%',
+            }}
+            initial={{ 
+              opacity: 0,
+              pointerEvents: 'all'
+            }}
+            animate={{ 
+              opacity: 1,
+              pointerEvents: 'none'
+            }}
+            exit={{ 
+              opacity: 0,
+              pointerEvents: 'all',
+              transition: { delay: defaultTheme.transitions.fakePageLoad * 0.6}
+            }}
+            transition={{ duration: .3}}
+          >
+            <LoadingScreenComponent/>
+          </motion.div>
+        }
+      </AnimatePresence>
       { header && 
         <header>
           { header }

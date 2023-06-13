@@ -7,6 +7,7 @@ import { proxy, useSnapshot } from 'valtio';
 import { baseState } from '../../data/state';
 import { ContactContentStyles } from './contact.styles';
 import { motion } from 'framer-motion';
+import { defaultTheme } from '@/styles/theme';
 
 
 export default function ContactPage({ page, navigation }) {
@@ -26,6 +27,7 @@ export default function ContactPage({ page, navigation }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         <ContactContentStyles circleCount={snap.circleCount}>
           <div className="column column-1 address-column">

@@ -8,6 +8,7 @@ export const LoadingScreenStyles = styled('div')`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 
   img {
     width: 100px;
