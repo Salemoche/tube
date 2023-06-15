@@ -11,8 +11,8 @@ export const LoadingScreenStyles = styled('div')`
   
 
   img {
-    width: 100px;
+    width: 200px;
     height: auto;
-    max-width: 20vw;
+    max-width: 40vw;
   }
 `

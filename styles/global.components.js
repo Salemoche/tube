@@ -48,3 +48,7 @@ export const ColumnContentComponent = styled(ContentStyles)`
 export const HomeContentStyles = styled(ContentStyles)`
   margin-top: 0;
 `
+
+export const DefaultPageStyles = styled(ContentStyles)`
+  background: green;
+`

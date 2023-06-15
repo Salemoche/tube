@@ -7,7 +7,7 @@ export const ArtistContentStyles = styled(ContentStyles)`
   flex-direction: column;
 
   .artist {
-    width: 50%;
+    width: calc( var(--circle-width) * 5 );
   }
 `
 

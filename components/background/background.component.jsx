@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { BackgroundStyles } from './background.styles';
 import { baseState } from '../../data/state';
 import { proxy, useSnapshot } from 'valtio';
-import { useScroll, motion, useMotionValueEvent } from 'framer-motion';
+import { useScroll, motion, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 
 const BackgroundComponent = () => {
 
@@ -36,16 +36,22 @@ const BackgroundComponent = () => {
   }, [snap, bgRef])
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    setScrollYPos(latest)
+    // setScrollYPos(latest)
   })
   
 
   return (
-    <BackgroundStyles ref={bgRef} circleCount={snap.circleCount} bgImage={`/images/background_${snap.circleCount}.png`}>
-      <motion.div style={{ y: snap.deviceMode != 'mobile' ? (scrollYPos-1)*(snap.circleWidth*5) : 0}}>
-        { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
-      </motion.div>
-    </BackgroundStyles>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: .3}}
+    >
+      <BackgroundStyles ref={bgRef} circleCount={snap.circleCount} bgImage={`/images/background_${snap.circleCount}.png`}>
+        <motion.div style={{ y: snap.deviceMode != 'mobile' ? (scrollYPos-1)*(snap.circleWidth*5) : 0}}>
+          { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
+        </motion.div>
+      </BackgroundStyles>
+    </motion.div>
   )
 }
 

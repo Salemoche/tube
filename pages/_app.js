@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }) {
 
     
     document.documentElement.style.setProperty('--random-color', `${randomColor}`)
-    console.log(randomColor)
+    // console.log(randomColor)
   }
 
   useEffect(() => {

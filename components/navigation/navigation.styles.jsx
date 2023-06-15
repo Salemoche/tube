@@ -23,12 +23,12 @@ export const NavigationStyles = styled('nav')`
 
   .logo {
     user-select: none;
-    font-size: 3vw;
+    font-size: 4vw;
     line-height: var(--circle-width);
     width: calc(6 * var(--circle-width));
     pointer-events: all;
     height: var(--circle-width);
-    transform: translateY(22%) translateX(-1%);
+    transform: translateY(16%) translateX(-1%);
   }
 
   .logo-mobile {
@@ -38,7 +38,7 @@ export const NavigationStyles = styled('nav')`
     position: absolute;
     right: ${({ theme }) => theme.spacing.SR };
     top: ${({ theme }) => theme.spacing.SR };
-    right: 0;
+    left: calc( var(--circle-width) / 8);
     top: 0;
     z-index: 100;
     ${ props => getFontSize('S', props) };
@@ -100,8 +100,9 @@ export const NavigationStyles = styled('nav')`
   }
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.L }px) {
-    .menu ul .menu-item {
-      font-size: font-size: 1.85vw;
+    .menu ul .menu-item,
+    .menu ul .menu-item a {
+      font-size: 2.65vw;
     }
   }
 

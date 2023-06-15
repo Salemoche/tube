@@ -45,7 +45,7 @@ export const defaultTheme = {
       letterSpacing: 0
     },
     'XL': {
-      unit: 'px',
+      unit: 'vw',
       fontSize: 10,
       lineHeight: 1.4,
       letterSpacing: 0

@@ -10,7 +10,7 @@ import { defaultTheme } from '@/styles/theme';
 export default function ExhibitionsPage({ page, navigation }) {  
 
   const isHovered = () => {
-    console.log('hub')
+    // console.log('hub')
   }
 
   return (

@@ -20,9 +20,11 @@ const NewsItem = ({ slice }) => {
       spacingTop={spacingTop} 
       width={width}
     >
-      <div className="thumbnail">
-        <PrismicNextImage field={news.thumbnail} />
-      </div>
+      { news?.thumbnail &&
+        <div className="thumbnail">
+          <PrismicNextImage field={news.thumbnail} />
+        </div>
+      }
       { news.title && <h2 className="title">{ news.title }</h2>}
       <p className="date">
         {
@@ -35,6 +37,11 @@ const NewsItem = ({ slice }) => {
       { news.summary && 
         <div className="summary">
           <PrismicRichText field={news.summary}/>
+        </div>
+      }
+      { news.content && 
+        <div className="content">
+          <PrismicRichText field={news.content}/>
         </div>
       }
     </NewsStyles>

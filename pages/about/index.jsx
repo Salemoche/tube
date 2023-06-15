@@ -11,7 +11,6 @@ import CustomMapComponent from '../../components/custom-map/custom-map.component
 import { defaultTheme } from '@/styles/theme';
 
 export default function AboutPage({ page, navigation }) {
-  console.log(page.data.intro)
   return (
     <LayoutComponent
       title={page.data.meta_title}

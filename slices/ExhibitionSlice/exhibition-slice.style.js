@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import css from 'styled-jsx/css';
+import getFontSize from '../../utils/getFontSize';
 
 export const ExhibitionSliceStyles = styled('div')`
 
@@ -16,7 +17,7 @@ export const ExhibitionSliceStyles = styled('div')`
     left: 0;
     width: 100%;
     height: 100vh;
-    font-size: 8vw;
+    ${ props => getFontSize( 'XL', props )};
     display: flex;
     pointer-events: none;
     ${'' /* top: 100vh; */}
@@ -25,7 +26,7 @@ export const ExhibitionSliceStyles = styled('div')`
     /* opacity: 0.1; */
 
     * {
-      line-height: calc( var(--circle-width) * 2);
+      line-height: calc( var(--circle-width) * 3);
     }
   }
 
@@ -50,11 +51,12 @@ export const ExhibitionSliceStyles = styled('div')`
   }
 `
 export const ExhibitionTitleStyles = styled('h2')`
-  transform: translateY(12%);
+  transform: translateY(-5%);
   position: absolute;
   width: calc( ${ props => props.width } * var(--circle-width));
   left: calc( ${ props => props.left } * var(--circle-width));
-  bottom: calc( ${ props => props.top } * var(--circle-width));
+  ${'' /* bottom: calc( ${ props => props.top } * var(--circle-width)); */}
+  top: calc( ${ props => props.top } * var(--circle-width));
   hyphens: auto;
   /* word-break: break-word; */
   margin-bottom: var(--circle-width);
@@ -62,7 +64,8 @@ export const ExhibitionTitleStyles = styled('h2')`
   @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
     width: calc( ${ props => props.width * props.theme.tabletMultiplier } * var(--circle-width));
     left: calc( ${ props => props.left * props.theme.tabletMultiplier } * var(--circle-width));
-    bottom: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width));
+    ${'' /* bottom: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width)); */}
+    top: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width));
   }
 
 
@@ -75,18 +78,20 @@ export const ExhibitionTitleStyles = styled('h2')`
   }
 `
 export const ExhibitionDateStyles = styled('div')`
-  transform: translateY(12%);
+  transform: translateY(-5%);
   position: absolute;
   width: calc( ${ props => props.width } * var(--circle-width));
   left: calc( ${ props => props.left } * var(--circle-width));
-  bottom: calc( ${ props => props.top } * var(--circle-width));
+  ${'' /* bottom: calc( ${ props => props.top } * var(--circle-width)); */}
+  top: calc( ${ props => props.top } * var(--circle-width));
   word-break: break-word;
   margin-bottom: var(--circle-width);
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
     width: calc( ${ props => props.width * props.theme.tabletMultiplier } * var(--circle-width));
     left: calc( ${ props => props.left * props.theme.tabletMultiplier } * var(--circle-width));
-    bottom: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width));
+    ${'' /* bottom: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width)); */}
+    top: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width));
   }
 
 
@@ -109,6 +114,7 @@ export const ExhibitionContentStyles = styled('div')`
   .image-container {
     width: calc( ${ props => props.width } * var(--circle-width));
     height: calc( ${ props => props.height } * var(--circle-width));
+    max-width: 100%;
 
     img {
       width: 100%;
@@ -159,7 +165,8 @@ export const ExhibitionContentStyles = styled('div')`
     margin-bottom: ${({ theme }) => theme.spacing.XL };
 
     .image-container {
-      height: 100%
+      width: 100%;
+      height: auto;
     }
   }
 `

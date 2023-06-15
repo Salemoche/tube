@@ -346,7 +346,7 @@ type DefaultPageDocumentDataSlicesSlice = DefaultTextSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type DefaultPageDocument<Lang extends string = string> =
-  prismicT.PrismicDocumentWithoutUID<
+  prismicT.PrismicDocumentWithUID<
     Simplify<DefaultPageDocumentData>,
     "default_page",
     Lang

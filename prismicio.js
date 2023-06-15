@@ -32,7 +32,7 @@ const routes = [
   },
   // {
   //   type: 'default_page',
-  //   path: '/:title',
+  //   path: '/:uid',
   // }
 ]
 

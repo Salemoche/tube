@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, createRef } from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next';
 import { ExhibitionSliceStyles, ExhibitionTitleStyles, ExhibitionDateStyles, ExhibitionContentStyles } from './exhibition-slice.style';
@@ -35,7 +35,37 @@ const ExhibitionSlice = ({ slice, index }) => {
   const store = proxy(baseState);
   const snap = useSnapshot(store);
 
-  console.log(images)
+  // const exhibitionContentRefs = useRef([]);
+  // exhibitionContentRefs.current = images.map((_, i) => exhibitionContentRefs.current[i] ?? createRef());
+
+  // const calculateImageHeight = () => {
+  //   exhibitionContentRefs.current.forEach((ref, i) => {
+  //     if (ref.current) {
+
+  //       ref.current.style.height = 'auto';
+  //       const circleWidth = window.innerWidth / snap.circleCount;
+  //       const timesCircle = Math.floor(ref.current.offsetHeight / circleWidth) + 1;
+  //       ref.current.style.height = snap.circleWidth * timesCircle + 'px';
+  //       console.log(ref.current.offsetHeight, circleWidth, ref.current.offsetHeight / circleWidth, timesCircle, circleWidth * timesCircle + 'px')
+
+  //     }
+  //   })
+  // }
+
+  // useEffect(() => {
+  //   calculateImageHeight();
+  // }, [exhibitionContentRefs])
+
+  // useEffect(() => {
+  //   window.addEventListener('resize', calculateImageHeight);
+  
+  //   return () => {
+  //     window.removeEventListener('resize', calculateImageHeight);
+  //   }
+  // }, [])
+  
+
+  // console.log(images)
   
 
   //TODO: find out why the primary isn't filtered
@@ -87,11 +117,12 @@ const ExhibitionSlice = ({ slice, index }) => {
             spacingTop={ image.primary.spacing_top}
             width={ image.primary.width}
             height={ image.primary.height}
+            // ref={exhibitionContentRefs.current[i]}
             // widthTablet={ Math.floor(image.primary.width * defaultTheme.tabletMultiplier)}
           >
             { image.primary.image && <div className="image-container"><PrismicNextImage field={ image.primary.image } /></div> }
               <div className="image-caption">
-                <div className="name">{image.primary.title?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}</div>
+                <div className="name">{image.primary.title[0]?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}</div>
                 <div className="info">{image.primary.information}</div>
               </div>
             <div className="description">
