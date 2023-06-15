@@ -25,7 +25,7 @@ const ExhibitionSlice = ({ slice, index }) => {
 
   const { scrollYProgress } = useScroll({ target: containerRef});
   const [scrollYPos, setScrollYPos] = useState(0)
-  const offset = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * -0.9 : 0;
+  const offset = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * 0.3 : 0;
   const offsetMobile = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * 0.3 : 0;
   const y = useTransform(scrollYProgress, [0, 1], [0, offset])
   const yMobile = useTransform(scrollYProgress, [0, 1], [0, offsetMobile])

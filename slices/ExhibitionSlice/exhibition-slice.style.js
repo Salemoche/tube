@@ -51,6 +51,9 @@ export const ExhibitionSliceStyles = styled('div')`
         margin-bottom: ${({ theme }) => theme.spacing.XL };
         font-size: 20vw;
         line-height: calc( var(--circle-width) * 2);
+      }
+
+      h2 {
         word-break: break-all;
       }
     }

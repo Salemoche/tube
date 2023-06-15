@@ -34,7 +34,7 @@ export default function ContactPage({ page, navigation }) {
             <SliceZone slices={page.data.slices} components={components} />
           </div>
           <div className="column column-2 newsletter-column">
-            <div className="newsletter-form">
+            {/* <div className="newsletter-form">
               <div className="newsletter-intro">  
                 <PrismicRichText field={page.data.intro}/>
               </div>
@@ -42,7 +42,7 @@ export default function ContactPage({ page, navigation }) {
                 <input className="newsletter-input" type="text" placeholder={page.data.newsletter_placeholder}/>
                 <input className="newsletter-submit"  type="submit" value={page.data.subscribe_button} />
               </div>
-            </div>
+            </div> */}
           </div>
         </ContactContentStyles>
       </motion.div>
