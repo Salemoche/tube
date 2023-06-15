@@ -26,7 +26,9 @@ const ExhibitionSlice = ({ slice, index }) => {
   const { scrollYProgress } = useScroll({ target: containerRef});
   const [scrollYPos, setScrollYPos] = useState(0)
   const offset = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * -0.9 : 0;
+  const offsetMobile = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * 0.3 : 0;
   const y = useTransform(scrollYProgress, [0, 1], [0, offset])
+  const yMobile = useTransform(scrollYProgress, [0, 1], [0, offsetMobile])
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setScrollYPos(latest)
@@ -77,7 +79,7 @@ const ExhibitionSlice = ({ slice, index }) => {
       ref={containerRef}
     >
       <motion.div 
-        style={{ y: snap.deviceMode != 'mobile' ? y : y }}
+        style={{ y: snap.deviceMode != 'mobile' ? y : yMobile }}
         className="exhibition-info"
       >
         <ExhibitionTitleStyles
@@ -123,11 +125,14 @@ const ExhibitionSlice = ({ slice, index }) => {
             { image.primary.image && <div className="image-container"><PrismicNextImage field={ image.primary.image } /></div> }
               <div className="image-caption">
                 <div className="name">{image.primary.title[0]?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}</div>
-                <div className="info">{image.primary.information}</div>
+                {image?.primary?.information && <div className="info">{image.primary.information}</div>}
               </div>
-            <div className="description">
-              <PrismicRichText field={image.primary.description}/>
-            </div>
+
+            { image.primary.description &&
+              <div className="description">
+                <PrismicRichText field={image.primary.description}/>
+              </div>
+            }
           </ExhibitionContentStyles>
         )
       }

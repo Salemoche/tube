@@ -55,6 +55,7 @@ export async function getStaticProps({ previewData }) {
                       title
                       thumbnail
                       summary
+                      content
                     }
                   }
                 }

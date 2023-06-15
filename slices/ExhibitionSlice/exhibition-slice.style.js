@@ -49,8 +49,9 @@ export const ExhibitionSliceStyles = styled('div')`
 
       * {
         margin-bottom: ${({ theme }) => theme.spacing.XL };
-        font-size: 15vw;
-        line-height: calc( var(--circle-width) * 1);
+        font-size: 20vw;
+        line-height: calc( var(--circle-width) * 2);
+        word-break: break-all;
       }
     }
   }
@@ -171,6 +172,10 @@ export const ExhibitionContentStyles = styled('div')`
 
     .image-container {
       width: 100%;
+      height: auto;
+    }
+
+    .image-caption {
       height: auto;
     }
   }
