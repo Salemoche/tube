@@ -40,6 +40,7 @@ const LayoutComponent = ({
         <meta property="og:description" content={ description }></meta>
         <meta property="og:image" content={ thumbnail } />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="./fonts/Bull-5-Mono.woff2" as="font" crossOrigin="" type="font/woff2" />
       </Head>
       <AnimatePresence>
         { !contentLoaded &&
@@ -63,7 +64,7 @@ const LayoutComponent = ({
             exit={{ 
               opacity: 0,
               pointerEvents: 'all',
-              transition: { delay: defaultTheme.transitions.fakePageLoad * 0.6}
+              // transition: { delay: defaultTheme.transitions.fakePageLoad * 0.6}
             }}
             transition={{ duration: .3}}
           >

@@ -46,7 +46,12 @@ export const ExhibitionSliceStyles = styled('div')`
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      font-size: 15vw;
+
+      * {
+        margin-bottom: ${({ theme }) => theme.spacing.XL };
+        font-size: 15vw;
+        line-height: calc( var(--circle-width) * 1);
+      }
     }
   }
 `

@@ -41,17 +41,12 @@ const BackgroundComponent = () => {
   
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: .3}}
-    >
+    
       <BackgroundStyles ref={bgRef} circleCount={snap.circleCount} bgImage={`/images/background_${snap.circleCount}.png`}>
         <motion.div style={{ y: snap.deviceMode != 'mobile' ? (scrollYPos-1)*(snap.circleWidth*5) : 0}}>
           { circles.map( (circle, i) => ( <div key={`circle-${i}`} className="circle"></div> ))}
         </motion.div>
       </BackgroundStyles>
-    </motion.div>
   )
 }
 
