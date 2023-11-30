@@ -1,5 +1,5 @@
 import * as prismic from '@prismicio/client'
-import { createClient } from '../../../prismicio'
+import { createClient } from '../../prismicio'
 import LayoutComponent from '@/components/layout/layout.component'
 import NavigationComponent from '@/components/navigation/navigation.component'
 import { motion } from 'framer-motion';
@@ -26,7 +26,7 @@ const ArtistPage = ({ page, navigation }) => {
         transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         { page && <DefaultContentStyles>
-          <SliceZone slices={page.data.slices} components={components}/>
+          <SliceZone slices={page.data.slices}/>
         </DefaultContentStyles>}
       </motion.div>
     </LayoutComponent>

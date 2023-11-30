@@ -49,6 +49,9 @@ export const HomeContentStyles = styled(ContentStyles)`
   margin-top: 0;
 `
 
+export const DefaultContentStyles = styled(ContentStyles)`
+`
+
 export const DefaultPageStyles = styled(ContentStyles)`
   background: green;
 `

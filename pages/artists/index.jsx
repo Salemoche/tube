@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { defaultTheme } from '@/styles/theme';
 
 export default function ArtistsPage({ page, navigation }) {
+  console.log(page)
   return (
     <LayoutComponent
       title={page.data.meta_title}
@@ -31,7 +32,35 @@ export default function ArtistsPage({ page, navigation }) {
 
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
-  const page = await client.getSingle('artist_page')
+  const page = await client.getSingle('artist_page'
+  , {
+    graphQuery: `{
+      artist_page {
+        meta_title
+        meta_description
+        meta_thumbnail
+        slices {
+          ...on artist {
+            variation {
+              ... on default {
+                primary {
+                  name
+                  information
+                  connected_artist_page {
+                    ... on single_artist_page {
+                      uid
+                      artist_name
+                      artist_information
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }`
+  })
 
   const navigation = await client.getSingle( 'navigation' )
 

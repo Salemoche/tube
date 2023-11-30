@@ -381,17 +381,6 @@ interface ExhibitionDocumentData {
   end_date: prismic.DateField;
 
   /**
-   * Page Link field in *Exhibition*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition.page_link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  page_link: prismic.LinkField;
-
-  /**
    * Slice Zone field in *Exhibition*
    *
    * - **Field Type**: Slice Zone
@@ -673,6 +662,17 @@ interface SingleArtistPageDocumentData {
   artist_information: prismic.RichTextField;
 
   /**
+   * Artist Info field in *Single Artist Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_artist_page.artist_info
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  artist_info: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *Single Artist Page*
    *
    * - **Field Type**: Slice Zone
@@ -904,10 +904,10 @@ export interface ArtistSliceDefaultPrimary {
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: artist.primary.artist_page
+   * - **API ID Path**: artist.primary.connected_artist_page
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  artist_page: prismic.ContentRelationshipField<"single_artist_page">;
+  connected_artist_page: prismic.ContentRelationshipField<"single_artist_page">;
 }
 
 /**

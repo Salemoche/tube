@@ -1,5 +1,6 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import { ExhibitionContentStyles } from '../ExhibitionSlice/exhibition-slice.style'
 
 /**
  * @typedef {import("@prismicio/client").Content.ExhibitionImageSlice} ExhibitionImageSlice
@@ -8,6 +9,7 @@ import { PrismicRichText } from '@prismicio/react'
  */
 const ExhibitionImage = ({ slice }) => (
   <ExhibitionContentStyles>
+    hello
   </ExhibitionContentStyles>
 )
 

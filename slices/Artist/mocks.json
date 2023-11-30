@@ -19,7 +19,7 @@
 					}
 				]
 			},
-			"artist_page": {
+			"connected_artist_page": {
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "DocumentLink",

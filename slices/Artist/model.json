@@ -27,7 +27,7 @@
             "multi": "paragraph,hyperlink"
           }
         },
-        "artist_page": {
+        "connected_artist_page": {
           "type": "Link",
           "config": {
             "label": "Artist Page",
