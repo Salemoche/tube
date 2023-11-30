@@ -3,38 +3,30 @@
   "label": "Exhibition",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "title": {
         "type": "Text",
-        "config": {
-          "label": "Title",
-          "placeholder": "Exhibition Title"
-        }
+        "config": { "label": "Title", "placeholder": "Exhibition Title" }
       },
       "start_date": {
         "type": "Date",
-        "config": {
-          "label": "Start Date",
-          "placeholder": ""
-        }
+        "config": { "label": "Start Date", "placeholder": "" }
       },
       "end_date": {
         "type": "Date",
-        "config": {
-          "label": "End Date",
-          "placeholder": ""
-        }
+        "config": { "label": "End Date", "placeholder": "" }
+      },
+      "page_link": {
+        "type": "Link",
+        "config": { "label": "Page Link", "placeholder": "", "select": null }
       },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "exhibition_image": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": { "exhibition_image": { "type": "SharedSlice" } }
         }
       }
     }

@@ -13,7 +13,10 @@
       "primary": {
         "name": {
           "type": "Text",
-          "config": { "label": "Name", "placeholder": "Artist Name" }
+          "config": {
+            "label": "Name",
+            "placeholder": "Artist Name"
+          }
         },
         "information": {
           "type": "StructuredText",
@@ -22,6 +25,16 @@
             "placeholder": "Artist Information",
             "allowTargetBlank": true,
             "multi": "paragraph,hyperlink"
+          }
+        },
+        "artist_page": {
+          "type": "Link",
+          "config": {
+            "label": "Artist Page",
+            "select": "document",
+            "customtypes": [
+              "single_artist_page"
+            ]
           }
         }
       },

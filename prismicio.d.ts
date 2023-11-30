@@ -387,6 +387,17 @@ interface ExhibitionDocumentData {
    */
   end_date: prismicT.DateField;
   /**
+   * Page Link field in *Exhibition*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.page_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  page_link: prismicT.LinkField;
+  /**
    * Slice Zone field in *Exhibition*
    *
    * - **Field Type**: Slice Zone
@@ -644,6 +655,73 @@ export type NewsPageDocument<Lang extends string = string> =
     "news_page",
     Lang
   >;
+/** Content for Standard Page documents */
+interface StandardPageDocumentData {
+  /**
+   * Slice Zone field in *Standard Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: standard_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<StandardPageDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *Standard Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: standard_page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_description: prismicT.KeyTextField;
+  /**
+   * Meta Image field in *Standard Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: standard_page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismicT.ImageField<never>;
+  /**
+   * Meta Title field in *Standard Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: standard_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismicT.KeyTextField;
+}
+/**
+ * Slice for *Standard Page → Slice Zone*
+ *
+ */
+type StandardPageDocumentDataSlicesSlice = ExhibitionImageSlice;
+/**
+ * Standard Page document from Prismic
+ *
+ * - **API ID**: `standard_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type StandardPageDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<StandardPageDocumentData>,
+    "standard_page",
+    Lang
+  >;
 export type AllDocumentTypes =
   | AboutPageDocument
   | ArtistPageDocument
@@ -653,7 +731,8 @@ export type AllDocumentTypes =
   | ExhibitionsPageDocument
   | NavigationDocument
   | NewsDocument
-  | NewsPageDocument;
+  | NewsPageDocument
+  | StandardPageDocument;
 /**
  * Primary content in Artist → Primary
  *
@@ -851,12 +930,12 @@ export type DefaultTextSlice = prismicT.SharedSlice<
   DefaultTextSliceVariation
 >;
 /**
- * Primary content in ExhibitionContent → Primary
+ * Primary content in StandardPageContent → Primary
  *
  */
 interface ExhibitionImageSliceDefaultPrimary {
   /**
-   * Image field in *ExhibitionContent → Primary*
+   * Image field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -866,7 +945,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   image: prismicT.ImageField<never>;
   /**
-   * Title field in *ExhibitionContent → Primary*
+   * Title field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Title
    * - **Placeholder**: Title
@@ -876,7 +955,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   title: prismicT.TitleField;
   /**
-   * Information field in *ExhibitionContent → Primary*
+   * Information field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -886,7 +965,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   information: prismicT.KeyTextField;
   /**
-   * Description field in *ExhibitionContent → Primary*
+   * Description field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Description
@@ -896,7 +975,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   description: prismicT.RichTextField;
   /**
-   * Show on Exhibitions Page field in *ExhibitionContent → Primary*
+   * Show on Exhibitions Page field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
@@ -907,7 +986,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   show_on_exhibitions_page: prismicT.BooleanField;
   /**
-   * Spacing Left field in *ExhibitionContent → Primary*
+   * Spacing Left field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -917,7 +996,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   spacing_left: prismicT.NumberField;
   /**
-   * Spacing Right field in *ExhibitionContent → Primary*
+   * Spacing Right field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -927,7 +1006,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   spacing_right: prismicT.NumberField;
   /**
-   * Spacing Top field in *ExhibitionContent → Primary*
+   * Spacing Top field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -937,7 +1016,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   spacing_top: prismicT.NumberField;
   /**
-   * Width field in *ExhibitionContent → Primary*
+   * Width field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -947,7 +1026,7 @@ interface ExhibitionImageSliceDefaultPrimary {
    */
   width: prismicT.NumberField;
   /**
-   * Height field in *ExhibitionContent → Primary*
+   * Height field in *StandardPageContent → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -958,7 +1037,7 @@ interface ExhibitionImageSliceDefaultPrimary {
   height: prismicT.NumberField;
 }
 /**
- * Default variation for ExhibitionContent Slice
+ * Default variation for StandardPageContent Slice
  *
  * - **API ID**: `default`
  * - **Description**: `ExhibitionImage`
@@ -971,12 +1050,12 @@ export type ExhibitionImageSliceDefault = prismicT.SharedSliceVariation<
   never
 >;
 /**
- * Slice variation for *ExhibitionContent*
+ * Slice variation for *StandardPageContent*
  *
  */
 type ExhibitionImageSliceVariation = ExhibitionImageSliceDefault;
 /**
- * ExhibitionContent Shared Slice
+ * StandardPageContent Shared Slice
  *
  * - **API ID**: `exhibition_image`
  * - **Description**: `ExhibitionImage`
@@ -1239,7 +1318,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
   namespace Content {
@@ -1270,6 +1349,9 @@ declare module "@prismicio/client" {
       NewsPageDocumentData,
       NewsPageDocumentDataSlicesSlice,
       NewsPageDocument,
+      StandardPageDocumentData,
+      StandardPageDocumentDataSlicesSlice,
+      StandardPageDocument,
       AllDocumentTypes,
       ArtistSliceDefaultPrimary,
       ArtistSliceDefault,

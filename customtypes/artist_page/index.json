@@ -3,6 +3,7 @@
   "label": "Artist Page",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "slices": {
