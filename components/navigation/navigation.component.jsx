@@ -9,7 +9,7 @@ import BackgroundComponent from '../background/background.component';
 import { motion } from 'framer-motion';
 import { defaultTheme } from '@/styles/theme';
 
-const NavigationComponent = ({ navigation }) => {
+const NavigationComponent = ({ navigation, currentItem }) => {
 
   const menuItems = navigation.data.slices;
 
@@ -49,7 +49,7 @@ const NavigationComponent = ({ navigation }) => {
         {/* { snap.deviceMode == 'mobile' && <div className="circle"></div> } */}
         { menuItems.map(( menuItem, i ) => (
           <li 
-            className={`menu-item ${ isPath(menuItem) && 'menu-item-current'}`} 
+            className={`menu-item ${ isPath(menuItem) || currentItem === menuItem.primary.label.toLowerCase() && 'menu-item-current'}`} 
             key={`menu-item-${i}`}
             style={{ color: isPath(menuItem) ? 'black' : defaultTheme.colors.gray }}
           >

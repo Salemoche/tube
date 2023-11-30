@@ -119,6 +119,8 @@ export const ExhibitionContentStyles = styled('div')`
   margin-right: calc(${ props => props.spacingRight > 0 ? props.spacingRight : 1 } * var(--circle-width));
   margin-top: calc( ${ props => props.spacingTop } * var(--circle-width));
   margin-bottom: var(--circle-width);
+  display: inline-block;
+  vertical-align: top;
 
   .image-container {
     width: calc( ${ props => props.width } * var(--circle-width));

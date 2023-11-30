@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: 'Bull';
-  src: url('./fonts/Bull-5-Mono.woff2') format('woff2'),
-       url('./fonts/Bull-5-Mono.woff') format('woff')
+  src: url('/fonts/Bull-5-Mono.woff2') format('woff2'),
+       url('/fonts/Bull-5-Mono.woff') format('woff')
 }
 
 ::selection {

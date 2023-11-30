@@ -8,6 +8,7 @@ export const components = {
   default_text: dynamic(() => import("./DefaultText")),
   exhibition_image: dynamic(() => import("./StandardContentItem")),
   exhibition_slice: dynamic(() => import("./ExhibitionSlice")),
+  hero_slice: dynamic(() => import("./TitleSectionSlice")),
   menu_item: dynamic(() => import("./MenuItem")),
   news_item: dynamic(() => import("./NewsItem")),
 };

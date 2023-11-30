@@ -7,17 +7,33 @@ import { defaultTheme } from '@/styles/theme';
 import { DefaultContentStyles } from '@/styles/global.components';
 import { SliceZone } from '@prismicio/react';
 import { components } from '@/slices';
+import ParallaxTitleComponent from '../../parallax-title/parallax-title';
+import { useRef, useState, useEffect } from 'react';
+import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 
 const ArtistPage = ({ page, navigation }) => {
 
-  console.log(page, navigation)
+  console.log(page)
+
+  const titleContainerRef = useRef(null);
+  const [yPos, setYPos] = useState(0)
+
+  const {scrollYProgress} = useScroll({
+    target: titleContainerRef,
+    // offset: ["0 1", "2 1"]
+  })
+
+  useEffect(() => {
+    return scrollYProgress.onChange((v) => setYPos(v));
+  }, [scrollYProgress]);
+
 
   return (
     <LayoutComponent 
       title={page?.data?.meta_title || ""}
       description={page?.data?.meta_description?.text || ""}
       image={page?.data?.meta_thumbnail?.url  || ""}
-      header={ navigation ? <NavigationComponent navigation={navigation} /> : null  }
+      header={ navigation ? <NavigationComponent navigation={navigation} currentItem={'artists'} /> : null  }
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -25,7 +41,17 @@ const ArtistPage = ({ page, navigation }) => {
         exit={{ opacity: 0 }}
         transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
-        { page && <DefaultContentStyles>
+        { page && <DefaultContentStyles ref={ titleContainerRef }>
+          <ParallaxTitleComponent 
+            options={{
+              contentLeft: page.data.artist_name,
+              contentLeftWidth: 100,
+              contentRightWidth: 0,
+              yPos,
+              scrollDistPercent: 50,
+              container: titleContainerRef,
+            }}
+          />
           <SliceZone slices={page.data.slices} components={components}/>
         </DefaultContentStyles>}
       </motion.div>

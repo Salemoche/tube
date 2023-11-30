@@ -1319,6 +1319,36 @@ export type ExhibitionSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for TitleSectionSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *TitleSectionSlice*
+ */
+type HeroSliceSliceVariation = HeroSliceSliceDefault;
+
+/**
+ * TitleSectionSlice Shared Slice
+ *
+ * - **API ID**: `hero_slice`
+ * - **Description**: HeroSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceSlice = prismic.SharedSlice<
+  "hero_slice",
+  HeroSliceSliceVariation
+>;
+
+/**
  * Primary content in *MenuItem → Primary*
  */
 export interface MenuItemSliceDefaultPrimary {
@@ -1526,6 +1556,9 @@ declare module "@prismicio/client" {
       ExhibitionSliceSliceDefaultPrimary,
       ExhibitionSliceSliceVariation,
       ExhibitionSliceSliceDefault,
+      HeroSliceSlice,
+      HeroSliceSliceVariation,
+      HeroSliceSliceDefault,
       MenuItemSlice,
       MenuItemSliceDefaultPrimary,
       MenuItemSliceVariation,

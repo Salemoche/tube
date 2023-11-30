@@ -124,7 +124,8 @@ const ExhibitionSlice = ({ slice, index }) => {
           >
             { image.primary.image && <div className="image-container"><PrismicNextImage field={ image.primary.image } /></div> }
               <div className="image-caption">
-                <div className="name">{image.primary.title[0]?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}</div>
+                {/* <div className="name">{image.primary.title[0]?.text ? <PrismicRichText field={image.primary.title}/> : `figure${ i > 9 ? i+1 : '0' + (i+1)}`}</div> */}
+                <div className="name">{image.primary.title[0]?.text && <PrismicRichText field={image.primary.title}/>}</div>
                 {image?.primary?.information && <div className="info">{image.primary.information}</div>}
               </div>
 
