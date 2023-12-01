@@ -2,114 +2,30 @@ import styled from 'styled-components';
 import css from 'styled-jsx/css';
 import getFontSize from '../../utils/getFontSize';
 
-export const ExhibitionSliceStyles = styled('div')`
+export const ExhibitionSliceStyles = styled('a')`
 
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  width: 100%;
+  padding: 0 var(--circle-width);
 
   &:first-child {
     padding-top: calc( var(--circle-width) * 4);
   }
 
-  .exhibition-info {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    ${ props => getFontSize( 'XL', props )};
-    display: flex;
-    pointer-events: none;
-    ${'' /* top: 100vh; */}
-    top: 0;
-    ${'' /* top: calc( ${ props => props.index } * 100vh); */}
-    /* opacity: 0.1; */
-
-    * {
-      line-height: calc( var(--circle-width) * 3);
+  &:hover {
+    .image-container {
+      ${'' /* filter: grayscale(100%); */}
+      ${'' /* mix-blend-mode: exclusion; */}
+      transform: scale(1.01);
     }
   }
-
-  ${'' /* @media screen and (max-width: ${ props => props.theme.breakpoints.M }px) {
-
-    .exhibition-info {
-      font-size: 12vw;
-    }
-  } */}
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     &:first-child {
       padding-top: ${({ theme }) => theme.spacing.XL };
     }
-
-    .exhibition-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      * {
-        margin-bottom: ${({ theme }) => theme.spacing.XL };
-        font-size: 20vw;
-        line-height: calc( var(--circle-width) * 2);
-      }
-
-      h2 {
-        word-break: break-all;
-      }
-    }
-  }
-`
-export const ExhibitionTitleStyles = styled('h2')`
-  transform: translateY(-5%);
-  position: absolute;
-  width: calc( ${ props => props.width } * var(--circle-width));
-  left: calc( ${ props => props.left } * var(--circle-width));
-  ${'' /* bottom: calc( ${ props => props.top } * var(--circle-width)); */}
-  top: calc( ${ props => props.top } * var(--circle-width));
-  hyphens: auto;
-  /* word-break: break-word; */
-  margin-bottom: var(--circle-width);
-
-  @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
-    width: calc( ${ props => props.width * props.theme.tabletMultiplier } * var(--circle-width));
-    left: calc( ${ props => props.left * props.theme.tabletMultiplier } * var(--circle-width));
-    ${'' /* bottom: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width)); */}
-    top: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width));
-  }
-
-
-  @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
-    width: 100%;
-    margin-bottom: ${({ theme }) => theme.spacing.SR };
-    position: static;
-    ${'' /* position: sticky;
-    top: 50vh; */}
-  }
-`
-export const ExhibitionDateStyles = styled('div')`
-  transform: translateY(-5%);
-  position: absolute;
-  width: calc( ${ props => props.width } * var(--circle-width));
-  left: calc( ${ props => props.left } * var(--circle-width));
-  ${'' /* bottom: calc( ${ props => props.top } * var(--circle-width)); */}
-  top: calc( ${ props => props.top } * var(--circle-width));
-  word-break: break-word;
-  margin-bottom: var(--circle-width);
-
-  @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
-    width: calc( ${ props => props.width * props.theme.tabletMultiplier } * var(--circle-width));
-    left: calc( ${ props => props.left * props.theme.tabletMultiplier } * var(--circle-width));
-    ${'' /* bottom: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width)); */}
-    top: calc( ${ props => props.top * props.theme.tabletMultiplier } * var(--circle-width));
-  }
-
-
-  @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
-    width: 100%;
-    margin-bottom: ${({ theme }) => theme.spacing.SR };
-    position: static;
-    ${'' /* position: sticky;
-    top: 50vh; */}
   }
 `
 
@@ -126,6 +42,7 @@ export const ExhibitionContentStyles = styled('div')`
     width: calc( ${ props => props.width } * var(--circle-width));
     height: calc( ${ props => props.height } * var(--circle-width));
     max-width: 100%;
+    transition: all 1s ease-in-out;
 
     img {
       width: 100%;

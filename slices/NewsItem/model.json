@@ -16,24 +16,38 @@
           "config": {
             "label": "News",
             "select": "document",
-            "customtypes": ["news"]
+            "customtypes": [
+              "news"
+            ]
           }
         },
         "spacing_left": {
           "type": "Number",
-          "config": { "label": "Spacing Left", "placeholder": "" }
+          "config": {
+            "label": "Spacing to the Left (times circle)",
+            "placeholder": ""
+          }
         },
         "spacing_right": {
           "type": "Number",
-          "config": { "label": "Spacing Right", "placeholder": "" }
+          "config": {
+            "label": "Spacing to the Right (times circle)",
+            "placeholder": ""
+          }
         },
         "spacing_top": {
           "type": "Number",
-          "config": { "label": "Spacing Top", "placeholder": "" }
+          "config": {
+            "label": "Spacing to the Top (times circle)",
+            "placeholder": ""
+          }
         },
         "width": {
           "type": "Number",
-          "config": { "label": "Width", "placeholder": "" }
+          "config": {
+            "label": "Width",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

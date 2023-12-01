@@ -9,8 +9,6 @@ import { defaultTheme } from '@/styles/theme';
 
 export default function ExhibitionsPage({ page, navigation }) {  
 
-  console.log(page)
-
   const isHovered = () => {
     // console.log('hub')
   }
@@ -50,17 +48,17 @@ export async function getStaticProps({ previewData }) {
             variation {
               ... on default {
                 primary {
-                  width_title
-                  horizontal_alignment_title
-                  vertical_alignment_title
-                  width_date
-                  horizontal_alignment_date
-                  vertical_alignment_date
                   exhibition {
                     ... on exhibition {
                       title
                       start_date
                       end_date
+                      width_title
+                      horizontal_alignment_title
+                      vertical_alignment_title
+                      width_date
+                      horizontal_alignment_date
+                      vertical_alignment_date
                       slices {
                         ...on exhibition_image {
                           variation {

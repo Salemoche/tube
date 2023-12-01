@@ -1,8 +1,9 @@
 {
   "id": "exhibitions_page",
-  "label": "Exhibitions Page",
+  "label": "Exhibitions Page (Home)",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "slices": {

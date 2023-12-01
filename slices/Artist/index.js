@@ -10,9 +10,6 @@ import Link from 'next/link'
  */
 const Artist = ({ slice, index, slices }) => {
 
-  // console.log(slice.primary.connected_artist_page.data)
-  console.log(slice.primary.connected_artist_page.data)
-
   return (
     <ArtistStyles className="artist">
       <p className="index">{index + 1 >= 10 ? `${index + 1}` : `0${index+1}`}</p>

@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 import { defaultTheme } from '@/styles/theme';
 
 export default function ArtistsPage({ page, navigation }) {
-  console.log(page)
   return (
     <LayoutComponent
       title={page.data.meta_title}

@@ -16,38 +16,10 @@
           "config": {
             "label": "Exhibition",
             "select": "document",
-            "customtypes": ["exhibition"]
+            "customtypes": [
+              "exhibition"
+            ]
           }
-        },
-        "horizontal_alignment_title": {
-          "type": "Number",
-          "config": {
-            "label": "Horizontal Alignment (Title)",
-            "placeholder": ""
-          }
-        },
-        "vertical_alignment_title": {
-          "type": "Number",
-          "config": { "label": "Vertical Alignment (Title)", "placeholder": "" }
-        },
-        "width_title": {
-          "type": "Number",
-          "config": { "label": "Width (Title)", "placeholder": "" }
-        },
-        "horizontal_alignment_date": {
-          "type": "Number",
-          "config": {
-            "label": "Horizontal Alignment (Date)",
-            "placeholder": ""
-          }
-        },
-        "vertical_alignment_date": {
-          "type": "Number",
-          "config": { "label": "Vertical Alignment (Date)", "placeholder": "" }
-        },
-        "width_date": {
-          "type": "Number",
-          "config": { "label": "Width (Date)", "placeholder": "" }
         }
       },
       "items": {},

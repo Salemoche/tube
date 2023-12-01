@@ -12,7 +12,7 @@
 			},
 			"spacing_right": {
 				"__TYPE__": "FieldContent",
-				"value": "94",
+				"value": "53",
 				"type": "Number"
 			},
 			"width": {
@@ -22,12 +22,12 @@
 			},
 			"spacing_top": {
 				"__TYPE__": "FieldContent",
-				"value": "20",
+				"value": "32",
 				"type": "Number"
 			},
 			"spacing_left": {
 				"__TYPE__": "FieldContent",
-				"value": "21",
+				"value": "0",
 				"type": "Number"
 			}
 		},

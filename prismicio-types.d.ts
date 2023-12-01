@@ -359,6 +359,39 @@ interface ExhibitionDocumentData {
   title: prismic.KeyTextField;
 
   /**
+   * Horizontal Alignment (Title) field in *Exhibition*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.horizontal_alignment_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  horizontal_alignment_title: prismic.NumberField;
+
+  /**
+   * Vertical Alignment (Title) field in *Exhibition*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.vertical_alignment_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  vertical_alignment_title: prismic.NumberField;
+
+  /**
+   * Width (Title) field in *Exhibition*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.width_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  width_title: prismic.NumberField;
+
+  /**
    * Start Date field in *Exhibition*
    *
    * - **Field Type**: Date
@@ -379,6 +412,39 @@ interface ExhibitionDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   end_date: prismic.DateField;
+
+  /**
+   * Horizontal Alignment (Date) field in *Exhibition*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.horizontal_alignment_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  horizontal_alignment_date: prismic.NumberField;
+
+  /**
+   * Vertical Alignment (Date) field in *Exhibition*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.vertical_alignment_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  vertical_alignment_date: prismic.NumberField;
+
+  /**
+   * Width (Date) field in *Exhibition*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibition.width_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  width_date: prismic.NumberField;
 
   /**
    * Slice Zone field in *Exhibition*
@@ -402,7 +468,7 @@ interface ExhibitionDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type ExhibitionDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
+  prismic.PrismicDocumentWithUID<
     Simplify<ExhibitionDocumentData>,
     "exhibition",
     Lang
@@ -411,11 +477,11 @@ export type ExhibitionDocument<Lang extends string = string> =
 type ExhibitionsPageDocumentDataSlicesSlice = ExhibitionSliceSlice;
 
 /**
- * Content for Exhibitions Page documents
+ * Content for Exhibitions Page (Home) documents
  */
 interface ExhibitionsPageDocumentData {
   /**
-   * Slice Zone field in *Exhibitions Page*
+   * Slice Zone field in *Exhibitions Page (Home)*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -424,7 +490,7 @@ interface ExhibitionsPageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<ExhibitionsPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Exhibitions Page*
+   * Meta Title field in *Exhibitions Page (Home)*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -435,7 +501,7 @@ interface ExhibitionsPageDocumentData {
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *Exhibitions Page*
+   * Meta Description field in *Exhibitions Page (Home)*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -446,7 +512,7 @@ interface ExhibitionsPageDocumentData {
   meta_description: prismic.RichTextField;
 
   /**
-   * Meta Thumbnail field in *Exhibitions Page*
+   * Meta Thumbnail field in *Exhibitions Page (Home)*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -458,7 +524,7 @@ interface ExhibitionsPageDocumentData {
 }
 
 /**
- * Exhibitions Page document from Prismic
+ * Exhibitions Page (Home) document from Prismic
  *
  * - **API ID**: `exhibitions_page`
  * - **Repeatable**: `false`
@@ -731,136 +797,6 @@ export type SingleArtistPageDocument<Lang extends string = string> =
     Lang
   >;
 
-type SingleExhibitionPageDocumentDataSlicesSlice = ExhibitionImageSlice;
-
-/**
- * Content for Single Exhibition Page documents
- */
-interface SingleExhibitionPageDocumentData {
-  /**
-   * Slice Zone field in *Single Exhibition Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: single_exhibition_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<SingleExhibitionPageDocumentDataSlicesSlice> /**
-   * Meta Description field in *Single Exhibition Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: single_exhibition_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Single Exhibition Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: single_exhibition_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Single Exhibition Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: single_exhibition_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Single Exhibition Page document from Prismic
- *
- * - **API ID**: `single_exhibition_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type SingleExhibitionPageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<SingleExhibitionPageDocumentData>,
-    "single_exhibition_page",
-    Lang
-  >;
-
-type StandardPageDocumentDataSlicesSlice = ExhibitionImageSlice;
-
-/**
- * Content for Standard Page documents
- */
-interface StandardPageDocumentData {
-  /**
-   * Slice Zone field in *Standard Page*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: standard_page.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<StandardPageDocumentDataSlicesSlice> /**
-   * Meta Description field in *Standard Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: standard_page.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Standard Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: standard_page.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Standard Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: standard_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Standard Page document from Prismic
- *
- * - **API ID**: `standard_page`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type StandardPageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<StandardPageDocumentData>,
-    "standard_page",
-    Lang
-  >;
-
 export type AllDocumentTypes =
   | AboutPageDocument
   | ArtistPageDocument
@@ -871,9 +807,7 @@ export type AllDocumentTypes =
   | NavigationDocument
   | NewsDocument
   | NewsPageDocument
-  | SingleArtistPageDocument
-  | SingleExhibitionPageDocument
-  | StandardPageDocument;
+  | SingleArtistPageDocument;
 
 /**
  * Primary content in *Artist → Primary*
@@ -1226,66 +1160,6 @@ export interface ExhibitionSliceSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   exhibition: prismic.ContentRelationshipField<"exhibition">;
-
-  /**
-   * Horizontal Alignment (Title) field in *ExhibitionSlice → Primary*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition_slice.primary.horizontal_alignment_title
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  horizontal_alignment_title: prismic.NumberField;
-
-  /**
-   * Vertical Alignment (Title) field in *ExhibitionSlice → Primary*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition_slice.primary.vertical_alignment_title
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  vertical_alignment_title: prismic.NumberField;
-
-  /**
-   * Width (Title) field in *ExhibitionSlice → Primary*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition_slice.primary.width_title
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  width_title: prismic.NumberField;
-
-  /**
-   * Horizontal Alignment (Date) field in *ExhibitionSlice → Primary*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition_slice.primary.horizontal_alignment_date
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  horizontal_alignment_date: prismic.NumberField;
-
-  /**
-   * Vertical Alignment (Date) field in *ExhibitionSlice → Primary*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition_slice.primary.vertical_alignment_date
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  vertical_alignment_date: prismic.NumberField;
-
-  /**
-   * Width (Date) field in *ExhibitionSlice → Primary*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: exhibition_slice.primary.width_date
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  width_date: prismic.NumberField;
 }
 
 /**
@@ -1316,36 +1190,6 @@ type ExhibitionSliceSliceVariation = ExhibitionSliceSliceDefault;
 export type ExhibitionSliceSlice = prismic.SharedSlice<
   "exhibition_slice",
   ExhibitionSliceSliceVariation
->;
-
-/**
- * Default variation for TitleSectionSlice Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroSliceSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *TitleSectionSlice*
- */
-type HeroSliceSliceVariation = HeroSliceSliceDefault;
-
-/**
- * TitleSectionSlice Shared Slice
- *
- * - **API ID**: `hero_slice`
- * - **Description**: HeroSlice
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroSliceSlice = prismic.SharedSlice<
-  "hero_slice",
-  HeroSliceSliceVariation
 >;
 
 /**
@@ -1418,7 +1262,7 @@ export interface NewsItemSliceDefaultPrimary {
   news: prismic.ContentRelationshipField<"news">;
 
   /**
-   * Spacing Left field in *NewsItem → Primary*
+   * Spacing to the Left (times circle) field in *NewsItem → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -1428,7 +1272,7 @@ export interface NewsItemSliceDefaultPrimary {
   spacing_left: prismic.NumberField;
 
   /**
-   * Spacing Right field in *NewsItem → Primary*
+   * Spacing to the Right (times circle) field in *NewsItem → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -1438,7 +1282,7 @@ export interface NewsItemSliceDefaultPrimary {
   spacing_right: prismic.NumberField;
 
   /**
-   * Spacing Top field in *NewsItem → Primary*
+   * Spacing to the Top (times circle) field in *NewsItem → Primary*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -1527,12 +1371,6 @@ declare module "@prismicio/client" {
       SingleArtistPageDocument,
       SingleArtistPageDocumentData,
       SingleArtistPageDocumentDataSlicesSlice,
-      SingleExhibitionPageDocument,
-      SingleExhibitionPageDocumentData,
-      SingleExhibitionPageDocumentDataSlicesSlice,
-      StandardPageDocument,
-      StandardPageDocumentData,
-      StandardPageDocumentDataSlicesSlice,
       AllDocumentTypes,
       ArtistSlice,
       ArtistSliceDefaultPrimary,
@@ -1556,9 +1394,6 @@ declare module "@prismicio/client" {
       ExhibitionSliceSliceDefaultPrimary,
       ExhibitionSliceSliceVariation,
       ExhibitionSliceSliceDefault,
-      HeroSliceSlice,
-      HeroSliceSliceVariation,
-      HeroSliceSliceDefault,
       MenuItemSlice,
       MenuItemSliceDefaultPrimary,
       MenuItemSliceVariation,

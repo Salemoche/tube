@@ -16,8 +16,6 @@ const ParallaxTitleComponent = ({ options }) => {
     ...options
   }
 
-  console.log(options)
-
   return (
     <>
       <ParallaxTitleStyles 

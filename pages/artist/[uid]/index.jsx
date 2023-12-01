@@ -7,13 +7,12 @@ import { defaultTheme } from '@/styles/theme';
 import { DefaultContentStyles } from '@/styles/global.components';
 import { SliceZone } from '@prismicio/react';
 import { components } from '@/slices';
-import ParallaxTitleComponent from '../../parallax-title/parallax-title';
+import ParallaxTitleComponent from '../../../components/parallax-title/parallax-title';
 import { useRef, useState, useEffect } from 'react';
 import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import HoveringTitleComponent from '@/components/hovering-title/hovering-title';
 
 const ArtistPage = ({ page, navigation }) => {
-
-  console.log(page)
 
   const titleContainerRef = useRef(null);
   const [yPos, setYPos] = useState(0)
@@ -42,7 +41,7 @@ const ArtistPage = ({ page, navigation }) => {
         transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         { page && <DefaultContentStyles ref={ titleContainerRef }>
-          <ParallaxTitleComponent 
+          {/* <ParallaxTitleComponent 
             options={{
               contentLeft: page.data.artist_name,
               contentLeftWidth: 100,
@@ -51,7 +50,13 @@ const ArtistPage = ({ page, navigation }) => {
               scrollDistPercent: 50,
               container: titleContainerRef,
             }}
-          />
+          /> */}
+          <HoveringTitleComponent options={{
+            content1: page.data.artist_name,
+            vertical_alignment_title: 8,
+            horizontal_alignment_title: 1,
+            scrollSpeed: -0.5,
+          }} containerRef={titleContainerRef} />
           <SliceZone slices={page.data.slices} components={components}/>
         </DefaultContentStyles>}
       </motion.div>

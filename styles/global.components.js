@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
 export const ContentStyles = styled('div')`
-  margin-top: calc( var(--circle-width) * 4 );
   margin-bottom: ${({ theme }) => theme.spacing.XLR };
 
   padding: 0 var(--circle-width);
+  padding-top: calc( var(--circle-width) * 4 );
 
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.L - 1 }px) {
@@ -47,6 +47,12 @@ export const ColumnContentComponent = styled(ContentStyles)`
 
 export const HomeContentStyles = styled(ContentStyles)`
   margin-top: 0;
+  padding: 0;
+
+  ${'' /* > * {
+    margin-left: var(--circle-width);
+    margin-right: var(--circle-width);
+  } */}
 `
 
 export const DefaultContentStyles = styled(ContentStyles)`

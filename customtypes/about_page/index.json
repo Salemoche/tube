@@ -16,22 +16,34 @@
       },
       "map_label": {
         "type": "Text",
-        "config": { "label": "Plan Label", "placeholder": "" }
+        "config": {
+          "label": "Plan Label",
+          "placeholder": ""
+        }
       },
       "image": {
         "type": "Image",
-        "config": { "label": "Plan", "constraint": {}, "thumbnails": [] }
+        "config": {
+          "label": "Plan",
+          "constraint": {},
+          "thumbnails": []
+        }
       },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": {} }
+        "config": {
+          "choices": {}
+        }
       }
     },
     "SEO": {
       "meta_title": {
         "type": "Text",
-        "config": { "label": "Meta Title", "placeholder": "" }
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
       },
       "meta_description": {
         "type": "StructuredText",
@@ -51,5 +63,6 @@
         }
       }
     }
-  }
+  },
+  "format": "custom"
 }

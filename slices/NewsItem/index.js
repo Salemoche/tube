@@ -14,8 +14,6 @@ const NewsItem = ({ slice }) => {
   const spacingTop = slice.primary.spacing_top || 0;
   const width = slice.primary.width || 3;
 
-  console.log(news)
-
   return (
     <NewsStyles 
       spacingRight={spacingRight} 
