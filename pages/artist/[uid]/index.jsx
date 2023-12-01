@@ -41,21 +41,14 @@ const ArtistPage = ({ page, navigation }) => {
         transition={{ duration: .3, delay: defaultTheme.transitions.fakePageLoad }}
       >
         { page && <DefaultContentStyles ref={ titleContainerRef }>
-          {/* <ParallaxTitleComponent 
-            options={{
-              contentLeft: page.data.artist_name,
-              contentLeftWidth: 100,
-              contentRightWidth: 0,
-              yPos,
-              scrollDistPercent: 50,
-              container: titleContainerRef,
-            }}
-          /> */}
           <HoveringTitleComponent options={{
             content1: page.data.artist_name,
             vertical_alignment_title: 8,
             horizontal_alignment_title: 1,
             scrollSpeed: -0.3,
+            scrollSpeedMobile: -0.3,
+            hyphens: 'none',
+            mobileTop: 8,
           }} containerRef={titleContainerRef} />
           <SliceZone slices={page.data.slices} components={components}/>
         </DefaultContentStyles>}

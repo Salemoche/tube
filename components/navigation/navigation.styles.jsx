@@ -118,10 +118,6 @@ export const NavigationStyles = styled('nav')`
 
     ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
       pointer-events: all;
-
-      ul {
-        pointer-events: all;
-      }
     `)}
 
     .menu {
@@ -154,6 +150,9 @@ export const NavigationStyles = styled('nav')`
         align-items: flex-start;
         padding: ${({ theme }) => theme.spacing.SR };
         pointer-events: none;
+        ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
+          pointer-events: all;
+        `)}
 
         .circle {
           border: 0.5px solid black;

@@ -47,7 +47,7 @@ export const ContentOneStyles = styled('h2')`
   left: calc( ${ props => props.left } * var(--circle-width));
   ${'' /* bottom: calc( ${ props => props.top } * var(--circle-width)); */}
   top: calc( ${ props => props.top } * var(--circle-width));
-  hyphens: auto;
+  hyphens: ${props => props.hyphens };
   /* word-break: break-word; */
   margin-bottom: var(--circle-width);
 
@@ -62,8 +62,10 @@ export const ContentOneStyles = styled('h2')`
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     width: 100%;
     margin-bottom: ${({ theme }) => theme.spacing.SR };
+    padding-left: ${({ theme }) => theme.spacing.SR };
+    padding-right: ${({ theme }) => theme.spacing.SR };
     position: relative;
-    top: calc( var(--circle-width) * 2);
+    top: calc( ${props => props.mobileTop } * var(--circle-width));
     left: 0;
     ${'' /* position: sticky;
     top: 50vh; */}
@@ -91,8 +93,10 @@ export const ContentTwoStyles = styled('div')`
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     width: 100%;
     margin-bottom: ${({ theme }) => theme.spacing.SR };
+    padding-left: ${({ theme }) => theme.spacing.SR };
+    padding-right: ${({ theme }) => theme.spacing.SR };
     position: relative;
-    top: calc( var(--circle-width) * 2);
+    top: 0;
     left: 0;
     ${'' /* position: sticky;
     top: 50vh; */}

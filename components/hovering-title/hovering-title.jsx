@@ -22,6 +22,9 @@ const HoveringTitleComponent = ({ options, containerRef }) => {
     horizontal_alignment_date: 0,
     vertical_alignment_date: 0,
     scrollSpeed: 0.3,
+    scrollSpeedMobile: 0.3,
+    hyphens: 'auto',
+    mobileTop: 5,
     ...options
   }
 
@@ -54,7 +57,7 @@ const HoveringTitleComponent = ({ options, containerRef }) => {
   const { scrollYProgress } = useScroll({ target: containerRef});
   const [scrollYPos, setScrollYPos] = useState(0)
   const offset = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * options.scrollSpeed : 0;
-  const offsetMobile = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * options.scrollSpeed : 0;
+  const offsetMobile = containerRef.current ? (-containerRef.current.offsetHeight + window.innerHeight) * options.scrollSpeedMobile : 0;
   const y = useTransform(scrollYProgress, [0, 1], [0, offset])
   const yMobile = useTransform(scrollYProgress, [0, 1], [0, offsetMobile])
 
@@ -66,7 +69,7 @@ const HoveringTitleComponent = ({ options, containerRef }) => {
   const snap = useSnapshot(store);
 
   return (
-    <HoveringTitleStyles>
+    <HoveringTitleStyles >
       <motion.div 
         style={{ y: snap.deviceMode != 'mobile' ? y : yMobile }}
         className="options-info"
@@ -75,6 +78,8 @@ const HoveringTitleComponent = ({ options, containerRef }) => {
           width={options.width_title}
           left={options.horizontal_alignment_title}
           top={options.vertical_alignment_title}
+          hyphens={options.hyphens}
+          mobileTop={options.mobileTop}
         >
           { options.content1 }
         </ContentOneStyles>
@@ -82,6 +87,7 @@ const HoveringTitleComponent = ({ options, containerRef }) => {
           width={options.width_date}
           left={options.horizontal_alignment_date}
           top={options.vertical_alignment_date}
+          hyphens={options.hyphens}
         >
           { options.content2 }
         </ContentTwoStyles>
