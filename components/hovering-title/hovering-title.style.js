@@ -33,13 +33,10 @@ export const HoveringTitleStyles = styled('div')`
 
     * {
       margin-bottom: ${({ theme }) => theme.spacing.XL };
-      font-size: 20vw;
-      line-height: calc( var(--circle-width) * 2);
+      font-size: 14vw;
+      line-height: 1;
     }
 
-    h2 {
-      word-break: break-all;
-    }
   }
 `
 
@@ -65,7 +62,9 @@ export const ContentOneStyles = styled('h2')`
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     width: 100%;
     margin-bottom: ${({ theme }) => theme.spacing.SR };
-    position: static;
+    position: relative;
+    top: calc( var(--circle-width) * 2);
+    left: 0;
     ${'' /* position: sticky;
     top: 50vh; */}
   }
@@ -92,7 +91,9 @@ export const ContentTwoStyles = styled('div')`
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     width: 100%;
     margin-bottom: ${({ theme }) => theme.spacing.SR };
-    position: static;
+    position: relative;
+    top: calc( var(--circle-width) * 2);
+    left: 0;
     ${'' /* position: sticky;
     top: 50vh; */}
   }

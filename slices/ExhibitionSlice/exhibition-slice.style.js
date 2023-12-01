@@ -24,8 +24,12 @@ export const ExhibitionSliceStyles = styled('a')`
 
   @media screen and (max-width: ${ props => props.theme.breakpoints.S }px) {
     &:first-child {
-      padding-top: ${({ theme }) => theme.spacing.XL };
+      margin-top: ${({ theme }) => theme.spacing.XL };
     }
+
+    height: 80vh;
+    align-items: center;
+
   }
 `
 

@@ -113,6 +113,16 @@ export const NavigationStyles = styled('nav')`
     pointer-events: none;
     height: 100vh;
     align-items: flex-start;
+    pointer-events: none;
+    display: block;
+
+    ${ props => ( props.menuOpen && props.mode == 'mobile' && css`
+      pointer-events: all;
+
+      ul {
+        pointer-events: all;
+      }
+    `)}
 
     .menu {
       width: 100vw;
@@ -122,7 +132,6 @@ export const NavigationStyles = styled('nav')`
       padding: 0;
       transition: opacity ${ props => props.theme.transitions.default };
       background: white;
-      pointer-events: none;
       transform: none;
       display: grid;
       grid-template-rows: 1fr auto;
@@ -133,8 +142,8 @@ export const NavigationStyles = styled('nav')`
         max-height: 100vh;
         pointer-events: all;
         opacity: 1;
+        z-index: 1;
         ${'' /* transform: none; */}
-
       `)}
 
       ul {
@@ -144,6 +153,7 @@ export const NavigationStyles = styled('nav')`
         position: relative;
         align-items: flex-start;
         padding: ${({ theme }) => theme.spacing.SR };
+        pointer-events: none;
 
         .circle {
           border: 0.5px solid black;

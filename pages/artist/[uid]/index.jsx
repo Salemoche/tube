@@ -55,7 +55,7 @@ const ArtistPage = ({ page, navigation }) => {
             content1: page.data.artist_name,
             vertical_alignment_title: 8,
             horizontal_alignment_title: 1,
-            scrollSpeed: -0.5,
+            scrollSpeed: -0.3,
           }} containerRef={titleContainerRef} />
           <SliceZone slices={page.data.slices} components={components}/>
         </DefaultContentStyles>}
