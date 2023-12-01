@@ -46,7 +46,7 @@ export const ExhibitionContentStyles = styled('div')`
     width: calc( ${ props => props.width } * var(--circle-width));
     height: calc( ${ props => props.height } * var(--circle-width));
     max-width: 100%;
-    transition: all 1s ease-in-out;
+    transition: transform .3s ease-in-out;
 
     img {
       width: 100%;

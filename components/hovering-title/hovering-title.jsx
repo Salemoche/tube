@@ -22,7 +22,7 @@ const HoveringTitleComponent = ({ options, containerRef }) => {
     horizontal_alignment_date: 0,
     vertical_alignment_date: 0,
     scrollSpeed: 0.3,
-    scrollSpeedMobile: 0.3,
+    scrollSpeedMobile: -0.3,
     hyphens: 'auto',
     mobileTop: 5,
     ...options
